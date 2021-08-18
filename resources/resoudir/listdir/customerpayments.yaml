@@ -1,0 +1,11 @@
+columns:
+  - field: checknumber
+    coltitle: checknumber
+  - field: paymentdate
+    coltitle: paymentdate
+    type: date
+  - field: amount
+    coltitle: amount
+    type: number
+
+jstitle: JS.customerpaymenttitle

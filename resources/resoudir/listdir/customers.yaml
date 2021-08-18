@@ -1,0 +1,38 @@
+columns:
+  - field: customernumber
+    type: number
+    coltitle: customernumber
+  - field: customername
+    coltitle: customername
+    width: 260
+  - field: creditlimit
+    coltitle: creditlimit
+    type: number
+  - field: contactfirstname
+    coltitle: customerfirstname
+  - field: contactlastname
+    coltitle: customerlastname
+  - field: phone
+    coltitle: phone
+  - field: addressline1
+    coltitle: addressline1
+  - field: country
+    coltitle: country
+  - field: city
+    coltitle: city
+  - field: postalcode
+    coltitle: postalcode
+  - field: salesrepemployeenumber
+    coltitle: salesrepemployeenumber
+    type: number
+
+js: jslogic
+
+click:
+   - field: customernumber
+     jsaction:
+       - messid: customerpaymentschoice
+         jsaction: JS.clickcustomerpayments
+       - messid: customerorderschoice
+         jsaction: JS.clickcustomerorders
+         

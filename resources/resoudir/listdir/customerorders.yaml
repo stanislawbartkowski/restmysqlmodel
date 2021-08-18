@@ -1,0 +1,19 @@
+columns:
+  - field: ordernumber
+    coltitle: ordernumber
+    type: number
+  - field: orderdate
+    coltitle: orderdate
+    type: date
+  - field: requireddate
+    coltitle: requireddate
+    type: date
+  - field: shippeddate
+    coltitle: shippeddate
+    type: date
+  - field: status
+    coltitle: status
+  - field: comments
+    coltitle: comments
+
+jstitle: JS.customerordertitle

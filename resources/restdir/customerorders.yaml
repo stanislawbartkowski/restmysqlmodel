@@ -1,0 +1,5 @@
+proc: SQL
+action: select * from orders where customernumber=?
+pars:
+  - name: customernumber
+    type: int

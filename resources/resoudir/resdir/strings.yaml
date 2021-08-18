@@ -1,0 +1,35 @@
+pl:
+  button_customers: Customers
+  customernumber: Customer number
+  customername: Customer name
+  salesrepemployeenumber: Sale rep number
+  creditlimit: Credit limit
+  customerfirstname: First name
+  customerlastname: Last name
+  phone: Phone number
+  addressline1: Address
+  country: Country
+  city: City
+  postalcode: Postal code
+  checknumber: Check number
+  paymentdate: Payment date
+  amount: Amount
+  customerpaymentstitle: "Customer payments : {0} {1} {2} {3}"
+  customerorderstitle: "Customer orders : {0} {1} {2} {3}"
+  customerpaymentschoice: Customer payments
+  customerorderschoice: Customer orders
+  ordernumber: Order number
+  orderdate: Order date
+  requireddate: Required date
+  shippeddate: Shipped date
+  status: Status
+  comments: Comments
+
+
+
+
+
+
+
+
+
