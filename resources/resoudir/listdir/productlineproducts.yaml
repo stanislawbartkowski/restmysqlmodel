@@ -1,0 +1,22 @@
+columns:
+  - field: productcode
+    coltitle: productcode
+  - field: productname
+    coltitle: productname
+    width: 180
+  - field: productscale
+    coltitle: productscale
+  - field: productvendor
+    coltitle: productvendor
+    width: 180
+  - field: quantityinstock
+    coltitle: quantityinstock
+    type: number
+  - field: buyprice
+    coltitle: buyprice
+    type: number
+  - field: msrp
+    coltitle: msrp
+    type: number
+
+jstitle: JS.productlineproductstitle

@@ -1,3 +1,5 @@
 menu:
- - id: customers
-   restid: customers
+  - id: customers
+    restid: customers
+  - id: productlines
+    restid: productlines

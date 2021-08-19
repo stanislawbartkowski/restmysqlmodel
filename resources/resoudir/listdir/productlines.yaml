@@ -1,0 +1,13 @@
+columns:
+  - field: productline
+    coltitle: productline
+    width: 200
+  - field: textdescription
+    coltitle: description
+    width: 1100
+
+js: jslogic
+
+click:
+   - field: productline
+     jsaction: JS.clickproductlineproducts

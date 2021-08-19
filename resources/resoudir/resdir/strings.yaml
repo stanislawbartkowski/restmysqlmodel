@@ -24,6 +24,17 @@ pl:
   shippeddate: Shipped date
   status: Status
   comments: Comments
+  button_productlines: Product lines
+  productline: Product line
+  description: Description
+  productcode: Product code
+  productname: Product name
+  productscale: Product scale
+  productvendor: Product vendor
+  quantityinstock: Quantity in stock
+  buyprice: Buy price
+  msrp: MSRP
+  productlineproductstitle: "Products for : {0} {1}"
 
 
 

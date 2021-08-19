@@ -1,0 +1,4 @@
+proc: SQL
+action: select * from products where productline=?
+pars:
+  - name: productline

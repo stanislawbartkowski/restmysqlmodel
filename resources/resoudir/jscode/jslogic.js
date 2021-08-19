@@ -29,5 +29,21 @@ var JS = {
 
     customerordertitle: function (row) {
         return { "messid": "customerorderstitle", "params": [row.customernumber, row.customername, row.contactfirstname, row.contactlastname] };
+    },
+
+    productlineproductstitle: function (row) {
+        return { "messid": "productlineproductstitle", "params": [row.productline, row.textdescription] };
+    },
+
+    clickproductlineproducts: function (row) {
+        return {
+            "action": "POPUP",
+            "restid": "productlineproducts",
+            "pars": {
+                "productline": row.productline
+            },
+            "vars": row
+        }
+
     }
 }
