@@ -28,6 +28,9 @@ columns:
 
 js: jslogic
 
+tools: 
+  - actionid: SHOW
+
 click:
    - field: customernumber
      jsaction:
