@@ -1,10 +1,12 @@
 columns:
   - field: productline
-    coltitle: productline
     width: 200
   - field: textdescription
     coltitle: description
     width: 1100
+
+tools: 
+  - actionid: SHOW
 
 js: jslogic
 

@@ -1,0 +1,8 @@
+fields:
+  - field: id 
+    type: number
+  - field: name
+
+buttons: 
+  - actionid: ACCEPT
+  - actionid: CANCEL

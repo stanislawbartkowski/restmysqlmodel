@@ -1,0 +1,9 @@
+columns:
+  - field: id 
+    type: number
+    fieldrequired: true
+  - field: name
+
+tools: 
+  - actionid: SHOW
+  - actionid: ADD

@@ -1,11 +1,8 @@
-columns:
+fields:
   - field: checknumber
   - field: paymentdate
     type: date
   - field: amount
     type: number
 
-tools: 
-  - actionid: SHOW
-
-jstitle: JS.customerpaymenttitle
+allreadonly: true

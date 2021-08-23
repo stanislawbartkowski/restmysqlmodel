@@ -1,20 +1,14 @@
-columns:
+fields:
   - field: productcode
   - field: productname
-    width: 180
   - field: productscale
   - field: productvendor
-    width: 180
   - field: quantityinstock
     type: number
   - field: buyprice
     type: number
   - field: msrp
-    coltitle: msrp
+    fieldname: msrp
     type: number
 
-tools: 
-  - actionid: SHOW
-
-
-jstitle: JS.productlineproductstitle
+allreadonly: true

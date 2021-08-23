@@ -1,5 +1,5 @@
 pl:
-  button_customers: Customers
+  customers: Customers
   customernumber: Customer number
   customername: Customer name
   salesrepemployeenumber: Sale rep number
@@ -24,7 +24,7 @@ pl:
   shippeddate: Shipped date
   status: Status
   comments: Comments
-  button_productlines: Product lines
+  productlines: Product lines
   productline: Product line
   description: Description
   productcode: Product code
@@ -34,7 +34,10 @@ pl:
   quantityinstock: Quantity in stock
   buyprice: Buy price
   msrp: MSRP
-  productlineproductstitle: "Products for : {0} {1}"
+  productlineproductstitle: "Products for : {0} {1}"  
+  testtable: Test CRUD
+  id : Id
+  name: Name
 
 
 

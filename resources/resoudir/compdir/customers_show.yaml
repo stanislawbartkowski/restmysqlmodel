@@ -1,8 +1,7 @@
-columns:
+fields:
   - field: customernumber
     type: number
   - field: customername
-    width: 260
   - field: creditlimit
     type: number
   - field: contactfirstname
@@ -15,16 +14,4 @@ columns:
   - field: salesrepemployeenumber
     type: number
 
-js: jslogic
-
-tools: 
-  - actionid: SHOW
-
-click:
-   - field: customernumber
-     jsaction:
-       - messid: customerpaymentschoice
-         jsaction: JS.clickcustomerpayments
-       - messid: customerorderschoice
-         jsaction: JS.clickcustomerorders
-         
+allreadonly: true

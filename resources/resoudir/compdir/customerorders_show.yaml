@@ -1,4 +1,4 @@
-columns:
+fields:
   - field: ordernumber
     type: number
   - field: orderdate
@@ -10,7 +10,4 @@ columns:
   - field: status
   - field: comments
 
-tools: 
-  - actionid: SHOW
-
-jstitle: JS.customerordertitle
+allreadonly: true

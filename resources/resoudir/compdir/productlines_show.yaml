@@ -1,0 +1,6 @@
+fields:
+  - field: productline
+  - field: textdescription
+    fieldname: description
+
+allreadonly: true
