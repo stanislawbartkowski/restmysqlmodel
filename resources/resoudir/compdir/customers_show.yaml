@@ -1,9 +1,11 @@
 fields:
   - field: customernumber
-    type: number
+    props:
+      type: number
   - field: customername
   - field: creditlimit
-    type: number
+    props:
+      type: number
   - field: contactfirstname
   - field: contactlastname
   - field: phone
@@ -12,6 +14,7 @@ fields:
   - field: city
   - field: postalcode
   - field: salesrepemployeenumber
-    type: number
+    props:
+      type: number
 
 allreadonly: true

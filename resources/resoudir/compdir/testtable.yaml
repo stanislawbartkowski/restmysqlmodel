@@ -1,7 +1,7 @@
 columns:
   - field: id 
-    type: number
-    fieldrequired: true
+    props:
+      type: number
   - field: name
 
 tools: 

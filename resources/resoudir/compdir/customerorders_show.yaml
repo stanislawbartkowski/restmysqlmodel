@@ -1,12 +1,16 @@
 fields:
   - field: ordernumber
-    type: number
+    props:
+      type: number
   - field: orderdate
-    type: date
+    props:
+      type: date
   - field: requireddate
-    type: date
+    props:
+      type: date
   - field: shippeddate
-    type: date
+    props:
+      type: date
   - field: status
   - field: comments
 

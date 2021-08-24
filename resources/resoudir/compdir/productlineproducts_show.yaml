@@ -4,11 +4,14 @@ fields:
   - field: productscale
   - field: productvendor
   - field: quantityinstock
-    type: number
+    props:
+      type: number
   - field: buyprice
-    type: number
+    props:
+      type: number
   - field: msrp
     fieldname: msrp
-    type: number
+    props:
+      type: number
 
 allreadonly: true

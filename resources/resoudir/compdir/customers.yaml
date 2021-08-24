@@ -1,10 +1,13 @@
 columns:
   - field: customernumber
-    type: number
+    props:
+      type: number
   - field: customername
-    width: 260
+    props:
+      width: 260
   - field: creditlimit
-    type: number
+    props:
+      type: number
   - field: contactfirstname
   - field: contactlastname
   - field: phone
@@ -13,7 +16,8 @@ columns:
   - field: city
   - field: postalcode
   - field: salesrepemployeenumber
-    type: number
+    props:
+      type: number
 
 js: jslogic
 

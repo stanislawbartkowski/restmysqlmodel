@@ -1,9 +1,11 @@
 columns:
   - field: productline
-    width: 200
+    props:
+      width: 200
   - field: textdescription
     coltitle: description
-    width: 1100
+    props:
+      width: 1100
 
 tools: 
   - actionid: SHOW

@@ -1,17 +1,22 @@
 columns:
   - field: productcode
   - field: productname
-    width: 180
+    props:
+      width: 180
   - field: productscale
   - field: productvendor
-    width: 180
+    props:
+      width: 180
   - field: quantityinstock
-    type: number
+    props:
+      type: number
   - field: buyprice
-    type: number
+    props:
+      type: number
   - field: msrp
     coltitle: msrp
-    type: number
+    props:
+      type: number
 
 tools: 
   - actionid: SHOW

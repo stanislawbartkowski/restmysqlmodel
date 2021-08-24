@@ -4,8 +4,8 @@ pl:
   customername: Customer name
   salesrepemployeenumber: Sale rep number
   creditlimit: Credit limit
-  customerfirstname: First name
-  customerlastname: Last name
+  contactfirstname: First name
+  contactlastname: Last name
   phone: Phone number
   addressline1: Address
   country: Country

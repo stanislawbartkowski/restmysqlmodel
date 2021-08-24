@@ -1,8 +1,10 @@
 fields:
   - field: checknumber
   - field: paymentdate
-    type: date
+    props:
+     type: date
   - field: amount
-    type: number
+    props:
+      type: number
 
 allreadonly: true
