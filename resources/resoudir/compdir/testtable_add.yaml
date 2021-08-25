@@ -1,5 +1,7 @@
 fields:
   - field: id
+    afterfield:
+      jsaction: TS.afterid
     props:
       type: number
       required: true
@@ -8,3 +10,5 @@ fields:
 buttons: 
   - actionid: ACCEPT
   - actionid: CANCEL
+
+js: testlogic
