@@ -1,6 +1,14 @@
 var TS = {
 
-    afterid: function (row, vars) {
+    afterid : function (row, vars)  {
+        return {
+          action: "FORM",
+          formaction: "RESTPOST",
+          restid: "testtable_afterid"
+        }
+    },
+
+    tempafterid: function (row, vars) {
         return {
             action: "YESNO",
             messid: {

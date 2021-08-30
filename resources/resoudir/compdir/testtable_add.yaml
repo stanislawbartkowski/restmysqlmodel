@@ -1,6 +1,7 @@
 fields:
   - field: id
     afterfield:
+      notempty: true
       jsaction: TS.afterid
     props:
       type: number
@@ -9,6 +10,10 @@ fields:
 
 buttons: 
   - actionid: ACCEPT
+    action: FORM
+    formaction: RESTPOST
+    restid: testtable_afterid
   - actionid: CANCEL
+    close: true
 
 js: testlogic
