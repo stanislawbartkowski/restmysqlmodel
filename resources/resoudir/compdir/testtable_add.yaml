@@ -6,13 +6,17 @@ fields:
     props:
       type: number
       required: true
+    labelprops:
+      required: true
   - field: name
 
 buttons: 
   - actionid: ACCEPT
-    action: FORM
-    formaction: RESTPOST
-    restid: testtable_afterid
+    checkrequired: true
+    jsaction:
+      action: FORM
+      formaction: RESTPOST
+      restid: testtable_afterid
   - actionid: CANCEL
     close: true
 
