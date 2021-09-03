@@ -1,0 +1,7 @@
+fields:
+  - field: id
+    props:
+      type: number
+  - field: name
+
+allreadonly: true

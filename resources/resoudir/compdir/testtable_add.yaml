@@ -14,9 +14,12 @@ buttons:
   - actionid: ACCEPT
     checkrequired: true
     jsaction:
-      action: FORM
-      formaction: RESTPOST
-      restid: testtable_afterid
+      action: YESNO
+      messid: addrecordask
+      confirm:
+        action: FORM
+        formaction: RESTPOST
+        restid: testtable_submit
   - actionid: CANCEL
     close: true
 

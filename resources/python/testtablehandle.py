@@ -26,18 +26,40 @@ def writerest(s):
         print(ss)
         f.write(ss)
 
-def checkid() :
+def iduniq() :
     da = getjson()
     print(da)
     id = da["row"]["id"]
     with getconn() as conn:
-        with  conn.cursor() as curs:
+        with conn.cursor() as curs:
             curs.execute("SELECT ID FROM TEST WHERE ID=%s" % id)
             row = curs.fetchone()
-            print(row)
-            if row == None: writerest({})
-            else : writerest({ 'action': 'FORM', 'formaction': 'NO'})
+            return row == None
+
+def checkid() :
+    if iduniq() : 
+        writerest({})
+        return True
+    writerest({ 'action': 'FORM', 'formaction': 'NO', 'error': [{ 'field' : 'id', 'mess' : 'duplicatedvalue' }]})
+    return False
+
+# curs.execute("insert into CUSTOMER values (?, ?)", (1, 'John'))
+
+def submit() :
+    if not checkid() : return
+    row = getjson()["row"]
+    print(row)
+    id = row["id"]
+    name = row.get("name")
+    with getconn() as conn:
+        with conn.cursor() as curs:
+            if name == None: sql = "insert into TEST values ( %s, NULL )" % id
+            else : sql = "insert into TEST values (%s ,'%s')" % id %name
+            print(sql)
+            curs.execute(sql)
+
 
 if __name__ == '__main__':
     what = sys.argv[1]
     if what == "checkid": checkid()
+    if what == "submit": submit()

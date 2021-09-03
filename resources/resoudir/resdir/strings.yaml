@@ -38,6 +38,8 @@ pl:
   testtable: Test CRUD
   id : Id
   name: Name
+  duplicatedvalue: Powtórzona wartość
+  addrecordask: Dodać?
 
 
 
