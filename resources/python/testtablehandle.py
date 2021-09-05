@@ -40,7 +40,7 @@ def checkid() :
     if iduniq() : 
         writerest({})
         return True
-    writerest({ 'action': 'FORM', 'formaction': 'NO', 'error': [{ 'field' : 'id', 'mess' : 'duplicatedvalue' }]})
+    writerest({ 'action': 'NO', 'error': [{ 'field' : 'id', 'mess' : 'duplicatedvalue' }]})
     return False
 
 # curs.execute("insert into CUSTOMER values (?, ?)", (1, 'John'))

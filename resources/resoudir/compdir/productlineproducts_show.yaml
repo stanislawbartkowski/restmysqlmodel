@@ -10,7 +10,6 @@ fields:
     props:
       type: number
   - field: msrp
-    fieldname: msrp
     props:
       type: number
 

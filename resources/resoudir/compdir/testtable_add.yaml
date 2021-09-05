@@ -17,8 +17,7 @@ buttons:
       action: YESNO
       messid: addrecordask
       confirm:
-        action: FORM
-        formaction: RESTPOST
+        action: RESTPOST
         restid: testtable_submit
   - actionid: CANCEL
     close: true

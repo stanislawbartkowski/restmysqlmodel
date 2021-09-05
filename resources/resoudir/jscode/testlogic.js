@@ -2,8 +2,7 @@ var TS = {
 
     afterid : function (row, vars)  {
         return {
-          action: "FORM",
-          formaction: "RESTPOST",
+          action: "RESTPOST",
           restid: "testtable_afterid"
         }
     },
