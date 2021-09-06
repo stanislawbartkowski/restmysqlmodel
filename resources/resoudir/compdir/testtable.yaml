@@ -8,3 +8,4 @@ tools:
   - actionid: SHOW
   - actionid: ADD
   - actionid: DEL
+  - actionid: MODIF

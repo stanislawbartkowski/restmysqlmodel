@@ -1,14 +1,13 @@
 fields:
   - field: id
+    readonly: true
     props:
       type: number
   - field: name
 
-allreadonly: true
-
 buttons: 
-  - actionid: DEL
-    jsaction: TS.deletedata
+  - actionid: ACCEPT
+    jsaction: TS.modifdata
   - actionid: CANCEL
     close: true
 

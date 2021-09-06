@@ -1,0 +1,6 @@
+proc: SQL
+action: delete from test where id=?
+updatequery: true
+pars:
+  - name: id
+    type: int

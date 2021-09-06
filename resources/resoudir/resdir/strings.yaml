@@ -40,6 +40,8 @@ pl:
   name: Name
   duplicatedvalue: Powtórzona wartość
   addrecordask: Dodać?
+  delrecordask: Usunąć dane?
+  changerecordask: Zmienić dane?
 
 
 

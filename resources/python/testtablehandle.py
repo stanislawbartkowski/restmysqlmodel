@@ -54,7 +54,7 @@ def submit() :
     with getconn() as conn:
         with conn.cursor() as curs:
             if name == None: sql = "insert into TEST values ( %s, NULL )" % id
-            else : sql = "insert into TEST values (%s ,'%s')" % id %name
+            else : sql = "insert into TEST values (%s ,'%s')" % (id,name)
             print(sql)
             curs.execute(sql)
 

@@ -1,2 +1,2 @@
 proc: SQL
-action: select * from test
+action: select * from test order by id

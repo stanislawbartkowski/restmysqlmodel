@@ -1,0 +1,7 @@
+proc: SQL
+action: update test set name=? where id=?
+updatequery: true
+pars:
+  - name: name
+  - name: id
+    type: int

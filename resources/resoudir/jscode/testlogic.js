@@ -1,23 +1,39 @@
 var TS = {
 
-    afterid : function (row, vars)  {
+    afterid: function (row, vars) {
         return {
-          action: "RESTPOST",
-          restid: "testtable_afterid"
+            action: "RESTPOST",
+            restid: "testtable_afterid"
         }
     },
 
-    tempafterid: function (row, vars) {
+    deletedata: function (row, vars) {
         return {
             action: "YESNO",
-            messid: {
-                localize: false,
-                messid: "Do you want stay at id ?"
-            },
+            messid: "delrecordask",
             confirm: {
-                action: "FORM",
-                formaction: "NO"
+                action: "RESTGET",
+                restid: "testtable-del",
+                pars: {
+                    id: row.id
+                },
+            }
+        }
+    },
+
+    modifdata: function (row, vars) {
+        return {
+            action: "YESNO",
+            messid: "changerecordask",
+            confirm: {
+                action: "RESTGET",
+                restid: "testtable-modif",
+                pars: {
+                    name: row.name,
+                    id: row.id
+                },
             }
         }
     }
+
 }
