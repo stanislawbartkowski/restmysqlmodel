@@ -16,5 +16,6 @@ columns:
 
 tools: 
   - actionid: SHOW
+  - actionid: REFRESH
 
 jstitle: JS.customerordertitle

@@ -23,6 +23,7 @@ js: jslogic
 
 tools: 
   - actionid: SHOW
+  - actionid: REFRESH
 
 click:
    - field: customernumber

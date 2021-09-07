@@ -5,6 +5,7 @@ columns:
   - field: name
 
 tools: 
+  - actionid: REFRESH
   - actionid: SHOW
   - actionid: ADD
   - actionid: DEL
