@@ -1,6 +1,7 @@
 import os, sys, json
 import jaydebeapi
 
+# CREATE TABLE TEST (ID INT NOT NULL PRIMARY KEY, NAME VARCHAR(100));
 
 def getfiles():
     return (os.environ["TMPFILE"], os.environ["UPLOADEDFILE"])
