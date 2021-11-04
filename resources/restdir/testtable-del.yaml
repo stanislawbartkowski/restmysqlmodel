@@ -1,5 +1,5 @@
 proc: SQL
-action: delete from test where id=?
+action: delete from TEST where id=?
 updatequery: true
 pars:
   - name: id
