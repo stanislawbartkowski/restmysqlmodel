@@ -3,5 +3,7 @@ menu:
     restid: customers
   - id: productlines
     restid: productlines  
-  - id: testtable
-    restid: testtable
+  - id: products
+    restid: products
+  - id: employees
+    restid: employee

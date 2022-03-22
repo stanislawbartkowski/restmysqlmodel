@@ -42,6 +42,16 @@ pl:
   addrecordask: Dodać?
   delrecordask: Usunąć dane?
   changerecordask: Zmienić dane?
+  products: Products
+  employees: Employees
+  employeenumber: Employee number
+  lastname: Last name
+  firstname: First name
+  extension: Extension
+  officecode: Office code
+  reportsto: Report
+  jobtitle: Job title
+  email: email
 
 
 

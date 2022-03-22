@@ -1,13 +1,12 @@
 columns:
   - field: customernumber
+    showdetails: true 
+    fieldtype: number
     props:
-      type: number
+      align: 'left'
   - field: customername
-    props:
-      width: 260
   - field: creditlimit
-    props:
-      type: number
+    fieldtype: number
   - field: contactfirstname
   - field: contactlastname
   - field: phone
@@ -16,10 +15,12 @@ columns:
   - field: city
   - field: postalcode
   - field: salesrepemployeenumber
+    fieldtype: number
+    fieldtype: number
     props:
-      type: number
+      align: 'left'
 
-js: jslogic
+rowkey: customernumber  
 
 tools: 
   - actionid: SHOW
