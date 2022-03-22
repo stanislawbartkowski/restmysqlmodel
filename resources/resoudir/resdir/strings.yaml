@@ -52,6 +52,24 @@ pl:
   reportsto: Report
   jobtitle: Job title
   email: email
+  officecode: Office code
+  phone: Phone
+  addressline1: Address line 1
+  addressline2: Address line 2
+  state: State
+  country: country
+  postalcode: Postal code
+  territory: Territory
+  offices: Offices
+  orders: Orders
+  payments: Payments
+  checknumber: Check number
+  paymentdate: Payment date
+  orderlinenumber: number
+  quantityordered: Quantity ordered
+  priceeach: Price each
+
+
 
 
 

@@ -1,0 +1,13 @@
+columns:
+  - field: checknumber
+    showdetails: true 
+  - field: customernumber
+    fieldtype: number
+    props:
+      align: 'left'
+  - field: customername
+  - field: paymentdate
+  - field: amount
+    fieldtype: number
+
+rowkey: checknumber

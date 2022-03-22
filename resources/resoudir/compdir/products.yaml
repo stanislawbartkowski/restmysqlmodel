@@ -2,6 +2,7 @@ columns:
   - field: productcode    
     showdetails: true 
   - field: productname
+  - field: productline
   - field: productscale
   - field: productvendor
   - field: quantityinstock

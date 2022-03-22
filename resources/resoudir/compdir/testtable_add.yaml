@@ -1,5 +1,6 @@
 fields:
   - field: id
+    fieldtype: number
     afterfield:
       notempty: true
       jsaction: TS.afterid

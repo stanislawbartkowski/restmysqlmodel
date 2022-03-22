@@ -1,0 +1,2 @@
+proc: SQL
+action: select ordernumber,customernumber,customername,orderdate,requireddate,shippeddate,status,comments from orders join customers using(customernumber)

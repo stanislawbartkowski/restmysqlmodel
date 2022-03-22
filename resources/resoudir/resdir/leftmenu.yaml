@@ -1,9 +1,12 @@
 menu:
   - id: customers
-    restid: customers
+    icon: useroutlines
   - id: productlines
-    restid: productlines  
   - id: products
-    restid: products
   - id: employees
-    restid: employee
+    list: employee
+    icon: useroutlines
+  - id: offices
+  - id: orders
+  - id: payments
+  - id: testtable

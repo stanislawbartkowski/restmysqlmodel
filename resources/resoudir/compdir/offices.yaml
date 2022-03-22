@@ -1,0 +1,16 @@
+columns:
+  - field: officecode
+    showdetails: true 
+    fieldtype: number
+    props:
+      align: 'left'
+  - field: city
+  - field: phone
+  - field: addressline1
+  - field: addressline2
+  - field: state
+  - field: country
+  - field: postalcode
+  - field: territory
+
+rowkey: officecode

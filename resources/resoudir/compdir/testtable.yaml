@@ -1,12 +1,10 @@
 columns:
   - field: id 
-    props:
-      type: number
+    fieldtype: number
   - field: name
 
-tools: 
-  - actionid: REFRESH
-  - actionid: SHOW
-  - actionid: ADD
-  - actionid: DEL
-  - actionid: MODIF
+toolbar:
+  - id: ADD
+    props:
+       type: primary
+    listdef: testtable_add

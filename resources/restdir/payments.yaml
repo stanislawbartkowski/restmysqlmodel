@@ -1,0 +1,2 @@
+proc: SQL
+action: select customernumber,customername,checknumber,paymentdate,amount from payments join customers using(customernumber)

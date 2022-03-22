@@ -45,5 +45,11 @@ var JS = {
             "vars": row
         }
 
+    },
+
+    // antd
+    getexpandorders : function(row) {
+      return { list: 'orderdetails', params: { "ordernumber" : row.ordernumber}}
     }
+     
 }

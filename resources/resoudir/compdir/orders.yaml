@@ -1,0 +1,23 @@
+columns:
+  - field: ordernumber
+    showdetails: true 
+    fieldtype: number
+    props:
+      align: 'left'
+  - field: customernumber
+    fieldtype: number
+    props:
+      align: 'left'
+  - field: customername
+  - field: orderdate
+  - field: requireddate
+  - field: shippeddate
+  - field: status
+  - field: comments
+
+rowkey: ordernumber
+
+js: jslogic
+
+extendable: 
+  jsclick: JS.getexpandorders

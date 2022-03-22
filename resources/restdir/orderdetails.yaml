@@ -1,0 +1,10 @@
+proc: SQL
+action: > 
+  with O as (select ordernumber,productcode,quantityordered,priceeach,orderlinenumber from orderdetails
+  join orders using(ordernumber) ) select O.*,products.productname  from O join products using(productcode) 
+  where ordernumber=? order by orderlinenumber
+
+pars:
+  - name: ordernumber
+    type: int
+

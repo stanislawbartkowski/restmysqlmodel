@@ -1,0 +1,18 @@
+columns:
+  - field: orderlinenumber
+    showdetails: true 
+    fieldtype: number
+    props:
+      align: 'left'
+  - field: ordernumber
+    fieldtype: number
+    props:
+      align: 'left'
+  - field: productcode
+  - field: productname
+  - field: quantityordered
+    fieldtype: number
+  - field: priceeach
+    fieldtype: number
+
+rowkey: orderlinenumber
