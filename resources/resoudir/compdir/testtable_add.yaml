@@ -1,26 +1,16 @@
 fields:
   - field: id
     fieldtype: number
-    afterfield:
-      notempty: true
-      jsaction: TS.afterid
     props:
-      type: number
       required: true
-    labelprops:
-      required: true
+      rules: 
+      - required: true
   - field: name
 
 buttons: 
-  - actionid: ACCEPT
-    checkrequired: true
-    jsaction:
-      action: YESNO
-      messid: addrecordask
-      confirm:
-        action: RESTPOST
-        restid: testtable_submit
-  - actionid: CANCEL
-    close: true
+  - id: ACCEPT
+    validate: true
+  - id: CANCEL
+    close: boolean
 
 js: testlogic
