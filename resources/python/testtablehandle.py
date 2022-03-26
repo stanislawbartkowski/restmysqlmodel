@@ -47,6 +47,13 @@ def checkid() :
 # curs.execute("insert into CUSTOMER values (?, ?)", (1, 'John'))
 
 def submit() :
+    print("submit")
+    row = getjson()
+    print(row)
+    writerest({ 'action': 'NO', 'error': [{ 'field' : 'id', 'mess' : 'duplicatedvalue' }]})
+
+
+def xsubmit() :
     if not checkid() : return
     row = getjson()["row"]
     print(row)

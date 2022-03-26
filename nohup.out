@@ -6257,3 +6257,298 @@ Warning: Nashorn engine is planned to be removed from a future JDK release
 [2022-03-24 23:37:28] INFO: {"proc":"RESOURCE","format":"JS","dir":"jscode"}  
 [2022-03-24 23:37:28] INFO: GET resource=testlogic  
 Warning: Nashorn engine is planned to be removed from a future JDK release
+[2022-03-25 23:51:28] INFO: Rest method resource HTTP method GET  
+[2022-03-25 23:51:28] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-25 23:51:28] INFO: GET resource=leftmenu  
+[2022-03-25 23:51:28] INFO: Rest method resource HTTP method GET  
+[2022-03-25 23:51:28] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-25 23:51:28] INFO: GET resource=appdata  
+[2022-03-25 23:51:28] INFO: Rest method resource HTTP method GET  
+[2022-03-25 23:51:28] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-25 23:51:28] INFO: GET resource=strings  
+[2022-03-25 23:51:39] INFO: Rest method compdef HTTP method GET  
+[2022-03-25 23:51:39] INFO: {"proc":"RESOURCE","dir":"compdir"}  
+[2022-03-25 23:51:39] INFO: GET resource=testtable  
+[2022-03-25 23:51:39] INFO: Rest method testtable HTTP method GET  
+[2022-03-25 23:51:39] INFO: {"proc":"SQL","action":"select * from TEST order by id"}  
+[2022-03-25 23:51:39] INFO: GET null  
+[2022-03-25 23:51:39] INFO: select * from TEST order by id  
+[2022-03-25 23:51:40] INFO: Rest method compdef HTTP method GET  
+[2022-03-25 23:51:40] INFO: {"proc":"RESOURCE","dir":"compdir"}  
+[2022-03-25 23:51:40] INFO: GET resource=testtable_add  
+[2022-03-25 23:51:40] INFO: Rest method getjs HTTP method GET  
+[2022-03-25 23:51:40] INFO: {"proc":"RESOURCE","format":"JS","dir":"jscode"}  
+[2022-03-25 23:51:40] INFO: GET resource=testlogic  
+Warning: Nashorn engine is planned to be removed from a future JDK release
+[2022-03-25 23:51:44] INFO: Rest method getjs HTTP method OPTIONS  
+[2022-03-25 23:51:44] INFO: OPTIONS null  
+[2022-03-25 23:51:44] INFO: OPTIONS request  
+[2022-03-25 23:51:44] INFO: Rest method getjs HTTP method POST  
+[2022-03-25 23:51:44] INFO: {"proc":"RESOURCE","format":"JS","dir":"jscode"}  
+[2022-03-25 23:51:44] INFO: POST null  
+[2022-03-25 23:54:45] INFO: Rest method resource HTTP method GET  
+[2022-03-25 23:54:45] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-25 23:54:45] INFO: GET resource=leftmenu  
+[2022-03-25 23:54:45] INFO: Rest method resource HTTP method GET  
+[2022-03-25 23:54:45] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-25 23:54:45] INFO: GET resource=appdata  
+[2022-03-25 23:54:45] INFO: Rest method resource HTTP method GET  
+[2022-03-25 23:54:45] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-25 23:54:45] INFO: GET resource=strings  
+[2022-03-25 23:54:45] INFO: Rest method compdef HTTP method GET  
+[2022-03-25 23:54:45] INFO: {"proc":"RESOURCE","dir":"compdir"}  
+[2022-03-25 23:54:45] INFO: GET resource=testtable  
+[2022-03-25 23:54:46] INFO: Rest method testtable HTTP method GET  
+[2022-03-25 23:54:46] INFO: {"proc":"SQL","action":"select * from TEST order by id"}  
+[2022-03-25 23:54:46] INFO: GET null  
+[2022-03-25 23:54:46] INFO: select * from TEST order by id  
+[2022-03-25 23:55:11] INFO: Rest method resource HTTP method GET  
+[2022-03-25 23:55:11] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-25 23:55:11] INFO: GET resource=leftmenu  
+[2022-03-25 23:55:11] INFO: Rest method resource HTTP method GET  
+[2022-03-25 23:55:11] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-25 23:55:11] INFO: GET resource=appdata  
+[2022-03-25 23:55:12] INFO: Rest method resource HTTP method GET  
+[2022-03-25 23:55:12] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-25 23:55:12] INFO: GET resource=strings  
+[2022-03-25 23:55:12] INFO: Rest method compdef HTTP method GET  
+[2022-03-25 23:55:12] INFO: {"proc":"RESOURCE","dir":"compdir"}  
+[2022-03-25 23:55:12] INFO: GET resource=testtable  
+[2022-03-25 23:55:12] INFO: Rest method testtable HTTP method GET  
+[2022-03-25 23:55:12] INFO: {"proc":"SQL","action":"select * from TEST order by id"}  
+[2022-03-25 23:55:12] INFO: GET null  
+[2022-03-25 23:55:12] INFO: select * from TEST order by id  
+[2022-03-25 23:55:36] INFO: Rest method compdef HTTP method GET  
+[2022-03-25 23:55:36] INFO: {"proc":"RESOURCE","dir":"compdir"}  
+[2022-03-25 23:55:36] INFO: GET resource=testtable_add  
+[2022-03-25 23:55:37] INFO: Rest method getjs HTTP method GET  
+[2022-03-25 23:55:37] INFO: {"proc":"RESOURCE","format":"JS","dir":"jscode"}  
+[2022-03-25 23:55:37] INFO: GET resource=testlogic  
+Warning: Nashorn engine is planned to be removed from a future JDK release
+[2022-03-25 23:55:42] INFO: Rest method getjs HTTP method OPTIONS  
+[2022-03-25 23:55:42] INFO: OPTIONS null  
+[2022-03-25 23:55:42] INFO: OPTIONS request  
+[2022-03-25 23:55:42] INFO: Rest method getjs HTTP method POST  
+[2022-03-25 23:55:42] INFO: {"proc":"RESOURCE","format":"JS","dir":"jscode"}  
+[2022-03-25 23:55:42] INFO: POST null  
+[2022-03-25 23:56:54] INFO: Rest method compdef HTTP method GET  
+[2022-03-25 23:56:54] INFO: {"proc":"RESOURCE","dir":"compdir"}  
+[2022-03-25 23:56:54] INFO: GET resource=testtable_add  
+[2022-03-25 23:56:57] INFO: Rest method getjs HTTP method OPTIONS  
+[2022-03-25 23:56:57] INFO: OPTIONS null  
+[2022-03-25 23:56:57] INFO: OPTIONS request  
+[2022-03-25 23:56:57] INFO: Rest method getjs HTTP method POST  
+[2022-03-25 23:56:57] INFO: {"proc":"RESOURCE","format":"JS","dir":"jscode"}  
+[2022-03-25 23:56:57] INFO: POST null  
+[2022-03-25 23:59:15] INFO: Rest method resource HTTP method GET  
+[2022-03-25 23:59:15] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-25 23:59:15] INFO: GET resource=leftmenu  
+[2022-03-25 23:59:15] INFO: Rest method resource HTTP method GET  
+[2022-03-25 23:59:15] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-25 23:59:15] INFO: GET resource=appdata  
+[2022-03-25 23:59:15] INFO: Rest method resource HTTP method GET  
+[2022-03-25 23:59:15] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-25 23:59:15] INFO: GET resource=strings  
+[2022-03-25 23:59:17] INFO: Rest method compdef HTTP method GET  
+[2022-03-25 23:59:17] INFO: {"proc":"RESOURCE","dir":"compdir"}  
+[2022-03-25 23:59:17] INFO: GET resource=testtable  
+[2022-03-25 23:59:17] INFO: Rest method testtable HTTP method GET  
+[2022-03-25 23:59:17] INFO: {"proc":"SQL","action":"select * from TEST order by id"}  
+[2022-03-25 23:59:17] INFO: GET null  
+[2022-03-25 23:59:17] INFO: select * from TEST order by id  
+[2022-03-25 23:59:35] INFO: Rest method compdef HTTP method GET  
+[2022-03-25 23:59:35] INFO: {"proc":"RESOURCE","dir":"compdir"}  
+[2022-03-25 23:59:35] INFO: GET resource=testtable_add  
+[2022-03-26 00:00:40] INFO: Rest method resource HTTP method GET  
+[2022-03-26 00:00:40] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-26 00:00:40] INFO: GET resource=leftmenu  
+[2022-03-26 00:00:40] INFO: Rest method resource HTTP method GET  
+[2022-03-26 00:00:40] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-26 00:00:40] INFO: GET resource=appdata  
+[2022-03-26 00:00:40] INFO: Rest method resource HTTP method GET  
+[2022-03-26 00:00:40] INFO: {"proc":"RESOURCE","dir":"resdir"}  
+[2022-03-26 00:00:40] INFO: GET resource=strings  
+[2022-03-26 00:00:40] INFO: Rest method compdef HTTP method GET  
+[2022-03-26 00:00:40] INFO: {"proc":"RESOURCE","dir":"compdir"}  
+[2022-03-26 00:00:40] INFO: GET resource=testtable  
+[2022-03-26 00:00:40] INFO: Rest method testtable HTTP method GET  
+[2022-03-26 00:00:40] INFO: {"proc":"SQL","action":"select * from TEST order by id"}  
+[2022-03-26 00:00:40] INFO: GET null  
+[2022-03-26 00:00:40] INFO: select * from TEST order by id  
+[2022-03-26 00:00:43] INFO: Rest method compdef HTTP method GET  
+[2022-03-26 00:00:43] INFO: {"proc":"RESOURCE","dir":"compdir"}  
+[2022-03-26 00:00:43] INFO: GET resource=testtable_add  
+[2022-03-26 00:00:45] INFO: Rest method testtable_submit HTTP method OPTIONS  
+[2022-03-26 00:00:45] INFO: OPTIONS null  
+[2022-03-26 00:00:45] INFO: OPTIONS request  
+[2022-03-26 00:00:45] INFO: Rest method testtable_submit HTTP method POST  
+[2022-03-26 00:00:45] INFO: {"output":"TMPFILE","proc":"PYTHON3","method":"POST","upload":true,"setenvir":true,"format":"JSON","action":["testtablehandle.py","submit"]}  
+[2022-03-26 00:00:45] INFO: POST null  
+[2022-03-26 00:00:45] INFO: python3 testtablehandle.py submit   
+[2022-03-26 00:00:46] INFO: Traceback (most recent call last):  
+[2022-03-26 00:00:46] INFO:   File "/home/sb/restmysqlmodel/resources/python/testtablehandle.py", line 2, in <module>  
+[2022-03-26 00:00:46] INFO:     import jaydebeapi  
+[2022-03-26 00:00:46] INFO: ModuleNotFoundError: No module named 'jaydebeapi'  
+[2022-03-26 00:00:46] INFO: Exit code 1  
+[2022-03-26 00:00:46] SEVERE: [python3, testtablehandle.py, submit] non zero exit value 1  
+[2022-03-26 00:00:46] SEVERE: Error while handling service 
+java.io.IOException: [python3, testtablehandle.py, submit] non zero exit value 1
+	at com.rest.service.RestService.servicehandle(RestService.java:114)
+	at com.rest.restservice.RestHelper$RestServiceHelper.handle(RestHelper.java:197)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:77)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:82)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:80)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:730)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:77)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:699)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$DefaultExecutor.execute(ServerImpl.java:159)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Dispatcher.handle(ServerImpl.java:446)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Dispatcher.run(ServerImpl.java:412)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+ 
+[2022-03-26 00:02:19] INFO: Rest method testtable_submit HTTP method OPTIONS  
+[2022-03-26 00:02:19] INFO: OPTIONS null  
+[2022-03-26 00:02:19] INFO: OPTIONS request  
+[2022-03-26 00:02:19] INFO: Rest method testtable_submit HTTP method POST  
+[2022-03-26 00:02:19] INFO: {"output":"TMPFILE","proc":"PYTHON3","method":"POST","upload":true,"setenvir":true,"format":"JSON","action":["testtablehandle.py","submit"]}  
+[2022-03-26 00:02:19] INFO: POST null  
+[2022-03-26 00:02:19] INFO: python3 testtablehandle.py submit   
+[2022-03-26 00:02:19] INFO: Traceback (most recent call last):  
+[2022-03-26 00:02:19] INFO:   File "/home/sb/restmysqlmodel/resources/python/testtablehandle.py", line 2, in <module>  
+[2022-03-26 00:02:19] INFO:     import jaydebeapi  
+[2022-03-26 00:02:19] INFO: ModuleNotFoundError: No module named 'jaydebeapi'  
+[2022-03-26 00:02:19] INFO: Exit code 1  
+[2022-03-26 00:02:19] SEVERE: [python3, testtablehandle.py, submit] non zero exit value 1  
+[2022-03-26 00:02:19] SEVERE: Error while handling service 
+java.io.IOException: [python3, testtablehandle.py, submit] non zero exit value 1
+	at com.rest.service.RestService.servicehandle(RestService.java:114)
+	at com.rest.restservice.RestHelper$RestServiceHelper.handle(RestHelper.java:197)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:77)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:82)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:80)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:730)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:77)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:699)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$DefaultExecutor.execute(ServerImpl.java:159)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Dispatcher.handle(ServerImpl.java:446)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Dispatcher.run(ServerImpl.java:412)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+ 
+[2022-03-26 02:19:36] INFO: Rest method testtable_submit HTTP method OPTIONS  
+[2022-03-26 02:19:36] INFO: OPTIONS null  
+[2022-03-26 02:19:36] INFO: OPTIONS request  
+[2022-03-26 02:19:36] INFO: Rest method testtable_submit HTTP method POST  
+[2022-03-26 02:19:36] INFO: {"output":"TMPFILE","proc":"PYTHON3","method":"POST","upload":true,"setenvir":true,"format":"JSON","action":["testtablehandle.py","submit"]}  
+[2022-03-26 02:19:36] INFO: POST null  
+[2022-03-26 02:19:36] INFO: python3 testtablehandle.py submit   
+[2022-03-26 02:19:36] INFO: submit  
+[2022-03-26 02:19:36] INFO: {"action": "NO", "error": [{"field": "id", "mess": "duplicatedvalue"}]}  
+[2022-03-26 02:19:36] INFO: Exit code 0  
+[2022-03-26 02:19:46] INFO: Rest method testtable_submit HTTP method OPTIONS  
+[2022-03-26 02:19:46] INFO: OPTIONS null  
+[2022-03-26 02:19:46] INFO: OPTIONS request  
+[2022-03-26 02:19:46] INFO: Rest method testtable_submit HTTP method POST  
+[2022-03-26 02:19:46] INFO: {"output":"TMPFILE","proc":"PYTHON3","method":"POST","upload":true,"setenvir":true,"format":"JSON","action":["testtablehandle.py","submit"]}  
+[2022-03-26 02:19:46] INFO: POST null  
+[2022-03-26 02:19:46] INFO: python3 testtablehandle.py submit   
+[2022-03-26 02:19:46] INFO: submit  
+[2022-03-26 02:19:46] INFO: {"action": "NO", "error": [{"field": "id", "mess": "duplicatedvalue"}]}  
+[2022-03-26 02:19:46] INFO: Exit code 0  
+[2022-03-26 02:19:48] INFO: Rest method testtable_submit HTTP method POST  
+[2022-03-26 02:19:48] INFO: {"output":"TMPFILE","proc":"PYTHON3","method":"POST","upload":true,"setenvir":true,"format":"JSON","action":["testtablehandle.py","submit"]}  
+[2022-03-26 02:19:48] INFO: POST null  
+[2022-03-26 02:19:48] INFO: python3 testtablehandle.py submit   
+[2022-03-26 02:19:48] INFO: submit  
+[2022-03-26 02:19:48] INFO: {"action": "NO", "error": [{"field": "id", "mess": "duplicatedvalue"}]}  
+[2022-03-26 02:19:48] INFO: Exit code 0  
+[2022-03-26 02:19:49] INFO: Rest method testtable_submit HTTP method POST  
+[2022-03-26 02:19:49] INFO: {"output":"TMPFILE","proc":"PYTHON3","method":"POST","upload":true,"setenvir":true,"format":"JSON","action":["testtablehandle.py","submit"]}  
+[2022-03-26 02:19:49] INFO: POST null  
+[2022-03-26 02:19:49] INFO: python3 testtablehandle.py submit   
+[2022-03-26 02:19:49] INFO: submit  
+[2022-03-26 02:19:49] INFO: {"action": "NO", "error": [{"field": "id", "mess": "duplicatedvalue"}]}  
+[2022-03-26 02:19:49] INFO: Exit code 0  
+[2022-03-26 02:19:49] INFO: Rest method testtable_submit HTTP method POST  
+[2022-03-26 02:19:49] INFO: {"output":"TMPFILE","proc":"PYTHON3","method":"POST","upload":true,"setenvir":true,"format":"JSON","action":["testtablehandle.py","submit"]}  
+[2022-03-26 02:19:49] INFO: POST null  
+[2022-03-26 02:19:49] INFO: python3 testtablehandle.py submit   
+[2022-03-26 02:19:49] INFO: submit  
+[2022-03-26 02:19:49] INFO: {"action": "NO", "error": [{"field": "id", "mess": "duplicatedvalue"}]}  
+[2022-03-26 02:19:49] INFO: Exit code 0  
+[2022-03-26 02:19:50] INFO: Rest method testtable_submit HTTP method POST  
+[2022-03-26 02:19:50] INFO: {"output":"TMPFILE","proc":"PYTHON3","method":"POST","upload":true,"setenvir":true,"format":"JSON","action":["testtablehandle.py","submit"]}  
+[2022-03-26 02:19:50] INFO: POST null  
+[2022-03-26 02:19:50] INFO: python3 testtablehandle.py submit   
+[2022-03-26 02:19:50] INFO: submit  
+[2022-03-26 02:19:50] INFO: {"action": "NO", "error": [{"field": "id", "mess": "duplicatedvalue"}]}  
+[2022-03-26 02:19:50] INFO: Exit code 0  
+[2022-03-26 02:19:51] INFO: Rest method testtable_submit HTTP method POST  
+[2022-03-26 02:19:51] INFO: {"output":"TMPFILE","proc":"PYTHON3","method":"POST","upload":true,"setenvir":true,"format":"JSON","action":["testtablehandle.py","submit"]}  
+[2022-03-26 02:19:51] INFO: POST null  
+[2022-03-26 02:19:51] INFO: python3 testtablehandle.py submit   
+[2022-03-26 02:19:51] INFO: submit  
+[2022-03-26 02:19:51] INFO: {"action": "NO", "error": [{"field": "id", "mess": "duplicatedvalue"}]}  
+[2022-03-26 02:19:51] INFO: Exit code 0  
+[2022-03-26 02:19:56] INFO: Rest method testtable_submit HTTP method OPTIONS  
+[2022-03-26 02:19:56] INFO: OPTIONS null  
+[2022-03-26 02:19:56] INFO: OPTIONS request  
+[2022-03-26 02:19:56] INFO: Rest method testtable_submit HTTP method POST  
+[2022-03-26 02:19:56] INFO: {"output":"TMPFILE","proc":"PYTHON3","method":"POST","upload":true,"setenvir":true,"format":"JSON","action":["testtablehandle.py","submit"]}  
+[2022-03-26 02:19:56] INFO: POST null  
+[2022-03-26 02:19:56] INFO: python3 testtablehandle.py submit   
+[2022-03-26 02:19:56] INFO: submit  
+[2022-03-26 02:19:56] INFO: {"action": "NO", "error": [{"field": "id", "mess": "duplicatedvalue"}]}  
+[2022-03-26 02:19:56] INFO: Exit code 0  
+[2022-03-26 02:21:25] INFO: Rest method testtable_submit HTTP method OPTIONS  
+[2022-03-26 02:21:25] INFO: OPTIONS null  
+[2022-03-26 02:21:25] INFO: OPTIONS request  
+[2022-03-26 02:21:25] INFO: Rest method testtable_submit HTTP method POST  
+[2022-03-26 02:21:25] INFO: {"output":"TMPFILE","proc":"PYTHON3","method":"POST","upload":true,"setenvir":true,"format":"JSON","action":["testtablehandle.py","submit"]}  
+[2022-03-26 02:21:25] INFO: POST null  
+[2022-03-26 02:21:25] INFO: python3 testtablehandle.py submit   
+[2022-03-26 02:21:25] INFO: submit  
+[2022-03-26 02:21:25] INFO: Traceback (most recent call last):  
+[2022-03-26 02:21:25] INFO:   File "/home/sb/restmysqlmodel/resources/python/testtablehandle.py", line 74, in <module>  
+[2022-03-26 02:21:25] INFO:     if what == "submit": submit()  
+[2022-03-26 02:21:25] INFO:   File "/home/sb/restmysqlmodel/resources/python/testtablehandle.py", line 51, in submit  
+[2022-03-26 02:21:25] INFO:     row = getjson()["row"]  
+[2022-03-26 02:21:25] INFO: KeyError: 'row'  
+[2022-03-26 02:21:25] INFO: Exit code 1  
+[2022-03-26 02:21:25] SEVERE: [python3, testtablehandle.py, submit] non zero exit value 1  
+[2022-03-26 02:21:25] SEVERE: Error while handling service 
+java.io.IOException: [python3, testtablehandle.py, submit] non zero exit value 1
+	at com.rest.service.RestService.servicehandle(RestService.java:114)
+	at com.rest.restservice.RestHelper$RestServiceHelper.handle(RestHelper.java:197)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:77)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:82)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:80)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:730)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:77)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:699)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$DefaultExecutor.execute(ServerImpl.java:159)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Dispatcher.handle(ServerImpl.java:446)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Dispatcher.run(ServerImpl.java:412)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+ 
+[2022-03-26 02:22:57] INFO: Rest method testtable_submit HTTP method OPTIONS  
+[2022-03-26 02:22:57] INFO: OPTIONS null  
+[2022-03-26 02:22:57] INFO: OPTIONS request  
+[2022-03-26 02:22:57] INFO: Rest method testtable_submit HTTP method POST  
+[2022-03-26 02:22:57] INFO: {"output":"TMPFILE","proc":"PYTHON3","method":"POST","upload":true,"setenvir":true,"format":"JSON","action":["testtablehandle.py","submit"]}  
+[2022-03-26 02:22:57] INFO: POST null  
+[2022-03-26 02:22:57] INFO: python3 testtablehandle.py submit   
+[2022-03-26 02:22:57] INFO: submit  
+[2022-03-26 02:22:58] INFO: {'id': 1}  
+[2022-03-26 02:22:58] INFO: {"action": "NO", "error": [{"field": "id", "mess": "duplicatedvalue"}]}  
+[2022-03-26 02:22:58] INFO: Exit code 0  
+[2022-03-26 02:23:55] INFO: Rest method testtable_submit HTTP method OPTIONS  
+[2022-03-26 02:23:55] INFO: OPTIONS null  
+[2022-03-26 02:23:55] INFO: OPTIONS request  
+[2022-03-26 02:23:55] INFO: Rest method testtable_submit HTTP method POST  
+[2022-03-26 02:23:55] INFO: {"output":"TMPFILE","proc":"PYTHON3","method":"POST","upload":true,"setenvir":true,"format":"JSON","action":["testtablehandle.py","submit"]}  
+[2022-03-26 02:23:55] INFO: POST null  
+[2022-03-26 02:23:55] INFO: python3 testtablehandle.py submit   
+[2022-03-26 02:23:55] INFO: submit  
+[2022-03-26 02:23:55] INFO: {'id': 1111, 'name': 'wqqwe'}  
+[2022-03-26 02:23:55] INFO: {"action": "NO", "error": [{"field": "id", "mess": "duplicatedvalue"}]}  
+[2022-03-26 02:23:55] INFO: Exit code 0  

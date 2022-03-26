@@ -10,7 +10,9 @@ fields:
 buttons: 
   - id: ACCEPT
     validate: true
+    restaction: testtable_submit
+    method: POST
+    upload: true
+
   - id: CANCEL
     close: boolean
-
-js: testlogic
