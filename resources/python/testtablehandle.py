@@ -30,7 +30,7 @@ def writerest(s):
 def iduniq() :
     da = getjson()
     print(da)
-    id = da["row"]["id"]
+    id = da["id"]
     with getconn() as conn:
         with conn.cursor() as curs:
             curs.execute("SELECT ID FROM TEST WHERE ID=%s" % id)
@@ -39,23 +39,23 @@ def iduniq() :
 
 def checkid() :
     if iduniq() : 
-        writerest({})
+        writerest({'success' : True})
         return True
-    writerest({ 'action': 'NO', 'error': [{ 'field' : 'id', 'mess' : 'duplicatedvalue' }]})
+    writerest({ 'success' : False, 'error': [{ 'field' : 'id', 'err' : {'message' : 'duplicatedvalue' }}]})
     return False
 
 # curs.execute("insert into CUSTOMER values (?, ?)", (1, 'John'))
 
-def submit() :
+def testsubmit() :
     print("submit")
     row = getjson()
     print(row)
-    writerest({ 'action': 'NO', 'error': [{ 'field' : 'id', 'mess' : 'duplicatedvalue' }]})
+    writerest({ 'success' : False, 'error': [{ 'field' : 'id', 'err' : {'messagedirect' : 'Złe pole' }}]})
 
 
-def xsubmit() :
+def submit() :
     if not checkid() : return
-    row = getjson()["row"]
+    row = getjson()
     print(row)
     id = row["id"]
     name = row.get("name")

@@ -2,6 +2,11 @@ columns:
   - field: id 
     fieldtype: number
   - field: name
+  - field: actions
+    actions:
+       - message: delete
+         listdef: testtable_add
+
 
 toolbar:
   - id: ADD

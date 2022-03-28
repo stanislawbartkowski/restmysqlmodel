@@ -16,21 +16,8 @@ columns:
   - field: postalcode
   - field: salesrepemployeenumber
     fieldtype: number
-    fieldtype: number
     props:
       align: 'left'
 
 rowkey: customernumber  
 
-tools: 
-  - actionid: SHOW
-  - actionid: REFRESH
-
-click:
-   - field: customernumber
-     jsaction:
-       - messid: customerpaymentschoice
-         jsaction: JS.clickcustomerpayments
-       - messid: customerorderschoice
-         jsaction: JS.clickcustomerorders
-         

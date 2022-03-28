@@ -38,7 +38,7 @@ en:
   testtable: Test CRUD
   id : Id
   name: Name
-  duplicatedvalue: Powtórzona wartość
+  duplicatedvalue: Duplicated value
   addrecordask: Dodać?
   delrecordask: Usunąć dane?
   changerecordask: Zmienić dane?

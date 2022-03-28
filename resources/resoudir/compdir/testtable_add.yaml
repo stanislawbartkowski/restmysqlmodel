@@ -13,6 +13,7 @@ buttons:
     restaction: testtable_submit
     method: POST
     upload: true
+    confirm: true
 
   - id: CANCEL
     close: boolean
