@@ -39,9 +39,9 @@ def iduniq() :
 
 def checkid() :
     if iduniq() : 
-        writerest({'success' : True})
+        writerest({})
         return True
-    writerest({ 'success' : False, 'error': [{ 'field' : 'id', 'err' : {'message' : 'duplicatedvalue' }}]})
+    writerest({ 'error': [{ 'field' : 'id', 'err' : {'message' : 'duplicatedvalue' }}]})
     return False
 
 # curs.execute("insert into CUSTOMER values (?, ?)", (1, 'John'))
@@ -50,7 +50,7 @@ def testsubmit() :
     print("submit")
     row = getjson()
     print(row)
-    writerest({ 'success' : False, 'error': [{ 'field' : 'id', 'err' : {'messagedirect' : 'Złe pole' }}]})
+    writerest({ 'error': [{ 'field' : 'id', 'err' : {'messagedirect' : 'Złe pole' }}]})
 
 
 def submit() :
@@ -65,6 +65,11 @@ def submit() :
             else : sql = "insert into TEST values (%s ,'%s')" % (id,name)
             print(sql)
             curs.execute(sql)
+            writerest ({ 'notification' : 
+                { 'kind' : 'success',
+                'title' : { 'message' : 'done'},
+                'description': {'message' : 'youadded', 'params' : [id]} }
+             })
 
 
 if __name__ == '__main__':

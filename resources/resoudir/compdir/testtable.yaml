@@ -5,8 +5,13 @@ columns:
   - field: actions
     actions:
        - message: delete
-         listdef: testtable_add
+         jsclick: JS.testableclickdelete
+         listdef: testtable_del
+       - message: update
+         jsclick: JS.testableclickupdate
+         listdef: testtable_modif
 
+js: jslogic
 
 toolbar:
   - id: ADD

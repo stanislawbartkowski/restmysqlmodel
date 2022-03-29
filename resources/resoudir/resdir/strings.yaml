@@ -68,6 +68,10 @@ en:
   orderlinenumber: number
   quantityordered: Quantity ordered
   priceeach: Price each
+  done: Done
+  youdeleted: You deleted record {0} 
+  youupdated: You updated record {0}
+  youadded: You added record {0}
 
 
 

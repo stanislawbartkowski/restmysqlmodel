@@ -1,6 +1,7 @@
 proc: SQL
 action: update TEST set name=? where id=?
 updatequery: true
+method: PUT
 pars:
   - name: name
   - name: id

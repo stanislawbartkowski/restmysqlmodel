@@ -1,14 +1,18 @@
 fields:
-  - field: id
-    props:
-      readOnly: true
-      type: number
+  - field: id  
+    fieldtype: number
+    iprops:
+      disabled: true
   - field: name
 
 buttons: 
-  - actionid: ACCEPT
-    jsaction: TS.modifdata
-  - actionid: CANCEL
-    close: true
+  - id: UPDATE
+    jsclick: JS.testtableupdate
+    method: PUT
+    confirm: true
+    props:
+       type: primary     
+  - id: CANCEL
+    close: boolean
 
-js: testlogic
+js: jslogic
