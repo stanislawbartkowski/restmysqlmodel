@@ -50,4 +50,22 @@ var JS = {
       notification: this.notification('youupdated',row)
     };
   },
+
+// antd 
+  getorderbadge : function(row) {
+    var t = row.status
+    var st = 'default'
+    switch (t) {
+      case 'Shipped' : st = 'success'; break;
+      case 'In Process' : st = 'processing'; break;
+      case 'Disputed' : st = 'warning'; break
+      case 'Cancelled' : break;
+      case 'Resolved' : st = 'success'; break;
+      case 'On Hold': st = 'warning' ; break
+    }
+    return { 
+      props : { status: st}
+    }
+  }
+
 };

@@ -7,6 +7,7 @@ columns:
       align: 'left'
   - field: customername
   - field: paymentdate
+    fieldtype: date
   - field: amount
     fieldtype: number
 

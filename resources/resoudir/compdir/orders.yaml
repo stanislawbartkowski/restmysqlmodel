@@ -13,6 +13,8 @@ columns:
   - field: requireddate
   - field: shippeddate
   - field: status
+    badge:
+       js: JS.getorderbadge
   - field: comments
 
 rowkey: ordernumber
