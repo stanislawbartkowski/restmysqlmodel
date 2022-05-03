@@ -4,17 +4,19 @@ columns:
   - field: name
   - field: actions
     actions:
-       - message: delete
-         jsclick: JS.testableclickdelete
-         listdef: testtable_del
-       - message: update
-         jsclick: JS.testableclickupdate
-         listdef: testtable_modif
+       actions:
+         - message: delete
+           jsclick: JS.testableclickdelete
+           listdef: testtable_del
+         - message: update
+           jsclick: JS.testableclickupdate
+           listdef: testtable_modif
 
 js: jslogic
 
-toolbar:
-  - id: ADD
-    props:
-       type: primary
-    listdef: testtable_add
+header :
+  toolbar:
+    - id: ADD
+      props:
+         type: primary
+      listdef: testtable_add

@@ -3,11 +3,11 @@ columns:
     showdetails: true 
     fieldtype: number
     props:
-      align: 'left'
+      align: left
   - field: customernumber
     fieldtype: number
     props:
-      align: 'left'
+      align: left
   - field: customername
   - field: orderdate
   - field: requireddate

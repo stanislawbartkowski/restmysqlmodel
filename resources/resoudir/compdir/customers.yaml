@@ -3,7 +3,7 @@ columns:
     showdetails: true 
     fieldtype: number
     props:
-      align: 'left'
+      align: left
   - field: customername
   - field: creditlimit
     fieldtype: number
@@ -17,7 +17,7 @@ columns:
   - field: salesrepemployeenumber
     fieldtype: number
     props:
-      align: 'left'
+      align: left
 
 rowkey: customernumber  
 

@@ -1,24 +1,12 @@
 columns:
   - field: productcode
+    showdetails: true      
   - field: productname
-    props:
-      width: 180
   - field: productscale
   - field: productvendor
-    props:
-      width: 180
   - field: quantityinstock
-    props:
-      type: number
+    fieldtype: number
   - field: buyprice
-    props:
-      type: number
+    fieldtype: money
   - field: msrp
-    props:
-      type: number
 
-tools: 
-  - actionid: SHOW
-
-
-jstitle: JS.productlineproductstitle

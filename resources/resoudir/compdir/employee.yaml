@@ -3,7 +3,7 @@ columns:
     showdetails: true 
     fieldtype: number
     props:
-      align: 'left'
+      align: left
   - field: lastname
   - field: firstname
   - field: extension

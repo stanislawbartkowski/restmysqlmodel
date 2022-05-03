@@ -3,11 +3,11 @@ columns:
     showdetails: true 
     fieldtype: number
     props:
-      align: 'left'
+      align: left
   - field: ordernumber
     fieldtype: number
     props:
-      align: 'left'
+      align: left
   - field: productcode
   - field: productname
   - field: quantityordered

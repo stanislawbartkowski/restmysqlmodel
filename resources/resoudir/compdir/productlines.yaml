@@ -3,14 +3,12 @@ columns:
     showdetails: true 
   - field: textdescription
     coltitle: description
-
+  - field: actions
+    actions:
+       actions:
+       - message: products
+         jsclick: JS.productlineaction
+       
 rowkey: productline
 
-tools: 
-  - actionid: SHOW
-
 js: jslogic
-
-click:
-   - field: productline
-     jsaction: JS.clickproductlineproducts

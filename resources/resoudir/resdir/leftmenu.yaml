@@ -10,3 +10,7 @@ menu:
   - id: orders
   - id: payments
   - id: testtable
+  - title: reports
+    menus:
+    - id: printcustomers
+      listdef: reports/printcustomers

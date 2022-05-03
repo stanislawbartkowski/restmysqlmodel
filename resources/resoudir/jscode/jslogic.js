@@ -66,6 +66,25 @@ var JS = {
     return { 
       props : { status: st}
     }
+  },
+
+  getproductlineaction: function(row) {
+     return { actions: [ 
+         { 
+             message: 'products', 
+             list: 'productlineproducts', 
+             params: { productline : row.productline },  
+             props: { width: "70%" }  } 
+        ] 
+      }
+  },
+
+  productlineaction: function(row) {
+    return {
+      message: 'products', 
+      list: 'productlineproducts', 
+      params: { productline : row.productline },  
+      props: { width: "70%" }  } 
   }
 
 };
