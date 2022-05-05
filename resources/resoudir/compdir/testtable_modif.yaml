@@ -8,7 +8,6 @@ fields:
 buttons: 
   - id: UPDATE
     jsclick: JS.testtableupdate
-    method: PUT
     confirm: true
     props:
        type: primary     

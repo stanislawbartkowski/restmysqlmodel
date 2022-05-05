@@ -12,5 +12,6 @@ menu:
   - id: testtable
   - title: reports
     menus:
-    - id: printcustomers
-      listdef: reports/printcustomers
+    - id: printorders
+      listdef: reports/printorders
+      icon: printoutlined

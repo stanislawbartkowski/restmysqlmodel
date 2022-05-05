@@ -1,0 +1,9 @@
+proc: PYTHON3
+output: TMPFILE
+format: MIXED
+method: POST
+upload: true
+setenvir: true
+action:
+  - testtablehandle.py
+  - report

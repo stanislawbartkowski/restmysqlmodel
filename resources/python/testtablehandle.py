@@ -6,6 +6,10 @@ import jaydebeapi
 def getfiles():
     return (os.environ["TMPFILE"], os.environ["UPLOADEDFILE"])
 
+def getcontentfile() : 
+    return open(os.environ["CONTENTFILE"],"w+")
+
+
 def getconn():
     url = os.environ["ENV_url"]
     user = os.environ["ENV_user"]
@@ -53,6 +57,10 @@ def testsubmit() :
     writerest({ 'error': [{ 'field' : 'id', 'err' : {'messagedirect' : 'Złe pole' }}]})
 
 
+def get(row,key) :
+    p = row.get(key)
+    return p if p else ""
+
 def submit() :
     if not checkid() : return
     row = getjson()
@@ -71,8 +79,24 @@ def submit() :
                 'description': {'message' : 'youadded', 'params' : [id]} }
              })
 
-
+def report() :
+    row = getjson()
+    print(row)
+    writerest ({ 'notification' : 
+                { 'kind' : 'success',
+                'title' : { 'message' : 'done'},
+                'description': {'message' : 'reportisready'} }
+             })
+    customerorder = row["customernumber"]
+    orderdate = get(row,"orderdate")
+    with getcontentfile() as f:
+        f.write("My Report")
+        f.write("<br/>")        
+        f.write("<br/>"+customerorder)
+        f.write("<br/>"+orderdate)
+            
 if __name__ == '__main__':
     what = sys.argv[1]
     if what == "checkid": checkid()
     if what == "submit": submit()
+    if what == "report": report()

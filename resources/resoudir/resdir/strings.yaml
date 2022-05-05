@@ -74,6 +74,9 @@ en:
   youadded: You added record {0}
   reports: Reports
   printcustomers: Print customers
+  printorders: Print orders
+  reportisready: Report is ready
+  allorders: All orders
 
 
 

@@ -1,0 +1,26 @@
+fields:
+  - field: customernumber
+    props:
+      required: true
+      rules: 
+      - required: true
+  - field: orderdate
+    fieldtype: date
+  - field: allorders
+    fieldtype: boolean
+
+buttons: 
+  - id: PRINT
+    validate: true
+    restaction: report/printcustomers
+    method: POST 
+    upload: true
+    confirm: true
+    print: true
+    props:
+       type: primary
+
+formprops:
+    labelCol:
+      span: 10
+
