@@ -8,6 +8,83 @@ fields:
     fieldtype: date
   - field: allorders
     fieldtype: boolean
+  - field: orderstatus
+    radio: 
+      items:
+        - value: shipped
+          label: 
+             messagedirect: shipped
+        - value: delayed
+          label: 
+             messagedirect: delayed
+
+  - field: orderstatus1    
+    coltitle: 
+      message: orderstatus
+    radio: 
+      button: true
+      items:
+        - value: shipped
+          label: 
+             messagedirect: shipped
+        - value: delayed
+          label: 
+             messagedirect: delayed
+
+  - field: orderstatus2  
+    coltitle: 
+      message: orderstatus
+    radio: 
+      select: true
+      items:
+        - value: shipped
+          label: 
+             messagedirect: shipped
+        - value: delayed
+          label: 
+             messagedirect: delayed
+
+
+  - field: ordersstatus10
+    coltitle: 
+      message: orderstatus
+    checkbox: 
+      items:
+        - value: shipped
+          label: 
+             messagedirect: shipped
+        - value: delayed
+          label: 
+             messagedirect: delayed
+
+  - field: ordersstatus11
+    coltitle: 
+      message: orderstatus
+    checkbox: 
+      select: true
+      items:
+        - value: shipped
+          label: 
+             messagedirect: shipped
+        - value: delayed
+          label: 
+             messagedirect: delayed
+
+  - field: names
+    coltitle:
+       message: customername
+    list: 
+      addbutton:
+        name:
+          message: addcustomer
+      card:
+        title:
+           message: addlistofcustomer
+        props:
+           bordered: true
+           style: 
+              border: dashed 1px blue
+
 
 buttons: 
   - id: PRINT

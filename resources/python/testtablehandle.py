@@ -94,6 +94,7 @@ def report() :
         f.write("<br/>")        
         f.write("<br/>"+customerorder)
         f.write("<br/>"+orderdate)
+        f.write(str(row))
             
 if __name__ == '__main__':
     what = sys.argv[1]

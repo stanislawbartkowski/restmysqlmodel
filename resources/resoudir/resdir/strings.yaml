@@ -77,6 +77,12 @@ en:
   printorders: Print orders
   reportisready: Report is ready
   allorders: All orders
+  shipped: Shipped
+  delayed: Delayed
+  orderstatus: Order status
+  ordersexpected: Order expected
+  addcustomer : Add customer
+  addlistofcustomer: Add list of customers
 
 
 
