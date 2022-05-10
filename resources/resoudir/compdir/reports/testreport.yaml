@@ -1,0 +1,23 @@
+fields:
+  - field: testmoney
+    fieldtype: money
+    props:
+      required: true
+      rules: 
+      - required: true
+
+buttons: 
+  - id: PRINT
+    validate: true
+    restaction: report/testreport
+    method: POST 
+    upload: true
+    print: true
+    props:
+       type: primary
+
+formprops:
+    labelCol:
+      span: 10
+
+  

@@ -1,0 +1,6 @@
+proc: PYTHON3
+output: TMPFILE
+format: MIXED
+method: POST
+upload: true
+action: testreport.py

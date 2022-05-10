@@ -1,5 +1,6 @@
 import os, sys, json
 import jaydebeapi
+import * from helper
 
 # CREATE TABLE TEST (ID INT NOT NULL PRIMARY KEY, NAME VARCHAR(100));
 

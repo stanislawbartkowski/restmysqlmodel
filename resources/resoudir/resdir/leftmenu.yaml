@@ -15,3 +15,7 @@ menu:
     - id: printorders
       listdef: reports/printorders
       icon: printoutlined
+    - id: testreport
+      listdef: reports/testreport
+      icon: printoutlined
+    
