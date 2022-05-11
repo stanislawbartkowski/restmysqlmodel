@@ -6,6 +6,69 @@ fields:
       rules: 
       - required: true
 
+  - field: testdate
+    fieldtype: date
+
+  - field: rangedate
+    fieldtype: date
+    range: true
+    iprops:
+      allowEmpty:
+        - false
+        - true
+
+  - coltitle:
+       message: rangestring
+    items:
+      - field: name1
+        coltitle:
+           message: empty
+        props:
+          style:
+            display: 'inline-block'
+            width: 50%
+      - field: name2
+        coltitle:
+           message: empty
+        props:
+          style:
+            width: calc(50% - 6px)
+            display: 'inline-block'
+            margin: '0'
+            marginLeft: 6px
+
+  - field: names
+    coltitle:
+       message: rangestring
+    list: 
+      addbutton:
+        name:
+          message: addrange
+      card:
+        title:
+           message: listofranges
+        props:
+           bordered: true
+           style: 
+              border: dashed 1px blue                        
+    items:
+      - field: name1
+        coltitle:
+           message: empty
+        props:
+          style:
+            display: 'inline-block'
+            width: 50%
+      - field: name2
+        coltitle:
+           message: empty
+        props:
+          style:
+            width: calc(50% - 6px)
+            display: 'inline-block'
+            margin: '0'
+            marginLeft: 6px
+
 buttons: 
   - id: PRINT
     validate: true

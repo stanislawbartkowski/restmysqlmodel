@@ -1,4 +1,4 @@
-import os,json
+import os,json,datetime
 
 def getfiles():
     return (os.environ["TMPFILE"], os.environ["UPLOADEDFILE"])
@@ -14,9 +14,7 @@ def getjson():
 def writerest(s):
     (t, u) = getfiles()
     with open(t, "w+") as f:
-        print(s)
         ss = json.dumps(s)
-        print(ss)
         f.write(ss)
 
 def writedone(text=False) :
@@ -30,8 +28,8 @@ def writedone(text=False) :
 
 class WJON :
 
-  def __init__(self) :
-    self.js = getjson()
+  def __init__(self,jss=getjson()) :
+    self.js = jss
     print(self.js)
 
   def haskey(self,n) :
@@ -47,6 +45,17 @@ class WJON :
     if isinstance(s, str) or  isinstance(s, unicode) : s = float(s)
     return s
 
+  def getdate(self,n) :
+    s = self.get(n)
+    if s is None : return s
+    return datetime.datetime.strptime(s,'%Y-%m-%d').date()
+  
+  def getdaterange(self,n) :
+    s = self.get(n)
+    if s is None : return s
+    d1 = None if s[0] is None else datetime.datetime.strptime(s[0],'%Y-%m-%d').date()
+    d2 = None if s[1] is None else datetime.datetime.strptime(s[1],'%Y-%m-%d').date()
+    return [d1,d2]  
 
   def incheckbox(self,check,val) :
     if not self.js.has_key(check): return False

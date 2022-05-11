@@ -84,6 +84,12 @@ en:
   addcustomer : Add customer
   addlistofcustomer: Add list of customers
   testreport: Test report
+  testmoney: Money
+  testdate: Date
+  rangedate: Range date
+  rangestring: Range string
+  listofranges: List of ranges
+  addrange: Add range
 
 
 
