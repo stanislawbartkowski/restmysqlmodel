@@ -37,6 +37,15 @@ fields:
             margin: '0'
             marginLeft: 6px
 
+  - field: namesearch
+    coltitle:
+       messagedirect: Search name
+    enterbutton:
+       messagedirect: Search
+    placeholder:
+       messagedirect: Enter the name
+               
+
   - field: names
     coltitle:
        message: rangestring

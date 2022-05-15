@@ -34,6 +34,8 @@ fields:
   - field: orderstatus2  
     coltitle: 
       message: orderstatus
+    placeholder:
+        messagedirect: Enter order status
     radio: 
       select: true
       items:
@@ -60,6 +62,8 @@ fields:
   - field: ordersstatus11
     coltitle: 
       message: orderstatus
+    placeholder:
+        messagedirect: Enter order status
     checkbox: 
       select: true
       items:
