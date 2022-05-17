@@ -60,7 +60,7 @@ fields:
       card:
         title:
            message: listofranges
-        props:
+        cardprops:
            bordered: true
            style: 
               border: dashed 1px blue                        
@@ -83,17 +83,16 @@ fields:
             marginLeft: 6px
 
 buttons: 
-  - id: PRINT
-    validate: true
-    restaction: report/testreport
-    method: POST 
-    upload: true
-    print: true
-    props:
-       type: primary
+ - replace# : replace/printbutton
+   restaction: report/testreport
 
 formprops:
     labelCol:
       span: 10
+
+cardprops:
+  style:
+     width: 40%
+     border: solid 1px
 
   

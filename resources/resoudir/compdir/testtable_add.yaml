@@ -19,3 +19,8 @@ buttons:
 
   - id: CANCEL
     close: boolean
+
+formprops:
+  labelCol:
+    span: 5
+

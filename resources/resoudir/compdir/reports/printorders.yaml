@@ -1,79 +1,4 @@
 fields:
-  - field: customernumber
-    props:
-      required: true
-      rules: 
-      - required: true
-  - field: orderdate
-    fieldtype: date
-  - field: allorders
-    fieldtype: boolean
-  - field: orderstatus
-    radio: 
-      items:
-        - value: shipped
-          label: 
-             messagedirect: shipped
-        - value: delayed
-          label: 
-             messagedirect: delayed
-
-  - field: orderstatus1    
-    coltitle: 
-      message: orderstatus
-    radio: 
-      button: true
-      items:
-        - value: shipped
-          label: 
-             messagedirect: shipped
-        - value: delayed
-          label: 
-             messagedirect: delayed
-
-  - field: orderstatus2  
-    coltitle: 
-      message: orderstatus
-    placeholder:
-        messagedirect: Enter order status
-    radio: 
-      select: true
-      items:
-        - value: shipped
-          label: 
-             messagedirect: shipped
-        - value: delayed
-          label: 
-             messagedirect: delayed
-
-
-  - field: ordersstatus10
-    coltitle: 
-      message: orderstatus
-    checkbox: 
-      items:
-        - value: shipped
-          label: 
-             messagedirect: shipped
-        - value: delayed
-          label: 
-             messagedirect: delayed
-
-  - field: ordersstatus11
-    coltitle: 
-      message: orderstatus
-    placeholder:
-        messagedirect: Enter order status
-    checkbox: 
-      select: true
-      items:
-        - value: shipped
-          label: 
-             messagedirect: shipped
-        - value: delayed
-          label: 
-             messagedirect: delayed
-
   - field: names
     coltitle:
        message: customername
@@ -84,24 +9,54 @@ fields:
       card:
         title:
            message: addlistofcustomer
-        props:
+        cardprops:
            bordered: true
            style: 
               border: dashed 1px blue
+    items:
+      - field: name1
+        coltitle:
+           message: empty
+        props:
+          style:
+            display: 'inline-block'
+            width: 50%
+        enterbutton:
+          messagedirect: Search
+          list: customers
+          listdef: search/searchcustomers
+          modalprops: 
+            width: 70%
+        placeholder:
+          messagedirect: Customer number
 
+      - field: name2
+        coltitle:
+           message: empty
+        props:
+          style:
+            width: 46%
+            display: 'inline-block'
+            margin: '0'
+            marginLeft: 6px
+        enterbutton:
+          messagedirect: Search
+          list: customers
+          listdef: search/searchcustomers
+          modalprops: 
+            width: 70%
+        placeholder:
+          messagedirect: Customer number
 
 buttons: 
-  - id: PRINT
-    validate: true
-    restaction: report/printcustomers
-    method: POST 
-    upload: true
-    confirm: true
-    print: true
-    props:
-       type: primary
+  - replace# : replace/printbutton
+    restaction: report/printorders
 
 formprops:
     labelCol:
-      span: 10
+      span: 5
 
+cardprops:
+  style:
+     width: 40%
+     border: solid 1px green

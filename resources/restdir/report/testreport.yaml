@@ -1,6 +1,2 @@
-proc: PYTHON3
-output: TMPFILE
-format: MIXED
-method: POST
-upload: true
+replace#: replace/printrestdir
 action: testreport.py

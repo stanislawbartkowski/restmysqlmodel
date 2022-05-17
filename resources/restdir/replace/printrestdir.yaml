@@ -4,6 +4,3 @@ format: MIXED
 method: POST
 upload: true
 setenvir: true
-action:
-  - testtablehandle.py
-  - report

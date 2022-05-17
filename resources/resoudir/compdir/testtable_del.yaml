@@ -18,3 +18,7 @@ buttons:
     close: boolean
 
 js: jslogic
+
+formprops:
+  labelCol:
+    span: 5

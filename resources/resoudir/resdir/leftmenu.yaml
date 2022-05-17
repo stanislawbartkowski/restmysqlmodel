@@ -14,6 +14,10 @@ menu:
     menus:
     - id: printorders
       listdef: reports/printorders
+    - id: testorders
+      name:
+        messagedirect: Print test
+      listdef: reports/testorders
       icon: printoutlined
     - id: testreport
       listdef: reports/testreport
