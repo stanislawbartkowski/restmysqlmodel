@@ -42,6 +42,10 @@ fields:
        messagedirect: Search name
     enterbutton:
        messagedirect: Search
+       list: customers
+       listdef: search/searchcustomers
+       modalprops: 
+         width: 70%
     placeholder:
        messagedirect: Enter the name
                

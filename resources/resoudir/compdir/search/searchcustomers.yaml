@@ -1,0 +1,32 @@
+columns:
+  - field: customernumber
+    showdetails: true 
+    fieldtype: number
+    props:
+      align: left
+  - field: customername
+  - field: creditlimit
+    fieldtype: number
+  - field: contactfirstname
+  - field: contactlastname
+  - field: phone
+  - field: addressline1
+  - field: country
+  - field: city
+  - field: postalcode
+  - field: salesrepemployeenumber
+    fieldtype: number
+    props:
+      align: left
+
+rowkey: customernumber  
+
+nopaging: 10
+
+header :
+  toolbar:
+    - id: CHOOSE
+      choosefield: customernumber
+      props:
+         type: primary
+    - id: CANCEL

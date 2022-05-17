@@ -14,7 +14,8 @@ def report():
       name1 = w.get("name1")
       name2 = w.get("name2")
       f.write(f"name1 = {name1} name2={name2}\n")
-
+      namesearch = w.get("namesearch")
+      f.write(f"name search = {namesearch}\n")
 
    writedone(True)         
 
