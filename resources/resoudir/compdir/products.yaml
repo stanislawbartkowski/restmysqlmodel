@@ -8,7 +8,7 @@ columns:
   - field: quantityinstock
     fieldtype: number
   - field: buyprice
-    fieldtype: number
+    fieldtype: money
   - field: msrp
     fieldtype: number
 

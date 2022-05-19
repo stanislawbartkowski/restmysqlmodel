@@ -9,6 +9,6 @@ columns:
   - field: paymentdate
     fieldtype: date
   - field: amount
-    fieldtype: number
+    fieldtype: money
 
 rowkey: checknumber
