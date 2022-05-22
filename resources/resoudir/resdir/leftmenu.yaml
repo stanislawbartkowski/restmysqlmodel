@@ -10,16 +10,11 @@ menu:
   - id: orders
   - id: payments
   - id: testtable
-  - title: reports
-    menus:
-    - id: printorders
-      listdef: reports/printorders
-    - id: testorders
-      name:
-        messagedirect: Print test
-      listdef: reports/testorders
-      icon: printoutlined
-    - id: testreport
-      listdef: reports/testreport
-      icon: printoutlined
+  - id: testdir
+    name:
+      messagedirect: Directory
+    icon: printoutlined
+    list: getdir
+    menudir: true
+     
     

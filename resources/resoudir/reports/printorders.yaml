@@ -1,0 +1,4 @@
+id: printorders
+name: Print orders
+descr: This report print customer orders
+listdef: reports/printorders
