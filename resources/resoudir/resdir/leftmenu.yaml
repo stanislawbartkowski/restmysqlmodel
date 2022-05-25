@@ -9,12 +9,16 @@ menu:
   - id: offices
   - id: orders
   - id: payments
-  - id: testtable
   - id: testdir
     name:
       messagedirect: Directory
     icon: printoutlined
     list: getdir
     menudir: true
-     
-    
+  - id: ttdir
+    name:
+      messagedirect: Tests
+    icon: printoutlined
+    list: gettestdir
+    listdef: getdir
+    menudir: true

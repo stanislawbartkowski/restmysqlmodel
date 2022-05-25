@@ -1,0 +1,25 @@
+fields:
+  - field: orderstatus1    
+    coltitle: 
+      message: orderstatus
+    radio: 
+      button: true
+      items:
+        restaction: tests/getitems
+        value: id
+        label: name
+
+buttons: 
+ - replace# : replace/printbutton
+   restaction: report/testreport
+
+formprops:
+    labelCol:
+      span: 10
+
+cardprops:
+  style:
+     width: 40%
+     border: solid 1px
+
+

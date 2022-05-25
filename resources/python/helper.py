@@ -1,7 +1,10 @@
 import os,json,datetime
 
+def _tmpfile() :
+  return os.environ["TMPFILE"]
+
 def getfiles():
-    return (os.environ["TMPFILE"], os.environ["UPLOADEDFILE"])
+    return (_tmpfile(), os.environ["UPLOADEDFILE"])
 
 def getcontentfile() : 
     return open(os.environ["CONTENTFILE"],"w+")
@@ -11,11 +14,17 @@ def getjson():
     with open(u) as f:
         return json.load(f)
 
-def writerest(s):
-    (t, u) = getfiles()
+def _writerestt(t,s) :
     with open(t, "w+") as f:
         ss = json.dumps(s)
         f.write(ss)
+
+def writerestt(s) :
+    _writerestt(_tmpfile(),s)
+
+def writerest(s):
+    (t, u) = getfiles()
+    _writerestt(t,s)
 
 def writedone(text=False) :
     res = { 'notification' : 
@@ -28,8 +37,9 @@ def writedone(text=False) :
 
 class WJON :
 
-  def __init__(self,jss=getjson()) :
-    self.js = jss
+  def __init__(self,js=None) :
+    if js is None : js = getjson()
+    self.js = js
     print(self.js)
 
   def haskey(self,n) :

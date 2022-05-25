@@ -1,0 +1,4 @@
+id: testdynamic
+name: Dynamic options
+descr: Select and dictionaries provided dynamically through REST/API
+listdef: tests/printdynamic
