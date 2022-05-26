@@ -1,0 +1,4 @@
+fields:
+  - field: pfinal
+    fieldtype: html
+

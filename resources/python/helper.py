@@ -52,7 +52,7 @@ class WJON :
   def getnumber(self,n) :
     s = self.get(n)
     if s is None : return s
-    if isinstance(s, str) or  isinstance(s, unicode) : s = float(s)
+    if isinstance(s, str) : s = float(s)
     return s
 
   def getdate(self,n) :

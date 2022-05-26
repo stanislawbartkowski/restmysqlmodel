@@ -49,6 +49,14 @@ def checkid() :
     writerest({ 'error': [{ 'field' : 'id', 'err' : {'message' : 'duplicatedvalue' }}]})
     return False
 
+def stepcheckid() :
+    if iduniq() : 
+        descr = "<H1> You are about to add new entry to testtable table</H1>"
+        writerest({"next" : True, "vars" : {"descr" : descr}})
+        return
+    writerest({ 'error': [{ 'field' : 'id', 'err' : {'message' : 'duplicatedvalue' }}]})
+ 
+
 # curs.execute("insert into CUSTOMER values (?, ?)", (1, 'John'))
 
 def testsubmit() :
@@ -99,6 +107,8 @@ def report() :
             
 if __name__ == '__main__':
     what = sys.argv[1]
+    print(what)
     if what == "checkid": checkid()
     if what == "submit": submit()
     if what == "report": report()
+    if what == "stepcheckid" : stepcheckid()

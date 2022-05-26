@@ -1,0 +1,16 @@
+fields:
+  - field: id  
+    fieldtype: number
+    props:
+      required: true
+      rules: 
+      - required: true
+  - field: name
+
+js: jslogic
+
+restapivals: tests/getinitvalues
+
+buttons: 
+ - replace# : replace/printbutton
+   restaction: tests/printinitvalues

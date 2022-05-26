@@ -74,6 +74,18 @@ var JS = {
       list: 'productlineproducts', 
       params: { productline : row.productline },  
       modalprops: { width: "70%" }  } 
+  },
+
+  step3values: function(row,vars) {
+    console.log("row:================")
+    console.log(row)
+    console.log("vars:===========")
+    console.log(vars)
+    return { next: true, vars: { pdescr: "Just adding new value" }}
+  },
+
+  step3doaction: function(row,vars) {
+    return { next: true, vars: { pfinal: "<H1>Congratulations</H1>: it is done" }}
   }
 
 };

@@ -1,0 +1,14 @@
+steps:
+  - title:
+      messagedirect: Parameters
+    listdef: tests/step1
+  - title:
+      messagedirect: Parameters review
+    listdef: tests/step2
+  - title:
+      messagedirect: Adding
+    listdef: tests/step3    
+  - title:
+      messagedirect: Final
+    listdef: tests/step4
+

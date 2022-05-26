@@ -1,0 +1,18 @@
+fields:
+  - field: id  
+    fieldtype: number
+    props:
+      required: true
+      rules: 
+      - required: true
+  - field: name
+
+buttons: 
+  - id: NEXT
+    validate: true
+    restaction: tests/step_checkid
+    method: POST 
+    upload: true
+    props:
+     type: primary
+

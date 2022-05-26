@@ -1,0 +1,19 @@
+fields:
+  - field: pdescr
+    fieldtype: html
+    
+js: jslogic
+
+buttons: 
+  - id: PREV
+    prev: true
+  - id: NEXT
+    props:
+     type: primary
+    trigger: true
+    jsclick: JS.step3doaction
+
+
+
+
+
