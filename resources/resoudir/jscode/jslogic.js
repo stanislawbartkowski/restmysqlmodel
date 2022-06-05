@@ -1,5 +1,4 @@
 var JS = {
-  //antd
   testableclickdelete: function (row) {
     return {
       listdef: "testtable_del",
@@ -7,7 +6,6 @@ var JS = {
     };
   },
 
-  //antd
   testableclickupdate: function (row) {
     return {
       listdef: "testtable_modif",
@@ -15,7 +13,6 @@ var JS = {
     };
   },
 
-  // antd
   getexpandorders: function (row) {
     return { list: "orderdetails", params: { ordernumber: row.ordernumber } };
   },
@@ -31,7 +28,6 @@ var JS = {
     }
   },
 
-  // antd
   testtabledelete: function (row) {
     return {
       restaction: "testtable-del",
@@ -41,7 +37,12 @@ var JS = {
     };
   },
 
-  // antd
+  inittestvals: function(row,vars) {
+    console.log("initvals")
+    console.log(vars)
+    return vars
+  },
+
   testtableupdate: function (row) {
     return {
       restaction: "testtable-modif",
@@ -51,7 +52,6 @@ var JS = {
     };
   },
 
-// antd 
   getorderbadge : function(row) {
     var t = row.status
     var st = 'default'

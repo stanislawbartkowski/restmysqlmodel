@@ -10,11 +10,13 @@ buttons:
     jsclick: JS.testtableupdate
     confirm: true
     props:
-       type: primary     
+      type: primary     
   - id: CANCEL
     close: boolean
 
 js: jslogic
+
+jsrestapivals: JS.inittestvals
 
 formprops:
   labelCol:
