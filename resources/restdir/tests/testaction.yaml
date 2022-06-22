@@ -1,0 +1,6 @@
+proc: PYTHON3
+output: TMPFILE
+format: JSON
+action: testrun.py
+pars:
+  - name: what

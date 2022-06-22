@@ -14,6 +14,12 @@ def getjson():
     with open(u) as f:
         return json.load(f)
 
+def getpar(p) :
+  print("getpar="+p)
+  val = os.environ[p]
+  print(val)
+  return val
+
 def _writerestt(t,s) :
     with open(t, "w+") as f:
         ss = json.dumps(s)
@@ -23,8 +29,7 @@ def writerestt(s) :
     _writerestt(_tmpfile(),s)
 
 def writerest(s):
-    (t, u) = getfiles()
-    _writerestt(t,s)
+    _writerestt(_tmpfile(),s)
 
 def writedone(text=False) :
     res = { 'notification' : 
