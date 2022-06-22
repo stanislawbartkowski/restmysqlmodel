@@ -1,10 +1,12 @@
 fields:
   - field: id
     fieldtype: number
-    props:
-      required: true
-      rules: 
-      - required: true
+    validate:
+    - required: true
+    - restaction:
+        restaction : testtable_checkduplicate
+        method: POST
+        upload: true    
   - field: name
 
 buttons: 
@@ -18,7 +20,7 @@ buttons:
        type: primary
 
   - id: CANCEL
-    close: boolean
+    close: true
 
 formprops:
   labelCol:

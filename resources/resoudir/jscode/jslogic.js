@@ -43,6 +43,14 @@ var JS = {
     return vars
   },
 
+  initteststeps: function(row) {
+    var v = {}
+    v.id = null
+    v.name = "XXXXXXXX"
+    v.descr = "<h3>Initialy set as empty and XXXXXX</h3> <br> Should retains new values after coming back from next step"
+    return v
+  },
+
   testtableupdate: function (row) {
     return {
       restaction: "testtable-modif",

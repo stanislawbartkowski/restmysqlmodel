@@ -12,7 +12,7 @@ buttons:
     props:
       type: primary     
   - id: CANCEL
-    close: boolean
+    close: true
 
 js: jslogic
 

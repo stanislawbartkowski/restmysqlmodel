@@ -1,0 +1,4 @@
+id: teststeps
+name: Two steps and initvals
+descr: This test displays jsinitvals, should be called only once
+listdef: teststeps/teststeps

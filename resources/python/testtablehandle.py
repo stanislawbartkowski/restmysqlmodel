@@ -104,7 +104,11 @@ def report() :
         f.write("<br/>"+customerorder)
         f.write("<br/>"+orderdate)
         f.write(str(row))
-            
+
+def validateid() :
+    if checkid():  return
+    writerest({ 'err': {'messagedirect' : 'Złe pole' }})
+
 if __name__ == '__main__':
     what = sys.argv[1]
     print(what)
@@ -112,3 +116,4 @@ if __name__ == '__main__':
     if what == "submit": submit()
     if what == "report": report()
     if what == "stepcheckid" : stepcheckid()
+    if what == "validateid": validateid()
