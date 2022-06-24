@@ -1,0 +1,8 @@
+fields:
+  - field: id  
+    fieldtype: number
+  - field: name
+
+header:
+  title: ~Title  
+

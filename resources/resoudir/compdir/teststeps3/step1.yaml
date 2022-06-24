@@ -1,0 +1,24 @@
+fields:
+  - field: descr
+    fieldtype: html
+  - field: id  
+    fieldtype: number
+    props:
+      required: true
+      rules: 
+      - required: true
+  - field: name
+  - field: name1
+    coltitle: ~Another name
+
+js: jslogic
+jsrestapivals: JS.initteststeps3
+
+
+buttons: 
+  - id: NEXT
+    validate: true
+    next: true
+    props:
+     type: primary
+

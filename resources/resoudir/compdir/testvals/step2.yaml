@@ -1,0 +1,29 @@
+fields:
+  - field: descr
+    fieldtype: html
+  - field: id  
+    fieldtype: number
+    iprops:
+      disabled: true
+  - field: name
+    iprops:
+      disabled: true
+  - field: date
+    coltitle: ~Date
+    fieldtype: date
+    iprops:
+      disabled: true
+  - field: log1
+    fieldtype: boolean
+    coltitle: ~Boolean true
+    iprops:
+      disabled: true
+  - field: log2
+    fieldtype: boolean
+    coltitle: ~Boolean false
+    iprops:
+      disabled: true
+
+buttons: 
+  - id: PREV
+    prev: true

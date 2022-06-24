@@ -94,6 +94,21 @@ var JS = {
 
   step3doaction: function(row,vars) {
     return { next: true, vars: { pfinal: "<H1>Congratulations</H1>: it is done" }}
+  },
+
+  initteststeps3 : function(row) {
+    var v = {}
+    v.id = null
+    v.name = "XXXXXXXX"
+    v.descr = "<h3>Initialy set as empty and XXXXXX</h3> <br> Should retains new values after coming back from next step<h3>Another name is set in the second step and should also retain value"
+    return v
+  },
+
+  initteststep32 : function(row) {
+    var v = {}
+    console.log("initteststep32")
+    v.name1 = "YYYYYYYYYYYYY"
+    return v
   }
 
 };
