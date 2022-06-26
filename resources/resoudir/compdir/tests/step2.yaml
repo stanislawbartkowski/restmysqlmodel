@@ -9,8 +9,6 @@ fields:
   - field: descr
     coltitle: empty
     fieldtype: html
-    iprops:
-      disabled: true
 
 js: jslogic  
 

@@ -82,7 +82,7 @@ def submit() :
             else : sql = "insert into TEST values (%s ,'%s')" % (id,name)
             print(sql)
             curs.execute(sql)
-            writerest ({ 'notification' : 
+            writerest ({ 'close' : True, 'refresh' : True, 'notification' : 
                 { 'kind' : 'success',
                 'title' : { 'message' : 'done'},
                 'description': {'message' : 'youadded', 'params' : [id]} }
@@ -107,7 +107,7 @@ def report() :
 
 def validateid() :
     if checkid():  return
-    writerest({ 'err': {'messagedirect' : 'Złe pole' }})
+    writerest({ 'err': {'message' : 'duplicatedvalue' }})
 
 if __name__ == '__main__':
     what = sys.argv[1]

@@ -13,7 +13,7 @@ buttons:
     method: DELETE
     confirm: true
     props:
-       type: primary     
+       type: primary
   - id: CANCEL
     close: true
 

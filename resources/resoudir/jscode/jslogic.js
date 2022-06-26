@@ -33,7 +33,8 @@ var JS = {
       restaction: "testtable-del",
       method: "DELETE",
       params: { id: row.id },
-      notification: this.notification('youdeleted',row)
+      notification: this.notification('youdeleted',row),
+      retprops: {close: true, refresh: true }
     };
   },
 
@@ -56,7 +57,8 @@ var JS = {
       restaction: "testtable-modif",
       method: "PUT",
       params: { id: row.id, name: row.name },
-      notification: this.notification('youupdated',row)
+      notification: this.notification('youupdated',row),
+      retprops: {close: true, refresh: true }
     };
   },
 
@@ -93,7 +95,7 @@ var JS = {
   },
 
   step3doaction: function(row,vars) {
-    return { next: true, vars: { pfinal: "<H1>Congratulations</H1>: it is done" }}
+    return { next: true, vars: { pfinal: "<H1>Congratulations</H1>: it is done<h3>Warning: it is test only, nothing is added or changed</h3>" }}
   },
 
   initteststeps3 : function(row) {
