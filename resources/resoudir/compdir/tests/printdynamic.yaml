@@ -1,7 +1,12 @@
 fields:
+  - field: descrtitle
+    fieldtype: html
+    value:
+      value: >
+        <H1>The content of radio is created dynamically</H1>  
+        <p>There should be two options: name shipped and name delayed
   - field: orderstatus1    
-    coltitle: 
-      message: orderstatus
+    coltitle: orderstatus
     radio: 
       button: true
       items:
@@ -12,6 +17,8 @@ fields:
 buttons: 
  - replace# : replace/printbutton
    restaction: report/testreport
+   params:
+     what : dynamic
 
 formprops:
     labelCol:

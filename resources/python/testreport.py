@@ -1,7 +1,6 @@
 from helper import *
 
-def report():
-   w = WJON()
+def report(w):
 
    with getcontentfile() as f:
       f.write("My Report\n")
@@ -19,5 +18,16 @@ def report():
 
    writedone(True)         
 
+def reportdynamic(w) :
+   with getcontentfile() as f:
+      f.write("Report from dynamic option\n")
+      option = w.get('orderstatus1')
+      f.write("Option:" + option + "\n" )
+
+   writedone(True)
+
 if __name__ == '__main__':
-  report()
+   w = WJON()
+   what = getpar('what')
+   if what == "report" : report(w)
+   if what == "dynamic" : reportdynamic(w)
