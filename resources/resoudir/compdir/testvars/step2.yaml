@@ -1,0 +1,24 @@
+fields:
+  - field: info2
+    fieldtype: html
+    value: 
+      value: >
+        <h1>The field name1 should have value "Hello ..."</h1>
+        <h3>The id field should be <b>empty</b></h3>
+    
+  - field: id  
+    fieldtype: number
+    iprops:
+      disabled: true  
+  - field: name
+    iprops:
+      disabled: true
+  - field: name1
+    coltitle: ~Name 1
+    iprops:
+      disabled: true
+
+
+buttons: 
+  - id: PREV
+    prev: true

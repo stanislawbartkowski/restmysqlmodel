@@ -109,6 +109,42 @@ def validateid() :
     if checkid():  return
     writerest({ 'err': {'message' : 'duplicatedvalue' }})
 
+def initstepsupdate() :
+    writerestt({ "infoupdate" : "<h3>You are about to modify the data.</h3> <p>Verify the data before submitting</p>" })
+
+def testupdatesteps2() :
+    writerestt({ "beforeupdate" : "<h3>Check last time the data before update. There is no way back.</h3>" })
+
+def testupdatenextstep1() :
+    writerest({"next" : True, "vars" : { "beforeupdate2" : "<h1>Hello before update</h1>"}})    
+
+def testprintall() :
+    row = getjson()
+    print(row)
+    writerest ({ 'text' : True, 'notification' : 
+                { 'kind' : 'success',
+                'title' : { 'message' : 'done'},
+                'description': {'message' : 'reportisready'} }
+             })
+             
+    with getconn() as conn:
+        with conn.cursor() as curs:
+           with getcontentfile() as f:
+              f.write("Print all data in TEST table\n")
+              f.write("============================\n")
+
+              sql = "select * from TEST"
+              print(sql)
+              curs.execute(sql)
+              reslist = curs.fetchall()
+              print(reslist)
+              for r in reslist :
+                id = r[0]
+                name = r[1]
+                f.write("{0} - {1} \n".format(id,name))
+              f.write("============================\n")
+              f.write("THE END\n")
+
 if __name__ == '__main__':
     what = sys.argv[1]
     print(what)
@@ -117,3 +153,7 @@ if __name__ == '__main__':
     if what == "report": report()
     if what == "stepcheckid" : stepcheckid()
     if what == "validateid": validateid()
+    if what == "initstepsupdate" : initstepsupdate()
+    if what == "testupdatesteps2" : testupdatesteps2()
+    if what == "testupdatenextstep1" : testupdatenextstep1()
+    if what == "printall" : testprintall()

@@ -111,6 +111,24 @@ var JS = {
     console.log("initteststep32")
     v.name1 = "YYYYYYYYYYYYY"
     return v
+  },
+
+  teststepstep1 : function(row) {
+    var v = {}
+    console.log("teststepstep1")
+    console.log(row)
+    v.next = true
+    v.vars = {
+       name1: "name:" + row.name + "!"
+    }
+    return v
+  },
+
+  testvarsinitstep1 : function(row,vars) {
+    var v = this.inittestvals(row,vars)
+    v.name1="Hello, I'm name1"
+    v.id = null
+    return v
   }
 
 };

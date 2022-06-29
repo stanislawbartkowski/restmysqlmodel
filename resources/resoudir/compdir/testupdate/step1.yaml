@@ -1,0 +1,28 @@
+fields:
+  - field: info
+    fieldtype: html
+    value:
+      value: > 
+         <H1>The field below is initialized through REST/AP call</H1><p>This line below should be like "You are about ...." </p>
+  - field: infoupdate
+    fieldtype: html    
+  - field: id  
+    fieldtype: number
+    iprops:
+      disabled: true    
+  - field: name
+  
+js: jslogic
+jsrestapivals: JS.inittestvals
+
+restapivals: testupdatesteps
+
+buttons: 
+  - id: NEXT
+    props:
+     type: primary
+    method: POST
+    upload: true
+    restaction : testupdatenextstep1
+
+

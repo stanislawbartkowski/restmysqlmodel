@@ -1,0 +1,25 @@
+fields:
+  - field: info
+    fieldtype: html
+    value:
+      value: > 
+         <H1>The field below is initialized through JSON call</H1><p>Is sets variable not used in the first step but shoud be passed to the next step</p>
+         <h3>Important: the id field is should be <b>empty</b> because the JS code is setting it as empty<h3>
+         <p>If the id is not empty, it means a mistake</p>
+  - field: id  
+    fieldtype: number
+    iprops:
+      disabled: true    
+  - field: name
+    
+js: jslogic
+jsrestapivals: JS.testvarsinitstep1
+
+
+buttons: 
+  - id: NEXT
+    props:
+     type: primary
+    next: true
+
+

@@ -9,6 +9,10 @@ columns:
           jsclick: JS.testableclickdelete
         - message: update
           jsclick: JS.testableclickupdate
+        - messagedirect: Update steps
+          listdef: testupdate/update.yaml          
+        - messagedirect: Vars test
+          listdef: testvars/update.yaml          
       dropdown: true
       dprops: 
         type: text
@@ -18,6 +22,12 @@ js: jslogic
 
 header :
   toolbar:
+  - id: PRINT
+    method: POST 
+    upload: true
+    print: true
+    restaction: tests/printtest
+
   - id: ADD
     props:
       type: primary

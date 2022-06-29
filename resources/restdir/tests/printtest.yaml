@@ -1,0 +1,4 @@
+replace#: replace/printrestdir
+action:
+  - testtablehandle.py
+  - printall

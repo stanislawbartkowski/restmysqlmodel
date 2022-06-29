@@ -1,0 +1,11 @@
+steps:
+  - title: ~Change data
+    listdef: testupdate/step1
+  - title: ~Data Review
+    listdef: testupdate/step2
+  - title: ~Data update
+    listdef: testupdate/step3
+
+buttons: []    
+    
+

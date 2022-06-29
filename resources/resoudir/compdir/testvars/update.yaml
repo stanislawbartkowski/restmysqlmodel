@@ -1,0 +1,9 @@
+steps:
+  - title: ~First step
+    listdef: testvars/step1
+  - title: ~Next step
+    listdef: testvars/step2
+
+buttons: []    
+    
+

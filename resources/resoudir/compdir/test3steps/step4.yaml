@@ -1,0 +1,23 @@
+fields:
+  - field: descr4
+    fieldtype: html
+    value:
+      value: <h1>Both values should be presented also</h1>
+  - field: t_review
+    items:
+    - field: name1
+      coltitle: ~Name 1
+    - field: name2
+      coltitle: ~Name 2
+    itemlist:
+      vprops:
+        style:
+          width: 80%
+      header: ~Both parameters with values
+
+buttons: 
+  - id: PREV
+    prev: true
+    props:
+     type: primary
+

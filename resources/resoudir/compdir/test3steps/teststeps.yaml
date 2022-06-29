@@ -1,0 +1,11 @@
+steps:
+  - title: ~Parameters first 
+    listdef: test3steps/step1
+  - title: ~Parameters second
+    listdef: test3steps/step2
+  - title: ~Parameters all
+    listdef: test3steps/step3
+  - title: ~Parameters list
+    listdef: test3steps/step4
+    
+
