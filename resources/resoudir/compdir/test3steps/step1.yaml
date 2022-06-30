@@ -15,3 +15,12 @@ buttons:
     props:
      type: primary
 
+  - id: testtable
+    name: 
+      messagedirect: Table TEST
+    list: testtable
+    props:
+      type: link
+    modalprops: 
+      width: 70%
+
