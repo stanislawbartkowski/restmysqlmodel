@@ -26,8 +26,27 @@ def reportdynamic(w) :
 
    writedone(True)
 
+def uploadprint(w) :
+   with getcontentfile() as f:
+      f.write("Report with files uploaded\n")
+      l = w.get("upload")
+      for fname in l :
+        f.write("======================\n") 
+        f.write(fname + "\n")
+        ffname = fileintmpdir(fname)
+        with open(ffname) as ff :
+          lines = ff.readlines()
+          for l in lines:
+             f.write(l + "\n")
+
+        f.write("======================\n") 
+
+        
+   writedone(True)
+
 if __name__ == '__main__':
    w = WJON()
    what = getpar('what')
    if what == "report" : report(w)
    if what == "dynamic" : reportdynamic(w)
+   if what == "uploadprint" : uploadprint(w)

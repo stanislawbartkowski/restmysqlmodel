@@ -1,0 +1,17 @@
+fields:
+  - field: descrtitle
+    fieldtype: html
+    value:
+      value: >
+        <h1>You can upload files to the server</h1>  
+        <p>The uploaded files should be available after clicking PRINT</p>
+  - field: upload
+    upload:
+      id: UPLOAD
+
+buttons: 
+ - replace# : replace/printbutton
+   restaction: report/testreport
+   params:
+     what : uploadprint
+

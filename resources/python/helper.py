@@ -1,46 +1,12 @@
 import os,json,datetime,logging,sys
+import tempfile, shutil
 
-def _tmpfile() :
-  return os.environ["TMPFILE"]
 
-def getfiles():
-    return (_tmpfile(), os.environ["UPLOADEDFILE"])
+# -------------
+# TODO: REMOVE
+# -------------
 
-def getcontentfile() : 
-    return open(os.environ["CONTENTFILE"],"w+")
-
-def getjson():
-    (t, u) = getfiles()
-    with open(u) as f:
-        return json.load(f)
-
-def getpar(p) :
-  print("getpar="+p)
-  val = os.environ[p]
-  print(val)
-  return val
-
-def _writerestt(t,s) :
-    with open(t, "w+") as f:
-        ss = json.dumps(s)
-        f.write(ss)
-
-def writerestt(s) :
-    _writerestt(_tmpfile(),s)
-
-def writerest(s):
-    _writerestt(_tmpfile(),s)
-
-def writedone(text=False) :
-    res = { 'notification' : 
-               { 'kind' : 'success',
-                 'title' : { 'message' : 'done'},
-                'description': {'message' : 'reportisready'} }
-              }
-    if text : res["text"] = True
-    writerest (res)
-
-class WJON :
+class XWJON :
 
   def __init__(self,js=None) :
     if js is None : js = getjson()
@@ -76,7 +42,10 @@ class WJON :
     if not self.js.has_key(check): return False
     return val in self.js[check]
 
-  def dajchecklista(self,check) :import os,json,sys,datetime,logging
+  def dajchecklista(self,check) :
+    pass
+
+# ===================================    
 
 # -------------------------
 # Python3 specific
@@ -88,19 +57,21 @@ def getuploadfile() :
 def encodeutf8(s) :
   return s
 
-# ------------------
-# common procs
-# ------------------
+def _tmpfile() :
+  return os.environ["TMPFILE"]
 
+def getfiles():
+    return (_tmpfile(), os.environ["UPLOADEDFILE"])
 
-def getform():
-    u = getuploadfile()
-    with open(u) as f:
-        return json.load(f)
+def getcontentfile() : 
+    return open(os.environ["CONTENTFILE"],"w+")
 
-def toiso(s) :
-  a = s.split('-')
-  return datetime.date(int(a[0]),int(a[1]),int(a[2]))        
+def getpar(p) :
+  print("getpar="+p)
+  val = os.environ[p]
+  print(val)
+  return val
+
 
 # --------------
 # logger
@@ -116,19 +87,81 @@ def getlog(name) :
 
 _logg = getlog(__name__)
 
-class WWJON :
+# ------------------
+# common procs
+# ------------------
 
-  def __init__(self,jss=None) :
+
+def getform():
+    u = getuploadfile()
+    with open(u) as f:
+        return json.load(f)
+
+def getjson():
+    return getform()
+
+def writerest(s) :
+    t = _tmpfile()
+    with open(t, "w+") as f:
+        ss = json.dumps(s)
+        f.write(ss)
+        _logg.debug(s)
+
+def writedone(text=False) :
+    res = { 'notification' : 
+               { 'kind' : 'success',
+                 'title' : { 'message' : 'done'},
+                'description': {'message' : 'reportisready'} }
+              }
+    if text : res["text"] = True
+    writerest (res)
+
+def toiso(s) :
+  a = s.split('-')
+  return datetime.date(int(a[0]),int(a[1]),int(a[2]))        
+
+def gettmpdir() :
+  return tempfile.gettempdir()
+
+def fileintmpdir(f) :
+  dir = gettmpdir()
+  return os.path.join(dir,f)
+
+def uploadfile() :
+  filename = getpar("filename")
+  _logg.info("Uploaded filename {0}".format(filename))
+  upname = fileintmpdir(filename)
+  head_tail = os.path.split(upname)
+  dir = head_tail[0]
+  try:
+    os.mkdir(dir)
+  except OSError as error:
+    _logg.info("Directory {0} exists".format(dir))
+  _logg.info("Copy {0} to {1}".format(getuploadfile(),upname))
+  shutil.copyfile(getuploadfile(), upname)
+
+
+#---------------
+
+class _WWJON :
+
+  def __init__(self,jss) :
     if jss is None: jss=getform()
     self.js = jss
     _logg.debug("WJON {0}".format(self.js))
 #    print(self.js)
 
+  def getnumber(self,n) :
+    s = self.get(n)
+    if s is None : return s
+    if isinstance(s, str) : s = float(s)
+    return s
+
   def set(self,n,v) :
     self.js[n] = v
 
   def haskey(self,n) :
-    return self.js.has_key(n)
+    return self.js.get(n) is not None
 
   def get(self,n,defa=None) :
     return self.js[n] if self.haskey(n) and self.js[n] is not None  else defa
@@ -150,23 +183,11 @@ class WWJON :
 #    return datetime.datetime.strptime(da, '%Y-%m-%d').date()
 
   def incheckbox(self,check,val) :
-    if not self.js.has_key(check): return False
+    if not self.haskey(check): return False
     return val in self.js[check]
 
   def dajchecklista(self,check) :
     return self.get(check,[])
-
-  def ustawrangeD(self,n,zm1,zm2) :
-    s = self.get(n,None)
-    if s is None : 
-      s1 = ""
-      s2 = ""
-    else :
-      s1 = "" if s[0] is None else s[0]
-      s2 = "" if s[1] is None else s[1]
-
-    self._ustawD(s1,zm1)      
-    self._ustawD(s2,zm2)
 
   def writevars(self,f,var) :
     a = var if type(var) == list else [var]
@@ -204,3 +225,10 @@ class UL :
     res = "<ul>"
     for s in self.list: res = res + "<li>" + s + "</li>"
     return res + "</ul>"
+
+# ===========================
+
+class WJON(_WWJON) :
+
+  def __init__(self,js=None) :
+    _WWJON.__init__(self,js)
