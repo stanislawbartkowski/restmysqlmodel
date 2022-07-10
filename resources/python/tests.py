@@ -8,10 +8,10 @@ def getitems() :
     list.append( {"id":"delayed", "name" : "Name delayed"} )
     res = {}
     res['res'] = list
-    writerestt(res)
+    writerest(res)
 
 def getinitvalues() :
-    return writerestt({ "id" : "9999","name" : "I'm initiated as Python"})
+    return writerest({ "id" : "9999","name" : "I'm initiated as Python"})
 
 def printinitvalues() :
     w = WJON()

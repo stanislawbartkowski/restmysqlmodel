@@ -1,0 +1,4 @@
+id: multichoiceprinttest
+name: Multi choice button
+descr: This test demontrates the usage of multichoice button
+listdef: tests/testmultiprint

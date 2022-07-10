@@ -1,0 +1,7 @@
+steps:
+  - title: ~Parameter
+    listdef: tests/stepsmultichoice/step1
+  - title: ~Print
+    listdef: tests/stepsmultichoice/step2
+    
+

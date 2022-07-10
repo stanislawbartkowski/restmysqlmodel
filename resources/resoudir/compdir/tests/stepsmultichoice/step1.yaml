@@ -1,0 +1,18 @@
+fields:
+  - field: descrtitle
+    fieldtype: html
+    value:
+      value: <h1>You can select records to print</h1>
+  - field: title
+    coltitle: ~Report title
+  - field: idchoice
+    multichoice:
+      name: ~Choose records
+      list: testtable
+      listdef: search/searchtestid
+
+buttons: 
+ -  id: NEXT
+    next: true
+    props:
+      type: primary

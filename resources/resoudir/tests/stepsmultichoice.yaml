@@ -1,0 +1,4 @@
+id: stepsmultichoice
+name: Steps multi choice
+descr: It demonstrates how to choose many lines from the table ans steps defined dialog. It should preserve multichoce between steps
+listdef: tests/stepsmultichoice/steps.yaml

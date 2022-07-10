@@ -163,6 +163,10 @@ class _WWJON :
   def haskey(self,n) :
     return self.js.get(n) is not None
 
+  def getl(self,n) :
+    a = self.get(n,[])
+    return a
+
   def get(self,n,defa=None) :
     return self.js[n] if self.haskey(n) and self.js[n] is not None  else defa
 
@@ -232,3 +236,17 @@ class WJON(_WWJON) :
 
   def __init__(self,js=None) :
     _WWJON.__init__(self,js)
+
+  def getdate(self,n) :
+    s = self.get(n)
+    if s is None : return s
+    return datetime.datetime.strptime(s,'%Y-%m-%d').date()
+
+  def getdaterange(self,n) :
+    s = self.get(n)
+    if s is None : return s
+    d1 = None if s[0] is None else datetime.datetime.strptime(s[0],'%Y-%m-%d').date()
+    d2 = None if s[1] is None else datetime.datetime.strptime(s[1],'%Y-%m-%d').date()
+    return [d1,d2]  
+    
+    

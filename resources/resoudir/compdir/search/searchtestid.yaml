@@ -1,0 +1,15 @@
+columns:
+  - field: id 
+    fieldtype: number
+  - field: name
+nopaging: 10
+
+rowkey: id
+
+header :
+  toolbar:
+    - id: CHOOSE
+      choosefield: customernumber
+      props:
+         type: primary
+    - id: CANCEL

@@ -85,6 +85,8 @@ fields:
 buttons: 
  - replace# : replace/printbutton
    restaction: report/testreport
+   params:
+     what : report
 
 formprops:
     labelCol:

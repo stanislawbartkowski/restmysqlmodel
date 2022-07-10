@@ -118,9 +118,7 @@ def testupdatesteps2() :
 def testupdatenextstep1() :
     writerest({"next" : True, "vars" : { "beforeupdate2" : "<h1>Hello before update</h1>"}})    
 
-def testprintall() :
-    row = getjson()
-    print(row)
+def __testprintall(l) :
     writerest ({ 'text' : True, 'notification' : 
                 { 'kind' : 'success',
                 'title' : { 'message' : 'done'},
@@ -130,7 +128,9 @@ def testprintall() :
     with getconn() as conn:
         with conn.cursor() as curs:
            with getcontentfile() as f:
-              f.write("Print all data in TEST table\n")
+              if l is None: f.write("Print all data in TEST table\n")
+              else: f.write("Print only selected data in TEST table\n")
+
               f.write("============================\n")
 
               sql = "select * from TEST"
@@ -140,11 +140,26 @@ def testprintall() :
               print(reslist)
               for r in reslist :
                 id = r[0]
+                if l is not None and id not in l : continue
                 name = r[1]
                 f.write("{0} - {1} \n".format(id,name))
               f.write("============================\n")
-              f.write("THE END\n")
+              f.write("THE END\n")    
 
+def testprintall() :
+    __testprintall(None)
+
+
+def testprintselected():
+    w = WJON()
+    l = w.getl("multichoice")
+    __testprintall(l)
+
+def multitestprint() :
+    w = WJON()
+    l = w.getl("idchoice")
+    __testprintall(l)
+    
 if __name__ == '__main__':
     what = sys.argv[1]
     print(what)
@@ -157,3 +172,5 @@ if __name__ == '__main__':
     if what == "testupdatesteps2" : testupdatesteps2()
     if what == "testupdatenextstep1" : testupdatenextstep1()
     if what == "printall" : testprintall()
+    if what == "printselected" : testprintselected()
+    if what == "printidmultiselect" : multitestprint()

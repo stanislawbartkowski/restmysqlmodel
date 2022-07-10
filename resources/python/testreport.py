@@ -44,9 +44,15 @@ def uploadprint(w) :
         
    writedone(True)
 
+
+def multitestprint(w) :
+   pass
+   
+
 if __name__ == '__main__':
    w = WJON()
    what = getpar('what')
    if what == "report" : report(w)
    if what == "dynamic" : reportdynamic(w)
    if what == "uploadprint" : uploadprint(w)
+   if what == "multitestprint" : multitestprint()

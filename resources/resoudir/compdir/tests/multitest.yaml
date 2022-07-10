@@ -1,0 +1,14 @@
+columns:
+  - field: id 
+    fieldtype: number
+  - field: name
+
+rowkey: id
+
+header :
+  toolbar:
+  - id: PRINT
+    method: POST 
+    upload: true
+    print: true
+    restaction: tests/printtestselect

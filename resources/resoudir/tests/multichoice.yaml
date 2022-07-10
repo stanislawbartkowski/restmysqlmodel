@@ -1,0 +1,6 @@
+id: multichoice
+name: Multi choice
+descr: It demonstrates how to choose many lines from the table
+list: testtable
+listdef: tests/multitest
+multiselect: true
