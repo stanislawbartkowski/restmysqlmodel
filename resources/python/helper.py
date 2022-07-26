@@ -92,6 +92,19 @@ _logg = getlog(__name__)
 # ------------------
 
 
+def printlink(res,text=False) :
+  dir = "/tmp/links"
+  if not  os.path.isdir(dir) : os.mkdir(dir)
+  z = tempfile.mkstemp(dir=dir,suffix=".txt" if text else ".html")
+  sou = os.environ["CONTENTFILE"]
+  fname = z[1]
+  p = fname[1:].find("/")
+  link = fname[p+1:]
+  _logg.info("Copy {0} to {1}".format(sou,fname))
+  shutil.copy(sou,fname)
+  res["printlink"] = link
+
+
 def getform():
     u = getuploadfile()
     with open(u) as f:
@@ -114,6 +127,7 @@ def writedone(text=False) :
                 'description': {'message' : 'reportisready'} }
               }
     if text : res["text"] = True
+    printlink(res,text)
     writerest (res)
 
 def toiso(s) :
