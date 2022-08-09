@@ -1,0 +1,24 @@
+fields:
+- field: info
+  fieldtype: html
+  value:
+    value: <h1>It demonstrates the table list as a part of the dialog</h1>
+- field: lista
+  restlist:
+     list: orders
+     listdef: ordersin
+  props:
+    style:
+      width: 80%
+
+- field: info1
+  fieldtype: html
+  value:
+    value: <h1>The list below is defined through JS</h1>
+
+- field: lista1
+  restlist:
+    js: JS.getlistadef
+
+js: jslogic
+  

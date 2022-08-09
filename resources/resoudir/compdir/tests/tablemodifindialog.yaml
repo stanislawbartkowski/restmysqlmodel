@@ -1,0 +1,11 @@
+fields:
+- field: info
+  fieldtype: html
+  value:
+    value: <h1>It demonstrates the table list as a part of the dialog. The list contains CRUD functionality and refresh actions is tested</h1>
+- field: lista
+  restlist:
+     list: testtable
+  props:
+    style:
+      width: 80%

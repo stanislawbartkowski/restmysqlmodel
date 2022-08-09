@@ -141,6 +141,18 @@ var JS = {
     var s = "<ui>"
     for (var i = 0; i < l.length; i++) s = s + "<ul>" + l[i] + "</ul>"
     return { value: s + "</ui>"}
-  }
+  },
+
+  getlistadef : function(row) {
+    return { 
+      list: "orders",
+      listdef: "ordersin",
+      props: {
+        style : {
+           width: "80%"
+        }
+      }
+    }
+  }  
 
 };

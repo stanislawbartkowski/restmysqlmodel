@@ -1,0 +1,4 @@
+id: tablemodifindialog
+name: CRUD in dialog
+descr: Demonstrates the yable list woth CRUD operations in the dialog
+listdef: tests/tablemodifindialog
