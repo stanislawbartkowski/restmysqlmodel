@@ -14,8 +14,18 @@ def nextstep() :
     vars = { "vars" : res, "next" : True}
     writerest(vars)
 
+def gettestdata() :
+    w = WJON()
+    print("a----")
+    table = []
+    table.append({"id" : 1, "name": "hello"})
+    res = { "res" : table}
+    writerest(res)
+
+
 if __name__ == '__main__':
     what = getpar('what')
     if what == "testapiinit" : testapiinit()
     if what == "nextstep" : nextstep()
+    if what == "gettestdata" : gettestdata()
     

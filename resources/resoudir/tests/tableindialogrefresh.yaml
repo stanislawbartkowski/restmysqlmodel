@@ -1,0 +1,4 @@
+id: tableindialogrefresh
+name: Refresh table from dialog
+descr: Demonstrates how to refresh the table from dialog
+listdef: tests/tablerefreshindialog
