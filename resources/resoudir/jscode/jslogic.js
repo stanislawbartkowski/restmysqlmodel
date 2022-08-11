@@ -133,12 +133,9 @@ var JS = {
   },
 
   multidescrgetvalue: function (row) {
-    console.log("============================================================")
-    console.log(row)
     var l = row.idchoice
     console.log(l)
     if (l === undefined) return { value: "<h3>nothing is chosen</h3>" }
-    console.log("xlp''''''''''''''''''''''''''''''''''''''''''''''''''''''''''")
     var s = "<ui>"
     for (var i = 0; i < l.length; i++) s = s + "<ul>" + l[i] + "</ul>"
     return { value: s + "</ui>" }

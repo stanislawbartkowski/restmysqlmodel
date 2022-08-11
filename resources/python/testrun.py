@@ -16,9 +16,9 @@ def nextstep() :
 
 def gettestdata() :
     w = WJON()
-    print("a----")
+    name = w.get("name","<undefined>")
     table = []
-    table.append({"id" : 1, "name": "hello"})
+    table.append({"id" : 1, "name": name})
     res = { "res" : table}
     writerest(res)
 
