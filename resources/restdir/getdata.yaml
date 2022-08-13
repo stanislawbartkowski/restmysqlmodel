@@ -1,0 +1,9 @@
+proc: PYTHON3
+output: TMPFILE
+format: JSON
+method: POST
+action: data.py
+upload: true
+setenvir: true
+pars:
+  - name: what

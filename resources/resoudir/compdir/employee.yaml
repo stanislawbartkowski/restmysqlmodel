@@ -1,15 +1,26 @@
 columns:
-  - field: employeenumber
-    showdetails: true 
-    fieldtype: number
-    props:
-      align: left
-  - field: lastname
-  - field: firstname
-  - field: extension
-  - field: email
-  - field: officecode
-  - field: reportsto
-  - field: jobtitle
+- field: employeenumber
+  showdetails: 
+    varsrestaction: 
+      list: getdata
+      params:
+        what: getdetailsemployee
+      method: POST
+      upload: true 
+  fieldtype: number
+  props:
+    align: left
+- field: lastname
+- field: firstname
+- field: extension
+- field: email
+- field: officecode
+- field: reportsto
+- field: jobtitle
+- field: helloname
+  coltitle: ~Hello
+  fieldtype: html
+  tablenodef: true
+    
 
 rowkey: employeenumber
