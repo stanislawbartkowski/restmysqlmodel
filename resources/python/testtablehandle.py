@@ -110,10 +110,10 @@ def validateid() :
     writerest({ 'err': {'message' : 'duplicatedvalue' }})
 
 def initstepsupdate() :
-    writerestt({ "infoupdate" : "<h3>You are about to modify the data.</h3> <p>Verify the data before submitting</p>" })
+    writerest({ "infoupdate" : "<h3>You are about to modify the data.</h3> <p>Verify the data before submitting</p>" })
 
 def testupdatesteps2() :
-    writerestt({ "beforeupdate" : "<h3>Check last time the data before update. There is no way back.</h3>" })
+    writerest({ "beforeupdate" : "<h3>Check last time the data before update. There is no way back.</h3>" })
 
 def testupdatenextstep1() :
     writerest({"next" : True, "vars" : { "beforeupdate2" : "<h1>Hello before update</h1>"}})    
