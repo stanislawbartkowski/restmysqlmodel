@@ -1,0 +1,32 @@
+fields:
+- field: id
+  fieldtype: number
+  validate:
+  - required: true
+  - restaction:
+      restaction : demo/crud/tableaction
+      method: POST
+      upload: true
+      params:
+       what: validateid
+- field: name
+
+buttons: 
+- id: ACCEPT
+  validate: true
+  restaction : demo/crud/tableaction
+  method: POST
+  upload: true
+  confirm: true
+  params:
+    what: addid
+  props:
+    type: primary
+
+- id: CANCEL
+  close: true
+
+formprops:
+  labelCol:
+    span: 5
+

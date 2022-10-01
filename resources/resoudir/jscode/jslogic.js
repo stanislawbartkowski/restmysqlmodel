@@ -1,14 +1,14 @@
 var JS = {
   testableclickdelete: function (row) {
     return {
-      listdef: "testtable_del",
+      listdef: "demo/crud/testtable_del",
       formprops: { initialValues: row },
     };
   },
 
   testableclickupdate: function (row) {
     return {
-      listdef: "testtable_modif",
+      listdef: "demo/crud/testtable_modif",
       formprops: { initialValues: row },
     };
   },
@@ -30,7 +30,7 @@ var JS = {
 
   testtabledelete: function (row) {
     return {
-      restaction: "testtable-del",
+      restaction: "demo/crud/testtable-del",
       method: "DELETE",
       params: { id: row.id },
       notification: this.notification('youdeleted', row),
@@ -54,7 +54,7 @@ var JS = {
 
   testtableupdate: function (row) {
     return {
-      restaction: "testtable-modif",
+      restaction: "demo/crud/testtable-modif",
       method: "PUT",
       params: { id: row.id, name: row.name },
       notification: this.notification('youupdated', row),
@@ -155,7 +155,7 @@ var JS = {
 
   onchangename: function (row) {
     console.log(row);
-    return { vars: { xname: row.name, lista : 1 } }
+    return { vars: { xname: row.name, lista: 1 } }
   }
 
 };

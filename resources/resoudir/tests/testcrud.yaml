@@ -1,4 +1,4 @@
 id: testcrud
 name: CRUD table
 descr: Simple table and CRUD (Create/Read/Update/Delete) operations
-list: testtable
+list: demo/crud/testtable

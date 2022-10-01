@@ -1,0 +1,26 @@
+fields:
+- field: id  
+  fieldtype: number
+  iprops:
+    disabled: true
+- field: name
+  iprops:
+    disabled: true
+
+buttons: 
+- id: DEL
+  jsclick: JS.testtabledelete
+  method: DELETE
+  confirm: true
+  props:
+     type: primary
+- id: CANCEL
+  close: true
+
+js: jslogic
+jsrestapivals: JS.inittestvals
+
+
+formprops:
+  labelCol:
+    span: 5
