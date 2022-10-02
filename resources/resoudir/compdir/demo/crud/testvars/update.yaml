@@ -1,0 +1,9 @@
+steps:
+  - title: ~First step
+    listdef: demo/crud/testvars/step1
+  - title: ~Next step
+    listdef: demo/crud/testvars/step2
+
+buttons: []    
+    
+

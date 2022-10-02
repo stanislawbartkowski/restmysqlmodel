@@ -1,0 +1,11 @@
+steps:
+  - title: ~Change data
+    listdef: demo/crud/steps/step1
+  - title: ~Data Review
+    listdef: demo/crud/steps/step2
+  - title: ~Data update
+    listdef: demo/crud/steps/step3
+
+buttons: []    
+    
+

@@ -1,4 +1,6 @@
 var JS = {
+
+  // test table supporting methods  
   testableclickdelete: function (row) {
     return {
       listdef: "demo/crud/testtable_del",
@@ -12,6 +14,35 @@ var JS = {
       formprops: { initialValues: row },
     };
   },
+
+  testtabledelete: function (row) {
+    return {
+      restaction: "demo/crud/testtable-del",
+      method: "DELETE",
+      params: { id: row.id },
+      notification: this.notification('youdeleted', row),
+      retprops: { close: true, refresh: true }
+    };
+  },
+
+  testtableupdate: function (row) {
+    return {
+      restaction: "demo/crud/testtable-modif",
+      method: "PUT",
+      params: { id: row.id, name: row.name },
+      notification: this.notification('youupdated', row),
+      retprops: { close: true, refresh: true }
+    };
+  },
+
+  testvarsinitstep1: function (row, vars) {
+    var v = this.inittestvals(row, vars)
+    v.name1 = "Hello, I'm name1"
+    v.id = null
+    return v
+  },
+
+  // ==========
 
   getexpandorders: function (row) {
     return { list: "orderdetails", params: { ordernumber: row.ordernumber } };
@@ -28,15 +59,6 @@ var JS = {
     }
   },
 
-  testtabledelete: function (row) {
-    return {
-      restaction: "demo/crud/testtable-del",
-      method: "DELETE",
-      params: { id: row.id },
-      notification: this.notification('youdeleted', row),
-      retprops: { close: true, refresh: true }
-    };
-  },
 
   inittestvals: function (row, vars) {
     console.log("initvals")
@@ -52,15 +74,6 @@ var JS = {
     return v
   },
 
-  testtableupdate: function (row) {
-    return {
-      restaction: "demo/crud/testtable-modif",
-      method: "PUT",
-      params: { id: row.id, name: row.name },
-      notification: this.notification('youupdated', row),
-      retprops: { close: true, refresh: true }
-    };
-  },
 
   getorderbadge: function (row) {
     var t = row.status
@@ -125,12 +138,6 @@ var JS = {
     return v
   },
 
-  testvarsinitstep1: function (row, vars) {
-    var v = this.inittestvals(row, vars)
-    v.name1 = "Hello, I'm name1"
-    v.id = null
-    return v
-  },
 
   multidescrgetvalue: function (row) {
     var l = row.idchoice
@@ -144,7 +151,7 @@ var JS = {
   getlistadef: function (row) {
     return {
       list: "orders",
-      listdef: "ordersin",
+      listdef: "demo/listinthedialog/ordersin",
       props: {
         style: {
           width: "80%"

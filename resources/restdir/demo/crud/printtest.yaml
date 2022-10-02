@@ -1,0 +1,4 @@
+replace#: replace/printrestdir
+action:
+  - -c
+  -  "import testtable; testtable.printall()"

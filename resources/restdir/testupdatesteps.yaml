@@ -1,7 +1,0 @@
-proc: PYTHON3
-output: TMPFILE
-format: JSON
-setenvir: true
-action:
-  - testtablehandle.py
-  - initstepsupdate

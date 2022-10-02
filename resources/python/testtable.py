@@ -27,7 +27,9 @@ def idexist(conn, id: int) -> bool:
     return c == 1
 
 
+# ------------
 # response
+# ------------
 
 
 @validatefield
@@ -45,22 +47,50 @@ def _addid(db, w):
         err: Dict = generrfield("io", "duplicatedvalue")
         return generrfields(err)
     addrow(db, id, name)
-    #    return {
-    #        "close": True,
-    #        "refresh": True,
-    #        "notification": {
-    #            "kind": "success",
-    #            "title": "done",
-    #            "description": {"message": "youadded", "params": [id]},
-    #        },
     return gennotification(
         Notitication.SUCCESS, "done", {"message": "youadded", "params": [id]}
     )
 
 
+@printcontent(text=True)
+@dbconnect
+def printall(db, f):
+    f.write("============================\n")
+    result = db.execute("SELECT * FROM test")
+
+    for row in result:
+        id = row[0]
+        name = row[1]
+        f.write("{0} - {1} \n".format(id, name))
+
+    f.write("============================\n")
+    f.write("THE END\n")
+
+
+@respondrest
+def _updatestepsinit(w):
+    return {
+        "infoupdate": "<h3>You are about to modify the data.</h3> <p>Verify the data before submitting</p>"
+    }
+
+
+@respondrest
+def _updatestepsstep1(w):
+    return {
+        "beforeupdate": "<h3>Check last time the data before update. There is no way back.</h3>",
+        "next": True,
+    }
+
+@respondrest
+def _updatestepsstep2init(w) :
+     return { "beforeupdate2" : "<h1>Hello before update</h1>"}
+
 if __name__ == "__main__":
     D = DISPATCH()
     D.registerwhat("validateid", _validateid)
     D.registerwhat("addid", _addid)
+    D.registerwhat("updatestepsinit", _updatestepsinit)
+    D.registerwhat("updatestepsstep1", _updatestepsstep1)
+    D.registerwhat("updatestepsstep2init",_updatestepsstep2init)
 
     D.execute()

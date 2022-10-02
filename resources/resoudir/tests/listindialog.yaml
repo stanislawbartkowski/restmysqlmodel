@@ -1,4 +1,4 @@
 id: listindialog
 name: Table list in the dialog
 descr: Demonstrates the table list in the dialog
-listdef: tests/listinthedialog
+listdef: demo/listinthedialog/listinthedialog

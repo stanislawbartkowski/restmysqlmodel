@@ -10,9 +10,9 @@ columns:
     - message: update
       jsclick: JS.testableclickupdate
     - messagedirect: Update steps
-      listdef: testupdate/update.yaml          
+      listdef: demo/crud/steps/update.yaml          
     - messagedirect: Vars test
-      listdef: testvars/update.yaml          
+      listdef: demo/crud/testvars/update.yaml          
     dropdown: true
     dprops: 
       type: text
@@ -26,7 +26,7 @@ header :
     method: POST 
     upload: true
     print: true
-    restaction: tests/printtest
+    restaction: demo/crud//printtest
 
   - id: ADD
     props:

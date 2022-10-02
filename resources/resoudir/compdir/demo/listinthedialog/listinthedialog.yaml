@@ -6,7 +6,7 @@ fields:
 - field: lista
   restlist:
      list: orders
-     listdef: ordersin
+     listdef: demo/listinthedialog/ordersin
   props:
     style:
       width: 80%

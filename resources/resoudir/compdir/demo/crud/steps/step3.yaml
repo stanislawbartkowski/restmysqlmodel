@@ -1,0 +1,24 @@
+fields:
+- field: summarybefore
+  fieldtype: html
+  value:
+    value: <h1>Last time to verify, be vigilant</h1>
+- field: t_review
+  items:
+  - field: id
+  - field: name
+  itemlist:
+    vprops:
+      style:
+        width: 80%
+    header: ~Both parameters are here
+
+buttons: 
+- id: PREV
+  prev: true    
+- id: UPDATE
+  next: true
+  confirm: true
+  props:
+    type: primary
+  jsclick: JS.testtableupdate    

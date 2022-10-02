@@ -1,0 +1,36 @@
+fields:
+- field: info2
+  fieldtype: html
+  value: 
+    value: >
+      <h1>Review the data before submitting</h1>
+      <p>There should be two lines below, inclding "Hello"</p>
+- field: beforeupdate
+  fieldtype: html
+- field: beforeupdate2
+  fieldtype: html
+    
+- field: id  
+  fieldtype: number
+  iprops:
+    disabled: true
+- field: name
+  iprops:
+    disabled: true
+
+restapivals: 
+  restaction : demo/crud/tableaction
+  method: POST
+  upload: true
+  params:
+    what: updatestepsstep2init
+
+
+buttons: 
+- id: PREV
+  prev: true
+- id: NEXT
+  validate: true
+  next: true
+  props:
+    type: primary

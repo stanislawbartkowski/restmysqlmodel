@@ -2,6 +2,7 @@ import os, json, datetime, logging, sys
 from typing import Dict, List
 import functools
 from enum import Enum
+import tempfile,shutil
 
 from sqlalchemy import create_engine
 
@@ -48,6 +49,23 @@ def validatefield(func):
     return func_wrapper
 
 
+# decorator
+def printcontent(text: bool =False,link: bool = True):
+    def inner_func(func):
+        def func_wrapper(*args, **kwargs):
+            res: Dict = func(_getcontentfile(), *args, **kwargs)
+            res = {} if res is None else res
+            if text:
+                res["text"] = True
+            if link:
+                 _printlink(res,text)
+            writerest(res)
+
+        return func_wrapper
+
+    return inner_func
+
+
 # ------------------
 # logger
 # ------------------
@@ -67,6 +85,18 @@ _logg = getlog(__name__)
 # -------------
 # misc procs
 # -------------
+
+def _printlink(res,text=False) :
+  dir = "/tmp/links"
+  if not  os.path.isdir(dir) : os.mkdir(dir)
+  z = tempfile.mkstemp(dir=dir,suffix=".txt" if text else ".html")
+  sou = os.environ["CONTENTFILE"]
+  fname = z[1]
+  p = fname[1:].find("/")
+  link = fname[p+1:]
+  _logg.info("Copy {0} to {1}".format(sou,fname))
+  shutil.copy(sou,fname)
+  res["printlink"] = link
 
 
 def _toiso(s):
