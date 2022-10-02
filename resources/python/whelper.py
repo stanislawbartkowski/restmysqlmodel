@@ -2,7 +2,7 @@ import os, json, datetime, logging, sys
 from typing import Dict, List
 import functools
 from enum import Enum
-import tempfile,shutil
+import tempfile, shutil
 
 from sqlalchemy import create_engine
 
@@ -40,6 +40,18 @@ def respondrest(func):
 
 
 # decorator
+def respondlist(func):
+    @functools.wraps(func)
+    def func_wrapper(*args, **kwargs):
+        ret = func(*args, **kwargs)
+        ta: List[Dict] = [] if ret is None else ret if type(ret) == list else ret[0]
+        vars: Dict = ret[1] if type(ret) == tuple else None
+        writerest({"res": ta} if vars is None else {"res": ta, "vars": vars})
+
+    return func_wrapper
+
+
+# decorator
 def validatefield(func):
     @functools.wraps(func)
     def func_wrapper(*args, **kwargs):
@@ -50,7 +62,7 @@ def validatefield(func):
 
 
 # decorator
-def printcontent(text: bool =False,link: bool = True):
+def printcontent(text: bool = False, link: bool = True):
     def inner_func(func):
         def func_wrapper(*args, **kwargs):
             res: Dict = func(_getcontentfile(), *args, **kwargs)
@@ -58,7 +70,7 @@ def printcontent(text: bool =False,link: bool = True):
             if text:
                 res["text"] = True
             if link:
-                 _printlink(res,text)
+                _printlink(res, text)
             writerest(res)
 
         return func_wrapper
@@ -86,17 +98,19 @@ _logg = getlog(__name__)
 # misc procs
 # -------------
 
-def _printlink(res,text=False) :
-  dir = "/tmp/links"
-  if not  os.path.isdir(dir) : os.mkdir(dir)
-  z = tempfile.mkstemp(dir=dir,suffix=".txt" if text else ".html")
-  sou = os.environ["CONTENTFILE"]
-  fname = z[1]
-  p = fname[1:].find("/")
-  link = fname[p+1:]
-  _logg.info("Copy {0} to {1}".format(sou,fname))
-  shutil.copy(sou,fname)
-  res["printlink"] = link
+
+def _printlink(res, text=False):
+    dir = "/tmp/links"
+    if not os.path.isdir(dir):
+        os.mkdir(dir)
+    z = tempfile.mkstemp(dir=dir, suffix=".txt" if text else ".html")
+    sou = os.environ["CONTENTFILE"]
+    fname = z[1]
+    p = fname[1:].find("/")
+    link = fname[p + 1 :]
+    _logg.info("Copy {0} to {1}".format(sou, fname))
+    shutil.copy(sou, fname)
+    res["printlink"] = link
 
 
 def _toiso(s):

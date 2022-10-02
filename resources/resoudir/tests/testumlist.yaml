@@ -1,0 +1,4 @@
+id: testsumlist
+name: Footer containing the sum
+descr: Demonstrates the sum of the number in the list 
+list: demo/listsum

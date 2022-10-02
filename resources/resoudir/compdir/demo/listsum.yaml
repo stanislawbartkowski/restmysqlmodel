@@ -1,0 +1,34 @@
+columns:
+- field: id 
+  fieldtype: number
+- field: val1
+  coltitle: ~Value 1
+  fieldtype: money
+- field: val2
+  coltitle: ~Value 2
+  fieldtype: money
+
+js: jslogic
+
+summary:
+  - columns:
+    - field: val1
+      fieldtype: money
+      value:
+        js: JS.getvalue1sum
+    - field: val2
+      fieldtype: money
+      value:
+        js: JS.getvalue2sum
+  - columns:
+    - field: id
+      value:
+        value: Balance
+    - field: val1
+      fieldtype: money
+      value:
+        js: JS.getvalue1balance
+    - field: val2
+      fieldtype: money
+      value:
+        js: JS.getvalue2balance

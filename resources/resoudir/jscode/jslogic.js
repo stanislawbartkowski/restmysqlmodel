@@ -163,6 +163,27 @@ var JS = {
   onchangename: function (row) {
     console.log(row);
     return { vars: { xname: row.name, lista: 1 } }
+  },
+
+  getvalue1sum: function (row, vars, t) {
+    return { value: vars.sum1 }
+  },
+
+  getvalue2sum: function (row, vars, t) {
+    return { value: vars.sum2 }
+  },
+
+  getbalance: function (sum1, sum2) {
+    return (sum1 <= sum2) ? {} : { value: (sum1 - sum2) }
+  },
+
+  getvalue1balance: function (row, vars) {
+    return this.getbalance(vars.sum1, vars.sum2)
+  },
+
+  getvalue2balance: function (row, vars) {
+    return this.getbalance(vars.sum2, vars.sum1)
   }
+
 
 };

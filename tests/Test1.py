@@ -16,6 +16,7 @@ class DatabaseTest(unittest.TestCase, TestMixin) :
         print(list)
         self.assertTrue(len(list) > 1 )
 
+    @unittest.skip("Skipping")
     def test2(self) :
         data : Dict = {"id" : ID}
         r = self._postresttest(data, "testid")
@@ -32,6 +33,11 @@ class DatabaseTest(unittest.TestCase, TestMixin) :
         r = self._postresttest(data, "testid")
         print(r["res"])
         self.assertEqual("Exist",r["res"]) 
+
+    def test_listsum(self) :
+        list: List[Dict] = self._getrequestres("demo/listsum")
+        print(list)
+        self.assertTrue(len(list) > 0)
 
 
 
