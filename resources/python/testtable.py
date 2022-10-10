@@ -54,17 +54,44 @@ def _addid(db, w):
 
 @printcontent(text=True)
 @dbconnect
-def printall(db, f):
-    f.write("============================\n")
+def _printtest(db, f, li=None, title=None):
+    if title:
+        f.write("=== {0} ===\n".format(title))
+    else:
+        f.write("============================\n")
+
     result = db.execute("SELECT * FROM test")
 
+    no: int = 0
     for row in result:
         id = row[0]
+        if li is not None and id not in li:
+            continue
         name = row[1]
         f.write("{0} - {1} \n".format(id, name))
+        no = no + 1
 
+    if no == 0:
+        f.write("  -- EMPTY CONTENT\n")
     f.write("============================\n")
     f.write("THE END\n")
+
+
+def printall():
+    _printtest()
+
+
+@wjon
+def printselected(w):
+    l = w.getl("multichoice")
+    _printtest(l)
+
+
+@wjon
+def printidmultiselect(w):
+    l = w.getl("idchoice")
+    title = w.get("title")
+    _printtest(l, title=title)
 
 
 @respondrest
@@ -81,9 +108,11 @@ def _updatestepsstep1(w):
         "next": True,
     }
 
+
 @respondrest
-def _updatestepsstep2init(w) :
-     return { "beforeupdate2" : "<h1>Hello before update</h1>"}
+def _updatestepsstep2init(w):
+    return {"beforeupdate2": "<h1>Hello before update</h1>"}
+
 
 if __name__ == "__main__":
     D = DISPATCH()
@@ -91,6 +120,6 @@ if __name__ == "__main__":
     D.registerwhat("addid", _addid)
     D.registerwhat("updatestepsinit", _updatestepsinit)
     D.registerwhat("updatestepsstep1", _updatestepsstep1)
-    D.registerwhat("updatestepsstep2init",_updatestepsstep2init)
+    D.registerwhat("updatestepsstep2init", _updatestepsstep2init)
 
     D.execute()

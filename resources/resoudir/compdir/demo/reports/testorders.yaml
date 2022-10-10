@@ -1,0 +1,85 @@
+fields:
+- field: customernumber
+  props:
+    rules: 
+    - required: true
+- field: orderdate
+  fieldtype: date
+- field: allorders
+  fieldtype: boolean
+- field: orderstatus
+  radio: 
+    items:
+    - value: ~shipped
+      label: shipped
+    - value: delayed
+      label: ~delayed
+
+- field: orderstatus1    
+  coltitle: orderstatus
+  radio: 
+    button: true
+    items:
+    - value: shipped
+      label: ~shipped
+    - value: delayed
+      label: ~delayed
+
+- field: orderstatus2  
+  coltitle: orderstatus
+  placeholder: ~Enter order status
+  radio: 
+    select: true
+    items:
+    - value: shipped
+      label: ~shipped
+    - value: delayed
+      label: ~delayed
+
+
+- field: ordersstatus10
+  coltitle: orderstatus
+  checkbox: 
+    items:
+    - value: shipped
+      label: ~shipped
+    - value: delayed
+      label: ~delayed
+
+- field: ordersstatus11
+  coltitle: orderstatus
+  placeholder: ~Enter order status
+  checkbox: 
+    select: true
+    items:
+    - value: shipped
+      label: ~shipped
+    - value: delayed
+      label: ~delayed
+
+- field: names
+  coltitle: customername
+  list: 
+    addbutton:
+      name: addcustomer
+    card:
+      title: addlistofcustomer
+      cardprops:
+        bordered: true
+        style: 
+          border: dashed 1px blue
+
+buttons: 
+- replace# : replace/printbutton
+  restaction: demo/reports/testorders
+ 
+formprops:
+  labelCol:
+    span: 10
+  style:
+    margin: solid 20px
+
+cardprops:
+  style:
+    width: 35%
+    border: solid 1px

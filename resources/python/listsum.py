@@ -2,7 +2,6 @@ from whelper import *
 from typing import List, Dict
 from random import random
 
-
 @respondlist
 def _createlist():
     t: List[Dict] = []

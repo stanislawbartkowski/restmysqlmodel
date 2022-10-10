@@ -3,4 +3,4 @@ name: Initial values
 descr: > 
   Read initial values from Python script. Should be -
   id: 999, name: I'm initiated as Python
-listdef: tests/initvalues
+listdef: demo/initvalues

@@ -1,0 +1,27 @@
+fields:
+- field: info
+  fieldtype: html
+  value:
+    value: |
+      <h1>It demonstrates how the table can be refreshed from dialog</h1>
+      After chaning the name also the row should be changed<br>
+      Button ADD is not related to the test
+- field: name
+  onchange:
+    jsclick: JS.onchangename
+- field: xname 
+  fieldtype: html
+   
+- field: lista
+  restlist:
+    listdef: demo/crud/testtable
+    method: POST
+    upload: true
+    list: demo/testaction
+    params:
+       what: gettestdata
+  props:
+    style:
+      width: 80%
+
+js: jslogic    

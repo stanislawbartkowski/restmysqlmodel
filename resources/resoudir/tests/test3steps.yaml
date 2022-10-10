@@ -1,4 +1,4 @@
 id: test3steps
 name: Three steps
 descr: This report test two step with different variable name3 and thirs step expecting bound them all
-listdef: test3steps/teststeps.yaml
+listdef: demo/test3steps/teststeps.yaml

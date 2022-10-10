@@ -1,0 +1,16 @@
+fields:
+- field: descr2
+  fieldtype: html
+  value:
+    value: <h1>Single parameter name2</h1><h1>Single parameter name1</h1><p>Enter not empty value</p>
+- field: name2
+  coltitle: ~Name 2
+
+buttons: 
+- id: PREV
+  prev: true
+- id: NEXT
+  next: true
+  props:
+    type: primary
+

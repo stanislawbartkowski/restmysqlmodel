@@ -1,4 +1,4 @@
 id: tablemodifindialog
 name: CRUD in dialog
-descr: Demonstrates the table list woth CRUD operations in the dialog
-listdef: tests/tablemodifindialog
+descr: Demonstrates the table list with CRUD operations in the dialog
+listdef: demo/crud//tablemodifindialog

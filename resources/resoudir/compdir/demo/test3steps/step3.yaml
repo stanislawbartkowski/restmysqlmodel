@@ -1,0 +1,22 @@
+fields:
+- field: descr3
+  fieldtype: html
+  value:
+    value: <h1>Both values should be presented</h1>
+- field: name1
+  coltitle: ~Name 1
+  iprops:
+    disabled: True
+- field: name2
+  coltitle: ~Name 2
+  iprops:
+    disabled: True
+
+buttons: 
+- id: PREV
+  prev: true
+- id: NEXT
+  next: true
+  props:
+   type: primary
+

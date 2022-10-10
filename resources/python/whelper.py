@@ -38,6 +38,15 @@ def respondrest(func):
 
     return func_wrapper
 
+#decorator
+def wjon(func):
+    @functools.wraps(func)
+    def func_wrapper(*args, **kwargs):
+        w = WJON()
+        return func(w,*args, **kwargs)
+
+    return func_wrapper
+
 
 # decorator
 def respondlist(func):
@@ -257,10 +266,10 @@ class WJON:
         for v in a:
             l = self.get(v, None)
             if l is None:
-                f.write("{0} - wartosc logiczna pusta".format(v))
+                f.write("{0} - empty logical value".format(v))
             else:
                 f.write(
-                    "{0} : wartosc logiczna {1} \n".format(v, "true" if l else "false")
+                    "{0} : logical value {1} \n".format(v, "true" if l else "false")
                 )
 
     def getdate(self, n):
@@ -319,11 +328,10 @@ class UL:
 # DISPATCH
 # ---------------
 
-
-class DISPATCH:
-    def __init__(self):
-        self._w = WJON()
+class _DISPATCH:
+    def __init__(self,w):
         self._d: Dict = {}
+        self._w = w
 
     def registerwhat(self, what: str, func):
         self._d[what] = func
@@ -334,4 +342,15 @@ class DISPATCH:
         if func is None:
             _logg.fatal("Cannot find dispatch for {what}")
             return
-        func(self._w)
+        if self._w : func(self._w)
+        else: func()
+
+class DISPATCH(_DISPATCH) :
+
+    def __init__(self):
+        super().__init__(WJON())
+
+class GETDISPATCH(_DISPATCH) :
+
+    def __init__(self):
+        super().__init__(None)

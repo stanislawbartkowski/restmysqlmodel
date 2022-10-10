@@ -1,4 +1,4 @@
 id: testheader
 name: Form with header
 descr: Demonstrates form with header
-listdef: tests/formheader
+listdef: demo/formheader

@@ -1,4 +1,0 @@
-replace#: replace/printrestdir
-action:
-  - reports.py
-  - printorders

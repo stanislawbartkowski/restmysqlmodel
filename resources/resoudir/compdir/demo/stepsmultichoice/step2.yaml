@@ -1,0 +1,21 @@
+fields:
+- field: descrtitle
+  fieldtype: html
+  value:
+    value: <h1>Go back and make sure that multichoice is preserved</h1>
+- field: choicedescr
+  fieldtype: html
+  value:
+    js: JS.multidescrgetvalue
+- field: title
+  coltitle: ~Report title
+  iprops:
+    disabled: true
+
+js: jslogic
+
+buttons: 
+- id: PREV
+  prev: true
+- replace# : replace/printbutton
+  restaction: demo/crud/printmultiselect

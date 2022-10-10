@@ -1,0 +1,4 @@
+replace#: replace/printrestdir
+action: tests.py
+pars:
+- name: what

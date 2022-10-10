@@ -1,4 +1,4 @@
 id: testconstvals
 name: Set constant values
 descr: This test demonstrates how to set constant value in the yaml file itselt
-listdef: testvals/teststeps
+listdef: demo/testvals/teststeps

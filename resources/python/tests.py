@@ -1,30 +1,33 @@
-from helper import *
+from whelper import *
 import sys
 
-def getitems() :
+
+@respondlist
+def getitems():
 
     list = []
-    list.append( {"id":"shipped", "name" : "Name shipped"} )
-    list.append( {"id":"delayed", "name" : "Name delayed"} )
-    res = {}
-    res['res'] = list
-    writerest(res)
+    list.append({"id": "shipped", "name": "Name shipped"})
+    list.append({"id": "delayed", "name": "Name delayed"})
+    return list
 
-def getinitvalues() :
-    return writerest({ "id" : "9999","name" : "I'm initiated as Python"})
 
-def printinitvalues() :
-    w = WJON()
-  
-    with getcontentfile() as f:
-      id = w.getnumber("id")
-      name = w.get("name")
-      f.write(f"id : {id} !\n")
-      f.write(f"name : {name} !\n")
-    writedone(True)         
+@respondrest
+def _getinitvalues():
+    return {"id": "9999", "name": "I'm initiated as Python"}
 
-if __name__ == '__main__':
-    what = sys.argv[1]
-    if what == "getitems": getitems()
-    if what == "getinitvalues" : getinitvalues()
-    if what == "printinitvalues" : printinitvalues()
+
+@printcontent()
+@wjon
+def _printinitvalues(w, f):
+
+    id = w.getnumber("id")
+    name = w.get("name")
+    f.write(f"id : {id} !\n")
+    f.write(f"name : {name} !\n")
+
+
+if __name__ == "__main__":
+    D = GETDISPATCH()
+    D.registerwhat("getinitvalues", _getinitvalues)
+    D.registerwhat("printinitvalues", _printinitvalues)
+    D.execute()

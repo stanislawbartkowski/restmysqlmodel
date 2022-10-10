@@ -1,0 +1,58 @@
+fields:
+- field: names
+  coltitle: customername
+  list: 
+    addbutton:
+      name: addcustomer
+    card:
+      title:
+        message: addlistofcustomer
+      cardprops:
+        bordered: true
+        style: 
+          border: dashed 1px blue
+  items:
+  - field: name1
+    coltitle: empty
+    props:
+      style:
+        display: 'inline-block'
+        width: 50%
+    enterbutton:
+      messagedirect: Search
+      list: customers
+      listdef: search/searchcustomers
+      modalprops: 
+        width: 70%
+    placeholder:
+      messagedirect: Customer number
+
+  - field: name2
+    coltitle: empty
+    props:
+      style:
+        width: 46%
+        display: 'inline-block'
+        margin: '0'
+        marginLeft: 6px
+    enterbutton:
+      messagedirect: Search
+      list: customers
+      listdef: search/searchcustomers
+      modalprops: 
+        width: 70%
+    placeholder:
+      messagedirect: Customer number
+
+buttons: 
+- replace# : replace/printbutton
+  restaction: demo/reports/printorders
+
+formprops:
+  labelCol:
+    span: 5
+
+cardprops:
+  style:
+    width: 40%
+    border: solid 1px green

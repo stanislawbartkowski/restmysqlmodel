@@ -1,4 +1,0 @@
-replace#: replace/printrestdir
-action:
-  - testtablehandle.py
-  - report

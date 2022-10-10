@@ -1,0 +1,21 @@
+fields:
+- field: id  
+  fieldtype: number
+  props:
+    required: true
+    rules: 
+    - required: true
+- field: name
+
+
+restapivals: 
+  restaction : demo/getinitvalues
+  params:
+    what: getinitvalues
+
+
+buttons: 
+- replace# : replace/printbutton
+  restaction: demo/printinitvalues
+  params:
+    what: printinitvalues
