@@ -1,0 +1,30 @@
+fields:
+- field: descr
+  fieldtype: html
+- field: id  
+  fieldtype: number
+  props:
+    required: true
+    rules: 
+    - required: true
+- field: name
+
+
+restapivals: 
+  restaction: demo/testaction
+  params:
+     what: testapiinit
+
+
+buttons: 
+- id: NEXT
+  validate: true
+  props:
+    type: primary
+  method: POST
+  upload: true
+  restaction : demo/testaction
+  params:
+    what: nextstep
+
+

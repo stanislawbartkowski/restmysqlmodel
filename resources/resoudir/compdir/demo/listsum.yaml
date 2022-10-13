@@ -11,24 +11,24 @@ columns:
 js: jslogic
 
 summary:
-  - columns:
-    - field: val1
-      fieldtype: money
-      value:
-        js: JS.getvalue1sum
-    - field: val2
-      fieldtype: money
-      value:
-        js: JS.getvalue2sum
-  - columns:
-    - field: id
-      value:
-        value: Balance
-    - field: val1
-      fieldtype: money
-      value:
-        js: JS.getvalue1balance
-    - field: val2
-      fieldtype: money
-      value:
-        js: JS.getvalue2balance
+- columns:
+  - field: val1
+    fieldtype: money
+    value:
+      js: JS.getvalue1sum
+  - field: val2
+    fieldtype: money
+    value:
+      js: JS.getvalue2sum
+- columns:
+  - field: id
+    value:
+      value: Balance
+  - field: val1
+    fieldtype: money
+    value:
+      js: JS.getvalue1balance
+  - field: val2
+    fieldtype: money
+    value:
+      js: JS.getvalue2balance

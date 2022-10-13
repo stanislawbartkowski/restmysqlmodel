@@ -1,4 +1,4 @@
 id: teststeps
 name: Steps dialog
 descr: Presenting dialog as a sequence of steps
-listdef: tests/stepsdialog
+listdef: demo/tests/stepsdialog

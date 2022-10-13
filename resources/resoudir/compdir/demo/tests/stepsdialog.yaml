@@ -1,0 +1,10 @@
+steps:
+- title: ~Parameters
+  listdef: demo/tests/step1
+- title: ~Parameters review
+  listdef: demo/tests/step2
+- title: ~Adding
+  listdef: demo/tests/step3    
+- title: ~Final
+  listdef: demo/tests/step4
+

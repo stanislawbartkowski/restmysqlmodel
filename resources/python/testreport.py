@@ -2,7 +2,7 @@ from whelper import *
 
 
 @printcontent()
-def report(f, w):
+def _report(f, w):
 
     f.write("My Report\n")
     s = w.getnumber("testmoney")
@@ -25,7 +25,7 @@ def reportdynamic(f, w):
     f.write("Option:" + (option if option is not None else "<nothing selected>") + "\n")
 
 
-@printcontent()
+@printcontent(text=True)
 def uploadprint(f, w):
     f.write("Report with files uploaded\n")
     l = w.get("upload")
@@ -40,14 +40,13 @@ def uploadprint(f, w):
 
             f.write("======================\n")
 
-
 def multitestprint(w):
     pass
 
 
 if __name__ == "__main__":
     D = DISPATCH()
-    D.registerwhat("report", report)
+    D.registerwhat("report", _report)
     D.registerwhat("dynamic", reportdynamic)
     D.registerwhat("uploadprint", uploadprint)
     D.registerwhat("multitestprint", multitestprint)

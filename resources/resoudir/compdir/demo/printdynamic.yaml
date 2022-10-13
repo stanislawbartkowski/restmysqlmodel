@@ -16,7 +16,7 @@ fields:
 
 buttons: 
 - replace# : replace/printbutton
-  restaction: report/testreport
+  restaction: demo/report/testreport
   params:
     what : dynamic
 

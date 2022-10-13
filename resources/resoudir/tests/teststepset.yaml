@@ -1,4 +1,4 @@
 id: teststepset
 name: Two steps and variable setting
 descr: This test sets variable in the next step
-listdef: teststepset/teststeps
+listdef: demo/teststepset/teststeps

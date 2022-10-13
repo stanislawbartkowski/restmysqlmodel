@@ -6,6 +6,21 @@ import tempfile, shutil
 
 from sqlalchemy import create_engine
 
+# -----------
+def uploadfile() :
+  filename = getpar("filename")
+  _logg.info("Uploaded filename {0}".format(filename))
+  upname = fileintmpdir(filename)
+  head_tail = os.path.split(upname)
+  dir = head_tail[0]
+  try:
+    os.mkdir(dir)
+  except OSError as error:
+    _logg.info("Directory {0} exists".format(dir))
+  _logg.info("Copy {0} to {1}".format(getuploadfile(),upname))
+  shutil.copyfile(getuploadfile(), upname)
+
+
 # ---------------
 # sql
 # ---------------
@@ -38,12 +53,13 @@ def respondrest(func):
 
     return func_wrapper
 
-#decorator
+
+# decorator
 def wjon(func):
     @functools.wraps(func)
     def func_wrapper(*args, **kwargs):
         w = WJON()
-        return func(w,*args, **kwargs)
+        return func(w, *args, **kwargs)
 
     return func_wrapper
 
@@ -137,6 +153,15 @@ def _encodeutf8(s):
 
 def _tmpfile():
     return os.environ["TMPFILE"]
+
+
+def _gettmpdir():
+    return tempfile.gettempdir()
+
+
+def fileintmpdir(f):
+    dir = _gettmpdir()
+    return os.path.join(dir, f)
 
 
 def _getfiles():
@@ -328,8 +353,9 @@ class UL:
 # DISPATCH
 # ---------------
 
+
 class _DISPATCH:
-    def __init__(self,w):
+    def __init__(self, w):
         self._d: Dict = {}
         self._w = w
 
@@ -342,15 +368,17 @@ class _DISPATCH:
         if func is None:
             _logg.fatal("Cannot find dispatch for {what}")
             return
-        if self._w : func(self._w)
-        else: func()
+        if self._w:
+            func(self._w)
+        else:
+            func()
 
-class DISPATCH(_DISPATCH) :
 
+class DISPATCH(_DISPATCH):
     def __init__(self):
         super().__init__(WJON())
 
-class GETDISPATCH(_DISPATCH) :
 
+class GETDISPATCH(_DISPATCH):
     def __init__(self):
         super().__init__(None)

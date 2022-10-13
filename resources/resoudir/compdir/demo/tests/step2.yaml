@@ -1,0 +1,21 @@
+fields:
+- field: id  
+  fieldtype: number
+  iprops:
+    disabled: true
+- field: name
+  iprops:
+    disabled: true
+- field: descr
+  coltitle: empty
+  fieldtype: html
+
+js: jslogic  
+
+buttons: 
+- id: PREV
+  prev: true
+- id: NEXT
+  props:
+   type: primary
+  jsclick: JS.step3values

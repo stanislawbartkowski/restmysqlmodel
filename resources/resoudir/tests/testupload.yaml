@@ -1,4 +1,4 @@
 id: testupload
 name: Upload file
 descr: Presentation how to upload a file to the server
-listdef: tests/uploadtest
+listdef: demo/uploadtest

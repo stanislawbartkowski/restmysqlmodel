@@ -44,7 +44,7 @@ def _addid(db, w):
     id: int = w.get("id")
     name: str = w.get("name")
     if idexist(db, id):
-        err: Dict = generrfield("io", "duplicatedvalue")
+        err: Dict = generrfield("id", "duplicatedvalue")
         return generrfields(err)
     addrow(db, id, name)
     return gennotification(
@@ -114,6 +114,20 @@ def _updatestepsstep2init(w):
     return {"beforeupdate2": "<h1>Hello before update</h1>"}
 
 
+@respondrest
+@dbconnect
+def _addstep1(db, w):
+    if not idexist(db, w.get("id")):
+        return {
+            "vars": {
+                "descr": "<H1> You are about to add new entry to testtable table</H1>",
+            },
+            "next": True,
+        }
+    err: Dict = generrfield("id", "duplicatedvalue")
+    return generrfields(err)
+
+
 if __name__ == "__main__":
     D = DISPATCH()
     D.registerwhat("validateid", _validateid)
@@ -121,5 +135,6 @@ if __name__ == "__main__":
     D.registerwhat("updatestepsinit", _updatestepsinit)
     D.registerwhat("updatestepsstep1", _updatestepsstep1)
     D.registerwhat("updatestepsstep2init", _updatestepsstep2init)
+    D.registerwhat("addstep1", _addstep1)
 
     D.execute()

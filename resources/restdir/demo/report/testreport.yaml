@@ -1,4 +1,4 @@
 replace#: replace/printrestdir
 action: testreport.py
 pars:
-  - name: what
+- name: what

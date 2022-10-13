@@ -1,0 +1,21 @@
+fields:
+- field: id  
+  fieldtype: number
+  props:
+    required: true
+    rules: 
+    - required: true
+- field: name
+
+buttons: 
+
+- id: NEXT
+  validate: true
+  restaction: demo/crud/tableaction
+  method: POST 
+  upload: true
+  props:
+    type: primary
+  params:
+    what: addstep1
+

@@ -1,6 +1,4 @@
 from whelper import *
-import sys
-
 
 @respondlist
 def getitems():

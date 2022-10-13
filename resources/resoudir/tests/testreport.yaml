@@ -1,4 +1,4 @@
 id: testreport
 name: Test report
 descr: This report presents multi range input
-listdef: reports/testreport
+listdef: demo/reports/testreport

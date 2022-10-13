@@ -1,0 +1,22 @@
+fields:
+- field: info2
+  fieldtype: html
+  value: 
+    value: <h1>I'm set directly</h1>
+   
+- field: id  
+  fieldtype: number
+- field: name
+- field: name1
+  coltitle: ~Another name
+
+
+js: jslogic
+jsrestapivals: JS.initteststep32
+
+
+buttons: 
+- id: PREV
+  prev: true
+  props:
+    type: primary

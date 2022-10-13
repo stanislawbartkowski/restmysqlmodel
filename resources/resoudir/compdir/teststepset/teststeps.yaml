@@ -1,7 +1,0 @@
-steps:
-  - title: ~Parameters
-    listdef: teststepset/step1
-  - title: ~Parameters review
-    listdef: teststepset/step2
-    
-

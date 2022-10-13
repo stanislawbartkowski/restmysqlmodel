@@ -15,6 +15,7 @@ def _nextstep() :
     return vars
 
 @respondlist
+@wjon
 def _gettestdata(w) :
     name = w.get("name","<undefined>")
     table = []
@@ -23,7 +24,7 @@ def _gettestdata(w) :
 
 
 if __name__ == '__main__':
-    D = DISPATCH()
+    D = GETDISPATCH()
     D.registerwhat("testapiinit",_testapiinit)
     D.registerwhat("nextstep",_nextstep)
     D.registerwhat("gettestdata",_gettestdata)

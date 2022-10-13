@@ -1,4 +1,4 @@
 id: teststepsrest
 name: Two steps and initvals REST/API
 descr: This test displays initvals using REST/API
-listdef: teststepsapi/teststeps
+listdef: demo/teststepsapi/teststeps

@@ -1,4 +1,4 @@
 id: teststeps3
 name: Two steps and init
 descr: This test demonstrates jsinitval for every step and launched only once 
-listdef: teststeps3/teststeps
+listdef: demo/teststeps3/teststeps

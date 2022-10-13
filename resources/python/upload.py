@@ -1,9 +1,8 @@
-import os, sys, json
-from helper import *
+from whelper import *
 
+@respondrest
 def keepfile() :
     uploadfile()
-    writerest({})
     
 if __name__ == '__main__':
     keepfile()
