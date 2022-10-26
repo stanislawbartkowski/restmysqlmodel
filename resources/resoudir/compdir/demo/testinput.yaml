@@ -1,0 +1,58 @@
+fields:
+- field: inputupper
+  coltitle: ~Input upper case
+  toupper: true
+- field: inputlower
+  coltitle: ~Input lower case
+  tolower: true
+  
+- field: descr1
+  fieldtype: html
+  value:
+    value: <h3>First text in the range should be transformed to uppercase</h3>
+
+- coltitle: rangestring
+  items:
+  - field: name1
+    coltitle: empty
+    toupper: true
+    props:
+      style:
+        display: 'inline-block'
+        width: 50%
+  - field: name2
+    coltitle: empty
+    props:
+      style:
+        width: calc(50% - 6px)
+        display: 'inline-block'
+        margin: '0'
+        marginLeft: 6px
+
+
+- field: namesearch
+  coltitle: ~Search name to upper
+  toupper: true
+  enterbutton: 
+    messagedirect: Search
+    list: customers
+    listdef: search/searchcustomers
+    modalprops: 
+      width: 70%
+  placeholder:
+    messagedirect: Enter the name        
+
+buttons: 
+- replace# : replace/printbutton
+  restaction: demo/report/testreport
+  params:
+    what : reportinput
+
+formprops:
+  labelCol:
+    span: 10
+
+cardprops:
+  style:
+    width: 40%
+    border: solid 1px        

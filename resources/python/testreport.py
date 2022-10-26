@@ -1,12 +1,11 @@
 from whelper import *
 
 
-@printcontent()
+@printcontent(text=True)
 def _report(f, w):
 
     f.write("My Report\n")
-    s = w.getnumber("testmoney")
-    f.write(f"testmoney {s} \n")
+    w.writevarn(f,"testmoney")
     d = w.getdate("testdate")
     f.write(f"testdate {d}\n")
     dr = w.getdaterange("rangedate")
@@ -40,8 +39,19 @@ def uploadprint(f, w):
 
             f.write("======================\n")
 
+
 def multitestprint(w):
     pass
+
+
+@printcontent(text=True)
+def _reportinput(f, w):
+
+    f.write("Input Report\n")
+    f.write("======================\n")
+    w.writevars(f, ["inputupper", "inputlower"])
+    w.writerange(f, "range", "name1", "name2")
+    w.writevars(f, "namesearch")
 
 
 if __name__ == "__main__":
@@ -50,4 +60,5 @@ if __name__ == "__main__":
     D.registerwhat("dynamic", reportdynamic)
     D.registerwhat("uploadprint", uploadprint)
     D.registerwhat("multitestprint", multitestprint)
+    D.registerwhat("reportinput", _reportinput)
     D.execute()

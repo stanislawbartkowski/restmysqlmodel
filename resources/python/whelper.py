@@ -284,7 +284,18 @@ class WJON:
         a = var if type(var) == list else [var]
         for v in a:
             s = self.gets(v, "")
-            f.write("{0} : {1} \n".format(v, s))
+            f.write(f"{v} : {s} \n")
+
+    def writevarn(self, f, var):
+        a = var if type(var) == list else [var]
+        for v in a:
+            s = self.getnumber(v)
+            f.write(f"{v} : {s} \n")
+
+    def writerange(self,f, n,name1,name2) :
+        n1 = self.gets(name1,"")
+        n2 = self.gets(name2,"")
+        f.write(f"{n}  {n1} - {n2} \n")
 
     def writevarl(self, f, var):
         a = var if type(var) == list else [var]
