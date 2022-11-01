@@ -45,7 +45,16 @@ var JS = {
   // ==========
 
   getexpandorders: function (row) {
-    return { list: "orderdetails", params: { ordernumber: row.ordernumber } };
+    return {
+      list: "orderdetails",
+      params: { ordernumber: row.ordernumber },
+      props: { 
+        style: { 
+         boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)',
+         margin: "1px"
+         } 
+      }
+    };
   },
 
   notification: function (messid, row) {

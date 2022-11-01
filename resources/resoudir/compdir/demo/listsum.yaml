@@ -11,7 +11,10 @@ columns:
 js: jslogic
 
 summary:
-- columns:
+- columns:  
+  - field: id
+    value:
+      value: Sum
   - field: val1
     fieldtype: money
     value:
@@ -20,6 +23,11 @@ summary:
     fieldtype: money
     value:
       js: JS.getvalue2sum
+  rowprops: 
+    style: 
+      backgroundColor: >
+        #fafafa
+      boxShadow: '0 0 1px rgba(0, 0, 0, 0.3)'
 - columns:
   - field: id
     value:
@@ -32,3 +40,8 @@ summary:
     fieldtype: money
     value:
       js: JS.getvalue2balance
+  rowprops: 
+    style: 
+      backgroundColor: >
+        #f5f5f5
+      boxShadow: '0 0 2px rgba(0, 0, 0, 0.3)'

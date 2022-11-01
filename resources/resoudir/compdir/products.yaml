@@ -1,15 +1,15 @@
 columns:
-  - field: productcode    
-    showdetails: true 
-  - field: productname
-  - field: productline
-  - field: productscale
-  - field: productvendor
-  - field: quantityinstock
-    fieldtype: number
-  - field: buyprice
-    fieldtype: money
-  - field: msrp
-    fieldtype: number
+- field: productcode    
+  showdetails: true 
+- field: productname
+- field: productline
+- field: productscale
+- field: productvendor
+- field: quantityinstock
+  fieldtype: number
+- field: buyprice
+  fieldtype: money
+- field: msrp
+  fieldtype: number
 
 rowkey: productcode
