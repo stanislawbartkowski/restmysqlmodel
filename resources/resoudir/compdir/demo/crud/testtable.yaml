@@ -1,6 +1,7 @@
 columns:
 - field: id 
   fieldtype: number
+  showdetails: true
 - field: name
 - field: actions
   actions:

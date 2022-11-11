@@ -1,0 +1,8 @@
+formprops:
+  labelCol:
+    span: 10
+
+cardprops:
+  style:
+    width: 40%
+    border: solid 1px  

@@ -1,0 +1,14 @@
+columns:
+- field: id 
+  fieldtype: number
+  showdetails: true
+- field: val1
+  coltitle: ~Value 1
+  fieldtype: money
+- field: val2
+  coltitle: ~Value 2
+  fieldtype: money
+- field: log
+  coltitle: ~Yes
+  fieldtype: boolean
+

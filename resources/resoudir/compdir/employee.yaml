@@ -1,12 +1,6 @@
 columns:
 - field: employeenumber
-  showdetails: 
-    varsrestaction: 
-      list: getdata
-      params:
-        what: getdetailsemployee
-      method: POST
-      upload: true 
+  showdetails: true
   fieldtype: number
   props:
     align: left
@@ -22,5 +16,4 @@ columns:
   fieldtype: html
   tablenodef: true
     
-
 rowkey: employeenumber

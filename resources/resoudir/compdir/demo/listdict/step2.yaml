@@ -1,0 +1,40 @@
+fields:
+- field: descr
+  fieldtype: html
+  value:
+    value: The same info as list item
+- field: t_review
+  items:
+  - field: symbol
+    radio:  
+      button: true
+      items:
+        restaction : demo/getdynamicvalues
+        value: id
+        label: name
+  - field: symbol1
+    checkbox: 
+      items:
+        restaction : demo/getdynamicvalues
+        value: id
+        label: name
+
+  - field: symbol2  
+    radio: 
+      select: true
+      items:
+        restaction : demo/getdynamicvalues
+        value: id
+        label: name
+      
+
+  itemlist:
+    vprops:
+      style:
+        width: 80%
+
+buttons: 
+- id: PREV
+  prev: true 
+
+replace#: replace/propsform

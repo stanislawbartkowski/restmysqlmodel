@@ -1,0 +1,40 @@
+fields:
+- field: descr
+  fieldtype: html
+  value:
+    value: Data is entered as select
+- field: symbol
+  props:
+    required: true
+    rules: 
+    - required: true
+  radio: 
+    button: true
+    items:
+      restaction : demo/getdynamicvalues
+      value: id
+      label: name
+
+- field: symbol1
+  checkbox: 
+    items:
+      restaction : demo/getdynamicvalues
+      value: id
+      label: name
+
+- field: symbol2
+  radio: 
+    select: true
+    items:
+      restaction : demo/getdynamicvalues
+      value: id
+      label: name
+
+buttons: 
+- id: NEXT
+  validate: true
+  next: true
+  props:
+    type: primary
+
+replace#: replace/propsform

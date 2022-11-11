@@ -1,0 +1,4 @@
+id: testloglist
+name: Test list with log value
+descr: Test that log value id disabled in show details
+list: demo/listlogdata

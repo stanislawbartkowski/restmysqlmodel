@@ -1,0 +1,4 @@
+id: testlist dict
+name: Test dic field in list
+descr: Demostrates dictionary elem in list item
+listdef: demo/listdict/steps
