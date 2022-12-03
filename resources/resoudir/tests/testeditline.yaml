@@ -1,0 +1,4 @@
+id: testeditline
+name: List edit 
+descr: Demonstrates table allowing editing the lines
+listdef: demo/editline/edit

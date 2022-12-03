@@ -1,0 +1,72 @@
+fields:
+- field: listitems
+  items:
+  - field: rowkey
+    fieldtype: number
+    coltitle: ~rowkey
+    iprops:
+      disabled: true
+  - field: id
+    fieldtype: number
+    validate:
+      - required: true
+      - restaction:
+          restaction : demo/editline/editlineaction
+          method: POST
+          upload: true
+          params:
+            what: validateid
+
+
+  - field: name
+  - field: actions
+    coltitle: empty
+    actions:
+      actions:
+      - message: insert
+        icon: insertrowaboveoutlined
+        method: POST 
+        upload: true
+        restaction: demo/editline/editlineaction
+        params:
+          what: insert
+      - message: delete
+        icon: deleterowoutlined
+        confirm: true
+        method: POST 
+        upload: true
+        restaction: demo/editline/editlineaction
+        params:
+          what: delete
+
+  editlist:
+    addbutton:
+      name: ~Add line
+      props:
+        type: primary
+      method: POST 
+      upload: true
+      restaction: demo/editline/editlineaction
+      params:
+        what: addline
+    card:
+      cardprops:
+        style:
+          width: 40%
+          border: solid 1px
+      title: ~Entering the data
+
+restapivals: 
+  restaction : demo/editline/initvalues
+
+buttons: 
+- id: ACCEPT
+  validate: true
+  restaction :  demo/editline/editlineaction
+  method: POST
+  upload: true
+  confirm: true
+  params:
+    what: add
+  props:
+    type: primary

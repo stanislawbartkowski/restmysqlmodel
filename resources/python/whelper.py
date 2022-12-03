@@ -5,6 +5,7 @@ from enum import Enum
 import tempfile, shutil
 
 from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
 
 # -----------
 def uploadfile() :
@@ -38,6 +39,18 @@ def dbconnect(func):
     def func_wrapper(*args, **kwargs):
         db = dbengine().connect()
         res = func(db, *args, **kwargs)
+        db.close()
+        return res
+
+    return func_wrapper
+
+def dbsession(func):
+    @functools.wraps(func)
+    def func_wrapper(*args, **kwargs):
+        engine = dbengine()
+        db = engine.connect()
+        session = Session(engine)
+        res = func(session, *args, **kwargs)
         db.close()
         return res
 
@@ -164,10 +177,6 @@ def fileintmpdir(f):
     return os.path.join(dir, f)
 
 
-def _getfiles():
-    return (_tmpfile(), os.environ["UPLOADEDFILE"])
-
-
 def _getcontentfile():
     return open(os.environ["CONTENTFILE"], "w+")
 
@@ -191,8 +200,9 @@ def writerest(s: Dict):
         f.write(ss)
 
 
-def generrfield(field: str, err: str) -> Dict:
-    return {"field": field, "err": err}
+def generrfield(field: str, err: str = None, directmess: str = None) -> Dict:
+    return {"field": field, 
+        "err": err if directmess is None else { "messagedirect" : directmess}}
 
 
 def generrfields(errors: List[Dict]) -> Dict:
@@ -217,6 +227,9 @@ def gennotification(
             "description": descr,
         },
     }
+
+def getedittablepos(list: str, field: str, rowkey: int) -> str :
+    return f"{list}_{field}_{rowkey}"
 
 
 # -------------------
@@ -250,6 +263,16 @@ class WJON:
     def getl(self, n):
         a = self.get(n, [])
         return a
+
+    def getrowkey(self,itemedit) -> int :
+        l : str =  f"{itemedit}_rowkey"
+        return self.getnumber(l)
+
+    def getcurrent(self) :
+        return self.get("currentfield")
+
+    def getcurrentrowkey(self) :
+        return self.get("currentrowkey")
 
     def get(self, n, defa=None):
         return self.js[n] if self.haskey(n) and self.js[n] is not None else defa

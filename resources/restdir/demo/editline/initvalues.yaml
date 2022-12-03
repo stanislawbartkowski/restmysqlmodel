@@ -1,0 +1,4 @@
+replace#: replace/getrest
+action: 
+- -c
+- "import editline; editline.initvalues()"
