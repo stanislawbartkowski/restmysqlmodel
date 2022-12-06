@@ -1,0 +1,4 @@
+id: testsumeditlist
+name: Footer containing the sum for edit table
+descr: Demonstrates the sum of the number in the edit list/table
+listdef: demo/editline/editlistsum

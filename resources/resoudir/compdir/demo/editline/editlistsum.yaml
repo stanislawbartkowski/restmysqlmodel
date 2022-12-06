@@ -1,0 +1,52 @@
+fields:
+- field: listitems
+  items:
+  - field: rowkey
+    fieldtype: number
+    coltitle: ~rowkey
+    iprops:
+      disabled: true
+  - field: id
+    fieldtype: number
+  - field: val1
+    coltitle: ~Value 1
+    fieldtype: money
+    onchange: 
+      jsclick: JS.onchangeval1
+  - field: val2
+    coltitle: ~Value 2
+    fieldtype: money
+
+
+  editlist:
+    addbutton:
+      name: ~Add line
+      props:
+        type: primary
+    card:
+      cardprops:
+        style:
+          width: 40%
+          border: solid 1px
+      title: ~Sum columns in edit table
+    summary:
+    - columns:  
+      - field: id
+        value:
+          value: Sum
+      - field: val1
+        fieldtype: money
+        sum: true
+      - field: val2
+        fieldtype: money
+        sum: true
+      rowprops: 
+        style: 
+          backgroundColor: >
+            #fafafa
+          boxShadow: '0 0 1px rgba(0, 0, 0, 0.3)'
+
+restapivals: 
+  restaction : demo/editline/initsumvalues
+
+js: jslogic

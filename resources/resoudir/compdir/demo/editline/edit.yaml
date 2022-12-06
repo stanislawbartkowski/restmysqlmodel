@@ -17,7 +17,6 @@ fields:
           params:
             what: validateid
 
-
   - field: name
   - field: actions
     coltitle: empty

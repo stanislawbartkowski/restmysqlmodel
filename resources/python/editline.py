@@ -24,7 +24,7 @@ def initvalues(db):
 
     val = [{"id": e[0], "name": e[1]} for e in res]
 
-    return {"listitems": val}
+    return {LISTITEMS: val}
 
 
 @respondrest

@@ -192,6 +192,11 @@ var JS = {
 
   getvalue2balance: function (row, vars) {
     return this.getbalance(vars.sum2, vars.sum1)
+  },
+
+  onchangeval1 : function (row,vars) {
+    console.log(row)
+    console.log(vars)
   }
 
 
