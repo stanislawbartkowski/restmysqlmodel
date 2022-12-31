@@ -1,6 +1,8 @@
 from whelper import *
 from sqlalchemy.sql import text
 
+# CREATE TABLE TEST (ID INT NOT NULL PRIMARY KEY, NAME VARCHAR(100));
+
 # -------------------
 # helper functions
 # -------------------
