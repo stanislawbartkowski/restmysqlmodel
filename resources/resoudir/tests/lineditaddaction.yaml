@@ -1,0 +1,4 @@
+id: lineeditaddaction
+name: Edit list additional action
+descr: Demonstrates additional action in line edit widger
+listdef: demo/lineeditaction/action.yaml

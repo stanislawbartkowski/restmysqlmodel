@@ -197,7 +197,52 @@ var JS = {
   onchangeval1 : function (row,vars) {
     console.log(row)
     console.log(vars)
+  },
+
+  geteditbadge : function(row,vars) {
+    var rowkey = row.rowkey
+    var st = 'default'
+    if (rowkey == 0) st = 'warning'
+    return {
+      props: { status: st}
+    }
+
+  },
+
+  getedittags : function(row,vars) {
+    var res = []
+    res.push({
+      value : { messagedirect: row.name}  , props: { color: "green"}
+    })
+    return res
+  },
+
+  editchangename : function(row,vars) {
+    console.log('editchangename')
+    console.log(row)
+    console.log(vars)
+    return {}
+  },
+
+  editinsertline : function(row,vars) {
+    console.log('editinsertline')
+    console.log(row)
+    console.log(vars)
+    console.log('---------------')
+    return { jsclick: "JS.xxinsertline" }
+  },
+
+  xxinsertline : function(row,vars) {
+    console.log('xxxinsertline')
+    console.log(row)
+    console.log(vars)
+    console.log('---------------')
+    var r = row.listitems
+    r.push({})
+    console.log(r)
+    return { vars: { listitems : r} }
   }
+
 
 
 };

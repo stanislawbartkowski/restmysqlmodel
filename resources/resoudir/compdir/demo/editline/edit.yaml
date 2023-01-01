@@ -29,6 +29,9 @@ fields:
         restaction: demo/editline/editlineaction
         params:
           what: insert
+      - messagedirect: Insert JS
+        jsclick: JS.editinsertline
+        
       - message: delete
         icon: deleterowoutlined
         confirm: true
@@ -57,6 +60,8 @@ fields:
 
 restapivals: 
   restaction : demo/editline/initvalues
+
+js: jslogic
 
 buttons: 
 - id: ACCEPT

@@ -1,0 +1,47 @@
+fields:
+- field: title
+  fieldtype: html
+  value:
+    value: <h3>Addional actions in line edit</h3>
+
+- field: edititems
+  items:
+  - field: rowkey
+    fieldtype: number
+    coltitle: ~rowkey
+    iprops:
+      disabled: true
+  - field: id
+    fieldtype: number
+  - field: name
+    onchange:
+      jsclick: JS.editchangename
+  - field: badgeid
+    col: 
+      coltitle: ~Status
+      badge: 
+        js: JS.geteditbadge
+  - field: tagsid
+    col:
+      coltitle: ~Tags
+      tags:
+        js: JS.getedittags
+
+
+  editlist:
+    card:
+      cardprops:
+        style:
+          width: 90%
+          border: solid 1px
+      title: ~Edit List
+
+restapivals: 
+  restaction : demo//lineeditaction/lineedit
+  params:
+    what: getinitvalues
+
+js: jslogic
+
+
+replace#: replace/propsform  
