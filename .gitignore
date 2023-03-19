@@ -32,3 +32,4 @@ target/maven-archiver/pom.properties
 nohup.out
 resources/python/__pycache__/whelper.cpython-39.pyc
 resources/python/__pycache__/whelper.cpython-39.pyc
+resources/python/__pycache__/whelper.cpython-310.pyc
