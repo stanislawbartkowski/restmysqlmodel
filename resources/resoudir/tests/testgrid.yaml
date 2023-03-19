@@ -1,0 +1,4 @@
+id: testgrisimple
+name: Grid form
+descr: Demonstrates a simple usage of grid in the form
+listdef: demo/simplegrid

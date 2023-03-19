@@ -1,0 +1,58 @@
+fields:
+
+- field: info
+  fieldtype: html
+  value:
+    value: <h3>Simple form using a grid layout</h3>
+
+- field: name
+  coltitle: ~Name
+  gridrow: true
+  gridcol:
+    props:
+      span: 12
+
+- field: familyname
+  coltitle: ~Family name
+  gridcol:
+    props:
+      span: 12
+
+- field: name1
+  coltitle: ~Name 1
+  gridrow: true
+  gridcol:
+    props:
+      span: 12
+- field: name2
+  coltitle: ~Name 2
+  gridcol:
+    props:
+      span: 12
+
+- field: lista1
+  restlist:
+     list: orders
+     listdef: demo/listinthedialog/ordersin
+  gridrow: true
+  gridcol:
+    props:
+      span: 12
+
+- field: lista2
+  restlist:
+     list: orders
+     listdef: demo/listinthedialog/ordersin
+  gridcol:
+    props:
+      span: 12
+
+
+formprops:
+  labelCol:
+    span: 5
+
+cardprops:
+  style:
+    width: 100%
+    border: solid 1px    

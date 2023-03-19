@@ -14,6 +14,7 @@ def addrow(conn, id: int, name: str):
         if name
         else "INSERT INTO test VALUES(:id,NULL)"
     )
+    print(statement)
     conn.execute(statement, {"id": id, "name": name})
 
 
