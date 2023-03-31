@@ -1,25 +1,31 @@
-import os, json, datetime, logging, sys
+import os
+import json
+import datetime
+import logging
+import sys
 from typing import Dict, List
 import functools
 from enum import Enum
-import tempfile, shutil
+import tempfile
+import shutil
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
+
 # -----------
-def uploadfile() :
-  filename = getpar("filename")
-  _logg.info("Uploaded filename {0}".format(filename))
-  upname = fileintmpdir(filename)
-  head_tail = os.path.split(upname)
-  dir = head_tail[0]
-  try:
-    os.mkdir(dir)
-  except OSError as error:
-    _logg.info("Directory {0} exists".format(dir))
-  _logg.info("Copy {0} to {1}".format(getuploadfile(),upname))
-  shutil.copyfile(getuploadfile(), upname)
+def uploadfile():
+    filename = getpar("filename")
+    _logg.info("Uploaded filename {0}".format(filename))
+    upname = fileintmpdir(filename)
+    head_tail = os.path.split(upname)
+    dir = head_tail[0]
+    try:
+        os.mkdir(dir)
+    except OSError as error:
+        _logg.info("Directory {0} exists".format(dir))
+    _logg.info("Copy {0} to {1}".format(getuploadfile(), upname))
+    shutil.copyfile(getuploadfile(), upname)
 
 
 # ---------------
@@ -43,6 +49,7 @@ def dbconnect(func):
         return res
 
     return func_wrapper
+
 
 def dbsession(func):
     @functools.wraps(func)
@@ -201,8 +208,10 @@ def writerest(s: Dict):
 
 
 def generrfield(field: str, err: str = None, directmess: str = None) -> Dict:
-    return {"field": field, 
-        "err": err if directmess is None else { "messagedirect" : directmess}}
+    return {
+        "field": field,
+        "err": err if directmess is None else {"messagedirect": directmess},
+    }
 
 
 def generrfields(errors: List[Dict]) -> Dict:
@@ -228,7 +237,8 @@ def gennotification(
         },
     }
 
-def getedittablepos(list: str, field: str, rowkey: int) -> str :
+
+def getedittablepos(list: str, field: str, rowkey: int) -> str:
     return f"{list}_{field}_{rowkey}"
 
 
@@ -264,15 +274,16 @@ class WJON:
         a = self.get(n, [])
         return a
 
-    def getrowkey(self,itemedit) -> int :
-        l : str =  f"{itemedit}_rowkey"
+    def getrowkey(self, itemedit) -> int:
+        l: str = f"{itemedit}_rowkey"
         return self.getnumber(l)
 
-    def getcurrent(self) :
+    def getcurrent(self):
         return self.get("currentfield")
 
-    def getcurrentrowkey(self) :
-        return self.get("currentrowkey")
+#    def getcurrentrowkey(self, listitem):
+#        r = f'${listitem}_rowkey'
+ #       return self.get(r)
 
     def get(self, n, defa=None):
         return self.js[n] if self.haskey(n) and self.js[n] is not None else defa
@@ -315,9 +326,9 @@ class WJON:
             s = self.getnumber(v)
             f.write(f"{v} : {s} \n")
 
-    def writerange(self,f, n,name1,name2) :
-        n1 = self.gets(name1,"")
-        n2 = self.gets(name2,"")
+    def writerange(self, f, n, name1, name2):
+        n1 = self.gets(name1, "")
+        n2 = self.gets(name2, "")
         f.write(f"{n}  {n1} - {n2} \n")
 
     def writevarl(self, f, var):

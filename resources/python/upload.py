@@ -1,8 +1,10 @@
-from whelper import *
+from whelper import respondrest, uploadfile
+
 
 @respondrest
-def keepfile() :
+def keepfile():
     uploadfile()
-    
-if __name__ == '__main__':
+
+
+if __name__ == "__main__":
     keepfile()

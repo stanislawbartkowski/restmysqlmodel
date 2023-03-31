@@ -4,8 +4,7 @@ fields:
   - field: rowkey
     fieldtype: number
     coltitle: ~rowkey
-    iprops:
-      disabled: true
+    disabled: true
   - field: id
     fieldtype: number
     validate:
@@ -18,6 +17,12 @@ fields:
             what: validateid
 
   - field: name
+    istextarea: true
+    iprops:
+      style:
+        width: 60%
+      autoSize: true
+
   - field: actions
     coltitle: empty
     actions:
@@ -30,7 +35,7 @@ fields:
         params:
           what: insert
       - messagedirect: Insert JS
-        jsclick: JS.editinsertline
+        jsclick: JS.editinsertline      
         
       - message: delete
         icon: deleterowoutlined

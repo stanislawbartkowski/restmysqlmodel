@@ -1,5 +1,18 @@
-from whelper import *
 from sqlalchemy.sql import text
+
+from whelper import (
+    DISPATCH,
+    Notitication,
+    dbconnect,
+    generrfield,
+    generrfields,
+    gennotification,
+    printcontent,
+    respondrest,
+    validatefield,
+    wjon,
+)
+
 
 # CREATE TABLE TEST (ID INT NOT NULL PRIMARY KEY, NAME VARCHAR(100));
 
@@ -14,8 +27,8 @@ def addrow(conn, id: int, name: str):
         if name
         else "INSERT INTO test VALUES(:id,NULL)"
     )
-    print(statement)
     conn.execute(statement, {"id": id, "name": name})
+    conn.commit()
 
 
 def delrow(conn, id: int):
@@ -47,7 +60,7 @@ def _addid(db, w):
     id: int = w.get("id")
     name: str = w.get("name")
     if idexist(db, id):
-        err: Dict = generrfield("id", "duplicatedvalue")
+        err: dict = generrfield("id", "duplicatedvalue")
         return generrfields(err)
     addrow(db, id, name)
     return gennotification(
@@ -63,7 +76,7 @@ def _printtest(db, f, li=None, title=None):
     else:
         f.write("============================\n")
 
-    result = db.execute("SELECT * FROM test")
+    result = db.execute(text("SELECT * FROM test"))
 
     no: int = 0
     for row in result:

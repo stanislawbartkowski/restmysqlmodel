@@ -1,8 +1,8 @@
-from whelper import *
+from whelper import GETDISPATCH, printcontent, respondlist, respondrest, wjon
+
 
 @respondlist
 def getitems():
-
     list = []
     list.append({"id": "shipped", "name": "Name shipped"})
     list.append({"id": "delayed", "name": "Name delayed"})
@@ -17,7 +17,6 @@ def _getinitvalues():
 @printcontent()
 @wjon
 def _printinitvalues(w, f):
-
     id = w.getnumber("id")
     name = w.get("name")
     f.write(f"id : {id} !\n")

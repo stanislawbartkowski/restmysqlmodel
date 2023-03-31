@@ -1,11 +1,10 @@
-from whelper import *
+from whelper import DISPATCH, fileintmpdir, printcontent
 
 
 @printcontent(text=True)
 def _report(f, w):
-
     f.write("My Report\n")
-    w.writevarn(f,"testmoney")
+    w.writevarn(f, "testmoney")
     d = w.getdate("testdate")
     f.write(f"testdate {d}\n")
     dr = w.getdaterange("rangedate")
@@ -46,7 +45,6 @@ def multitestprint(w):
 
 @printcontent(text=True)
 def _reportinput(f, w):
-
     f.write("Input Report\n")
     f.write("======================\n")
     w.writevars(f, ["inputupper", "inputlower"])

@@ -1,5 +1,18 @@
-from whelper import *
-from typing import List, Dict, Set
+from typing import List, Dict
+
+from sqlalchemy.sql import text
+
+from whelper import (
+    DISPATCH,
+    generrfield,
+    generrfields,
+    respondrest,
+    dbconnect,
+    dbsession,
+    getedittablepos,
+    validatefield,
+)
+
 import testtable
 
 
@@ -18,7 +31,7 @@ def REMOVE_initvalues():
 @respondrest
 @dbconnect
 def initvalues(db):
-    query = "SELECT * FROM test"
+    query = text("SELECT * FROM test")
     result = db.execute(query)
     res = result.fetchall()
 
@@ -43,33 +56,36 @@ def _findpos(w, ta: List[Dict]) -> int:
             return i
 
 
-def _checkvalidity(ta : List[Dict]) :
+def _checkvalidity(ta: List[Dict]):
     err = []
-    for rowkey in range(0, len(ta)) :
+    for rowkey in range(0, len(ta)):
         id = ta[rowkey]["id"]
-        if id < 0 : 
-            idpos = getedittablepos(LISTITEMS,"id",rowkey)
+        if id < 0:
+            idpos = getedittablepos(LISTITEMS, "id", rowkey)
             err.append(generrfield(idpos, directmess="The number cannot be negative"))
     return None if len(err) == 0 else err
+
 
 @respondrest
 @dbsession
 def _add(session, w):
     ta: List[Dict] = w.get(LISTITEMS)
-    err : List[Dict] = _checkvalidity(ta)
-    if err is not None :
+    err: List[Dict] = _checkvalidity(ta)
+    if err is not None:
         return generrfields(err)
     session.begin()
-    session.execute("TRUNCATE TABLE test")
-    for w in ta :
+    session.execute(text("TRUNCATE TABLE test"))
+    for w in ta:
         id = w["id"]
         name = w.get("name")
-        testtable.addrow(session,id,name)
+        testtable.addrow(session, id, name)
     session.commit()
+
 
 @validatefield
 def _validateid(w):
-    rowkey: int = w.getcurrentrowkey()
+    rowkey: int = w.getrowkey(LISTITEMS)
+    print(rowkey)
     id: int = w.getcurrent()
     ta: List[Dict] = w.get(LISTITEMS)
     for t in ta:
