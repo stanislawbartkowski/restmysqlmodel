@@ -1,0 +1,18 @@
+fields:
+- field: info
+  fieldtype: html
+  value:
+    value: <h3>Demonstrates after change action and addtional dialog invocation</h3>
+
+- field: name 
+  coltitle: ~Enter the name
+  onchange: 
+    jsclick: JS.onchangefieldaction
+
+- field: infoname
+  disabled: true
+
+- field: infodial
+  disabled: true
+
+js: jslogic

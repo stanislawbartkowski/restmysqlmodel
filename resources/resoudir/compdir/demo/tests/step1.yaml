@@ -3,8 +3,6 @@ fields:
   fieldtype: number
   props:
     required: true
-    rules: 
-    - required: true
 - field: name
 
 buttons: 

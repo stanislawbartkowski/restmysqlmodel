@@ -48,11 +48,11 @@ var JS = {
     return {
       list: "orderdetails",
       params: { ordernumber: row.ordernumber },
-      props: { 
-        style: { 
-         boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)',
-         margin: "1px"
-         } 
+      props: {
+        style: {
+          boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)',
+          margin: "1px"
+        }
       }
     };
   },
@@ -194,37 +194,37 @@ var JS = {
     return this.getbalance(vars.sum2, vars.sum1)
   },
 
-  onchangeval1 : function (row,vars) {
+  onchangeval1: function (row, vars) {
     console.log(row)
     console.log(vars)
   },
 
-  geteditbadge : function(row,vars) {
+  geteditbadge: function (row, vars) {
     var rowkey = row.rowkey
     var st = 'default'
     if (rowkey == 0) st = 'warning'
     return {
-      props: { status: st}
+      props: { status: st }
     }
 
   },
 
-  getedittags : function(row,vars) {
+  getedittags: function (row, vars) {
     var res = []
     res.push({
-      value : { messagedirect: row.name}  , props: { color: "green"}
+      value: { messagedirect: row.name }, props: { color: "green" }
     })
     return res
   },
 
-  editchangename : function(row,vars) {
+  editchangename: function (row, vars) {
     console.log('editchangename')
     console.log(row)
     console.log(vars)
     return {}
   },
 
-  editinsertline : function(row,vars) {
+  editinsertline: function (row, vars) {
     console.log('editinsertline')
     console.log(row)
     console.log(vars)
@@ -232,7 +232,7 @@ var JS = {
     return { jsclick: "JS.xxinsertline" }
   },
 
-  xxinsertline : function(row,vars) {
+  xxinsertline: function (row, vars) {
     console.log('xxxinsertline')
     console.log(row)
     console.log(vars)
@@ -240,9 +240,31 @@ var JS = {
     var r = row.listitems
     r.push({})
     console.log(r)
-    return { vars: { listitems : r} }
+    return { vars: { listitems: r } }
+  },
+
+  onchangefieldaction: function (row) {
+    return {
+      vars: {
+        infoname: "hello",
+      },
+      retprops: {
+        listdef: "demo/dialog-wew",
+        vars: {
+          infodial: "cccccc"
+        }
+      }      
+
+    }
+  },
+
+  dialogwewok: function(row) {
+    return {
+      close: true,
+      vars: {
+        infodial: "cccccc"
+      }
+    }
   }
-
-
 
 };

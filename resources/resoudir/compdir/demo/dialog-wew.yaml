@@ -1,0 +1,12 @@
+fields:
+- field: inputname
+  coltitle: ~Wprowadź nazwę
+
+js: jslogic
+
+buttons:
+- id: CANCEL
+  close: true
+  
+- id: OK
+  jsclick: JS.dialogwewok

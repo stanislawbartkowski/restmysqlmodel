@@ -1,0 +1,4 @@
+id: dialogafterchange
+name: Dialog after change action
+descr: Demonstrates additional action after field is changed
+listdef: demo/dialogfieldchange
