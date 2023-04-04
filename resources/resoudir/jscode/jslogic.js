@@ -253,17 +253,34 @@ var JS = {
         vars: {
           infodial: "cccccc"
         }
-      }      
+      }
 
     }
   },
 
-  dialogwewok: function(row) {
+  dialogwewok: function (row) {
     return {
       close: true,
       vars: {
         infodial: "cccccc"
       }
+    }
+  },
+
+  getautoavalues: function (row) {
+    return {
+      res: [
+        { name: "A1" },
+        { name: "A2" },
+        { name: "A2" },
+        { name: "A3" },
+        { name: "A4" },
+        { name: "B1" },
+        { name: "B2" },
+        { name: "B2" },
+        { name: "B3" },
+        { name: "B4" },
+      ]
     }
   }
 

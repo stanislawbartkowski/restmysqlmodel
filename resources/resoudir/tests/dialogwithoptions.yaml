@@ -1,0 +1,4 @@
+id: dialogwithoptions
+name: Dialog and autocomplete
+descr: Demonstrates implementation of autocomplete fiels
+listdef: demo/dialogautocomplete

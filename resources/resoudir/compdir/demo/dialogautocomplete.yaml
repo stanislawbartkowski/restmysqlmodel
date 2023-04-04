@@ -1,0 +1,46 @@
+fields:
+- field: info
+  coltitle: empty
+  fieldtype: html
+  value:
+    value: <f3>Dialog and autocomplete fields</f3>
+
+- field: name
+  coltitle: ~Autocomplete
+  autocomplete: autoa
+
+- field: nameb
+  coltitle: ~Autocomplete-rest
+  autocomplete: autob
+
+- field: namesearch
+  coltitle: ~Search name
+  enterbutton: 
+    messagedirect: Search
+    list: customers
+    listdef: search/searchcustomers
+    modalprops: 
+      width: 70%
+  placeholder:
+    messagedirect: Enter the name        
+  autocomplete: autoc
+
+
+js: jslogic
+
+autocomplete:    
+- id: autoa
+  js: JS.getautoavalues
+  minlen: 1
+
+- id: autob
+  restaction: demo/autobvalues
+  params:
+    what: getvaluesb
+  minlen: 1
+
+- id: autoc
+  restaction: customers
+  minlen: 1
+  colname: customernumber
+  

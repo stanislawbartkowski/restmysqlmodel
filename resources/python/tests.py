@@ -23,8 +23,17 @@ def _printinitvalues(w, f):
     f.write(f"name : {name} !\n")
 
 
+@respondlist
+def _getvaluesb():
+    list = []
+    list.append({"name": "AA"})
+    list.append({"name": "BB"})
+    return list
+
+
 if __name__ == "__main__":
     D = GETDISPATCH()
     D.registerwhat("getinitvalues", _getinitvalues)
     D.registerwhat("printinitvalues", _printinitvalues)
+    D.registerwhat("getvaluesb", _getvaluesb)
     D.execute()
