@@ -282,6 +282,21 @@ var JS = {
         { name: "B4" },
       ]
     }
+  },
+
+  searchclickbutton: function (row, vars) {
+    console.log(row)
+    console.log(vars)
+    return {
+      vars: {
+        lista: {
+          first: true,
+          searchF: {
+            name: row.name
+          }
+        }
+      }
+    }
   }
 
 };

@@ -1,0 +1,28 @@
+fields:
+- field: info
+  fieldtype: html
+  value:
+    value: <h3>Search row in the table</h3>
+
+- field: name
+  coltitle: ~Nazwa do wyszukania
+  gridrow: true
+- field: button
+  button:
+    id: SEARCH
+    jsclick: JS.searchclickbutton
+
+   
+- field: lista
+  gridrow: true
+  gridcol:
+    props:
+      span: 12
+  restlist:
+    listdef: demo/crud/testtable
+    list: demo/crud/testtable
+  props:
+    style:
+      width: 80%
+
+js: jslogic       

@@ -12,3 +12,5 @@ columns:
   coltitle: ~Yes
   fieldtype: boolean
 
+extendedsearch: true  
+

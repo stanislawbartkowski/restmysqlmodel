@@ -1,0 +1,4 @@
+id: tablelistandsearch
+name: Search table in dialog
+descr: Demonstrates searching and setting row in the table in dialog
+listdef: demo/tableindialogsearch
