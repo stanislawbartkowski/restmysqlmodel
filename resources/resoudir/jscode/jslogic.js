@@ -290,7 +290,7 @@ var JS = {
     return {
       vars: {
         lista: {
-          first: true,
+          next: false,
           searchF: {
             name: row.name
           }

@@ -225,9 +225,11 @@ class Notitication(Enum):
 
 
 def gennotification(
-    kind: Notitication, title: str, descr, close=True, refresh=True
+    kind: Notitication, title: str, descr, close=True, refresh=True, searchF=None
 ) -> Dict:
-    return {
+    searchD = {} if searchF is None else {"vars": {"searchF": {"searchF": searchF}}}
+
+    return searchD | {
         "close": close,
         "refresh": refresh,
         "notification": {
@@ -281,9 +283,9 @@ class WJON:
     def getcurrent(self):
         return self.get("currentfield")
 
-#    def getcurrentrowkey(self, listitem):
-#        r = f'${listitem}_rowkey'
- #       return self.get(r)
+    #    def getcurrentrowkey(self, listitem):
+    #        r = f'${listitem}_rowkey'
+    #       return self.get(r)
 
     def get(self, n, defa=None):
         return self.js[n] if self.haskey(n) and self.js[n] is not None else defa

@@ -64,7 +64,10 @@ def _addid(db, w):
         return generrfields(err)
     addrow(db, id, name)
     return gennotification(
-        Notitication.SUCCESS, "done", {"message": "youadded", "params": [id]}
+        Notitication.SUCCESS,
+        "done",
+        {"message": "youadded", "params": [id]},
+        searchF={"id": id},
     )
 
 
@@ -140,7 +143,7 @@ def _addstep1(db, w):
             },
             "next": True,
         }
-    err: Dict = generrfield("id", "duplicatedvalue")
+    err: dict = generrfield("id", "duplicatedvalue")
     return generrfields(err)
 
 
