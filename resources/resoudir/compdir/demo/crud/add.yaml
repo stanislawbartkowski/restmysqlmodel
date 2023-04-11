@@ -26,6 +26,10 @@ buttons:
 - id: CANCEL
   close: true
 
+header:
+  title: ~Dodanie nowego rekordu
+
+
 formprops:
   labelCol:
     span: 5
