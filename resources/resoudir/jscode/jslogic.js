@@ -297,6 +297,36 @@ var JS = {
         }
       }
     }
+  },
+
+  onchangecollapsesearch: function (row, vars) {
+    var name = row.name
+    return {
+      vars: {
+        name1: name
+      }
+    }
+  },
+
+  onchangecolapseorderstatus: function (row, vars) {
+
+    var orderstatus = row.ordersstatus
+    console.log("---------------------------")
+    console.log(row)
+    return {
+      vars: {
+        orderstatusselected: orderstatus
+      }
+
+    }
+
+  },
+
+  collapsedialoginit: function () {
+    return {
+      name: "Initial name"
+    }
   }
 
-};
+
+}

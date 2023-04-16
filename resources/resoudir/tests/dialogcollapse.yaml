@@ -1,0 +1,4 @@
+id: dialogcollapes
+name: Collapse dialog
+descr: Demonstrates collapse feature in dialog
+listdef: demo/dialogcollapse

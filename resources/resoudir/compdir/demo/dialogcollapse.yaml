@@ -1,0 +1,52 @@
+fields:
+- field: info
+  fieldtype: html
+  value:
+    value: <h3>Demontrates collapse feature in dialog</h3>
+
+- field: collapse1
+  props:
+    size: small
+  collapse:   
+  - header: ~Search
+    key: panel1
+    items:
+    - field: name
+      coltitle: ~Enter customer name
+      onchange: 
+        jsclick: JS.onchangecollapsesearch
+      gridrow: true
+    - field: name1
+      coltitle: ~Customer name entered
+      disabled: true
+    - field: ordersstatus
+      gridrow: true
+      gridcol:
+        props:
+          span: 6
+      coltitle: orderstatus
+      placeholder: ~Enter order status
+      radio: 
+        segmented: true
+        items:
+        - value: shipped
+          label: ~shipped
+        - value: delayed
+          label: ~delayed
+      onchange: 
+        jsclick: JS.onchangecolapseorderstatus
+    - field: orderstatusselected
+      coltitle: ~Order status selected
+      disabled: true
+
+
+js: jslogic
+
+jsrestapivals: JS.collapsedialoginit
+
+
+
+  
+
+
+  
