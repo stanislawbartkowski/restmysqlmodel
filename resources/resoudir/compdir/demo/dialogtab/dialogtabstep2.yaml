@@ -1,0 +1,29 @@
+fields:
+- field: info
+  fieldtype: html
+  value:
+    value: <h3>Review customer data</h3>
+
+- field: customerdata
+  items:
+  - field: name
+    coltitle: ~Client first name
+  - field: familyname
+    coltitle: ~Family name
+  - field: birth
+    fieldtype: date
+    coltitle: ~Birth date
+  itemlist:
+    vprops:
+      style:
+        width: 60%
+    header: ~Customer data
+
+  
+
+
+buttons: 
+- id: PREV
+  prev: true
+  props:
+    type: primary

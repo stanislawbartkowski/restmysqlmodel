@@ -1,0 +1,6 @@
+steps:
+- title: ~Customer data
+  listdef: demo/dialogtab/dialogtabstep1
+- title: ~Customer data review
+  listdef: demo/dialogtab/dialogtabstep2
+

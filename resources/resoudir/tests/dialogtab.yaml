@@ -1,0 +1,4 @@
+id: dialogtab
+name: Tab dialog
+descr: Demonstrates dialog divided between tab
+listdef: demo/dialogtab/steps

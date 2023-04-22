@@ -18,6 +18,7 @@
 *.zip
 *.tar.gz
 *.rar
+*.pyc
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
@@ -35,3 +36,4 @@ resources/python/__pycache__/whelper.cpython-39.pyc
 resources/python/__pycache__/whelper.cpython-310.pyc
 resources/python/__pycache__/testtable.cpython-39.pyc
 resources/python/__pycache__/tests.cpython-39.pyc
+resources/python/__pycache__/testtable.cpython-310.pyc

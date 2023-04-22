@@ -1,0 +1,34 @@
+fields:
+- field: panel1
+  tab:
+    defaultActiveKey: 
+      cookie: true
+      default: "1"
+    tabs:
+    - label: ~Client first name
+      key: "1"
+      items:
+      - field: name
+        coltitle: ~Client first name
+    - label: ~Client last name
+      key: "2"
+      items:
+      - field: familyname
+        coltitle: ~Family name
+      - field: birth
+        fieldtype: date
+        coltitle: ~Birth date
+
+header:
+  title: ~Dialog divided between different views
+
+buttons: 
+- id: NEXT
+  next: true
+  props:
+    type: primary
+
+js: jslogic
+
+jsrestapivals: JS.collapsedialoginit
+
