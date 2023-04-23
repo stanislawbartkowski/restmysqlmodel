@@ -10,12 +10,17 @@ columns:
     align: left
 - field: customername
 - field: orderdate
+  fieldtype: date
 - field: requireddate
+  fieldtype: date
 - field: shippeddate
+  fieldtype: date
 - field: status
   badge:
     js: JS.getorderbadge
+  width: 20
 - field: comments
+  width: 20%
 
 rowkey: ordernumber
 

@@ -1,6 +1,6 @@
 columns:
 - field: productline
-  showdetails: true 
+  showdetails: true
 - field: textdescription
   coltitle: description
 - field: actions

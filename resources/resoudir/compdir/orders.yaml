@@ -1,3 +1,6 @@
 replace#: replace/orders
 
+resize:
+  resize: true
+
 extendedsearch: true

@@ -1,6 +1,6 @@
 columns:
 - field: productcode
-  showdetails: true      
+  showdetails: true
 - field: productname
 - field: productscale
 - field: productvendor
