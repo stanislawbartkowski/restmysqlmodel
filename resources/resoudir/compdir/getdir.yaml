@@ -2,7 +2,8 @@ columns:
   - field: name
     showdetails: true
     coltitle: empty
-  - field: descr    
+  - field: descr
+    coltitle: empty
         
 rowkey: id
 

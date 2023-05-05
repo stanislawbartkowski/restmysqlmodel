@@ -28,7 +28,6 @@ def addrow(conn, id: int, name: str):
         else "INSERT INTO test VALUES(:id,NULL)"
     )
     conn.execute(statement, {"id": id, "name": name})
-    conn.commit()
 
 
 def delrow(conn, id: int):
