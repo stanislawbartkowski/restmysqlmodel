@@ -22,7 +22,6 @@ columns:
 - field: comments
   width: 20%
 
-rowkey: ordernumber
 
 js: jslogic
 

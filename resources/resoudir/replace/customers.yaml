@@ -22,3 +22,5 @@ columns:
 rowkey: customernumber
 
 extendedsearch: true
+
+tablesize: true

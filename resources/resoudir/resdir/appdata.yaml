@@ -4,3 +4,7 @@ logosmall: logo192.png
 language: en
 title: Test App
 version: version 1.11 (r:04) 2023/04/01
+extendedsearch: true
+tablesize: true
+resize:
+  resize: true

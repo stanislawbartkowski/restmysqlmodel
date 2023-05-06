@@ -11,4 +11,4 @@ columns:
   - field: amount
     fieldtype: money
 
-rowkey: checknumber
+tablesize: true
