@@ -12,5 +12,6 @@ columns:
   coltitle: ~Yes
   fieldtype: boolean
 
-extendedsearch: true  
+toolbar:
+  extendedsearch: true  
 

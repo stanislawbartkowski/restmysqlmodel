@@ -21,6 +21,6 @@ columns:
 
 rowkey: customernumber
 
-extendedsearch: true
-
-tablesize: true
+toolbar:
+  extendedsearch: true
+  tablesize: true
