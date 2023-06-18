@@ -1,4 +1,8 @@
 fields:
+- field: info
+  fieldtype: html
+  value:
+    value: Desscription as html initialized in JS 
 - field: descr
   fieldtype: html
 - field: id  

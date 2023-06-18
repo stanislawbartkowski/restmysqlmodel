@@ -3,6 +3,7 @@ logo: logo192.png
 logosmall: logo192.png
 language: en
 title: Test App
+js: jslogic
 version: version 1.11 (r:05) 2023/05/07
 toolbar:
   extendedsearch: true

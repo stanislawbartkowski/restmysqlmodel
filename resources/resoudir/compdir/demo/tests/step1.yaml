@@ -1,8 +1,8 @@
 fields:
 - field: id  
   fieldtype: number
-  props:
-    required: true
+  validate:
+  - required: true
 - field: name
 
 buttons: 
